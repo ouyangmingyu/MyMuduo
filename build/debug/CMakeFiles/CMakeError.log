@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0cb11/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0cb11.dir/build.make CMakeFiles/cmTC_0cb11.dir/build
+make[1]: Entering directory '/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0cb11.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic    -o CMakeFiles/cmTC_0cb11.dir/CheckSymbolExists.cxx.o -c /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:33: warning: use of old-style cast [-Wold-style-cast]
+   return ((int*)(&pthread_create))[argc];
+                                 ^
+Linking CXX executable cmTC_0cb11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cb11.dir/link.txt --verbose=1
+/usr/bin/c++   -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic     CMakeFiles/cmTC_0cb11.dir/CheckSymbolExists.cxx.o  -o cmTC_0cb11 -rdynamic 
+CMakeFiles/cmTC_0cb11.dir/CheckSymbolExists.cxx.o：在函数‘main’中：
+/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0cb11.dir/build.make:97: recipe for target 'cmTC_0cb11' failed
+make[1]: *** [cmTC_0cb11] Error 1
+make[1]: Leaving directory '/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0cb11/fast' failed
+make: *** [cmTC_0cb11/fast] Error 2
+
+File /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b8adb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b8adb.dir/build.make CMakeFiles/cmTC_b8adb.dir/build
+make[1]: Entering directory '/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b8adb.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++     -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b8adb.dir/CheckFunctionExists.cxx.o -c /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_b8adb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8adb.dir/link.txt --verbose=1
+/usr/bin/c++   -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b8adb.dir/CheckFunctionExists.cxx.o  -o cmTC_b8adb -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b8adb.dir/build.make:97: recipe for target 'cmTC_b8adb' failed
+make[1]: *** [cmTC_b8adb] Error 1
+make[1]: Leaving directory '/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b8adb/fast' failed
+make: *** [cmTC_b8adb/fast] Error 2
+
+

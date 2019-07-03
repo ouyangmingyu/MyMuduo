@@ -1,4 +1,5 @@
 set(base_SRCS
+  Exception.cc
   Timestamp.cc
   )
 

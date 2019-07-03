@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mingyu/MyMuduo/testmuduo/MyMuduo
+CMAKE_SOURCE_DIR = /home/mingyu/MyMuduo/MyMuduo/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug
+CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/MyMuduo/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -168,6 +168,32 @@ muduo_base/fast:
 .PHONY : muduo_base/fast
 
 #=============================================================================
+# Target rules for targets named atomic_unittest
+
+# Build rule for target.
+atomic_unittest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 atomic_unittest
+.PHONY : atomic_unittest
+
+# fast build rule for target.
+atomic_unittest/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/atomic_unittest.dir/build.make muduo/base/tests/CMakeFiles/atomic_unittest.dir/build
+.PHONY : atomic_unittest/fast
+
+#=============================================================================
+# Target rules for targets named exception_test
+
+# Build rule for target.
+exception_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 exception_test
+.PHONY : exception_test
+
+# fast build rule for target.
+exception_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/exception_test.dir/build.make muduo/base/tests/CMakeFiles/exception_test.dir/build
+.PHONY : exception_test/fast
+
+#=============================================================================
 # Target rules for targets named timestamp_unittest
 
 # Build rule for target.
@@ -206,6 +232,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... muduo_base"
+	@echo "... atomic_unittest"
+	@echo "... exception_test"
 	@echo "... timestamp_unittest"
 	@echo "... bsa"
 .PHONY : help

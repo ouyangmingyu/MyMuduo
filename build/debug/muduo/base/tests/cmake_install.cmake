@@ -1,8 +1,8 @@
-# Install script for directory: /home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/tests
+# Install script for directory: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug-install")
+  set(CMAKE_INSTALL_PREFIX "/home/mingyu/MyMuduo/MyMuduo/build/debug-install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

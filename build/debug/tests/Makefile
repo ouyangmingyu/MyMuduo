@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mingyu/MyMuduo/testmuduo/MyMuduo
+CMAKE_SOURCE_DIR = /home/mingyu/MyMuduo/MyMuduo/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug
+CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/MyMuduo/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/tests/CMakeFiles/progress.marks
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles 0
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/progress.marks
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/bsa.dir/rule:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bsa.dir/rule
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bsa.dir/rule
 .PHONY : tests/CMakeFiles/bsa.dir/rule
 
 # Convenience name for target.
@@ -166,7 +166,7 @@ bsa: tests/CMakeFiles/bsa.dir/rule
 
 # fast build rule for target.
 bsa/fast:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
 .PHONY : bsa/fast
 
 bsa.o: bsa.cc.o
@@ -175,7 +175,7 @@ bsa.o: bsa.cc.o
 
 # target to build an object file
 bsa.cc.o:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/bsa.cc.o
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/bsa.cc.o
 .PHONY : bsa.cc.o
 
 bsa.i: bsa.cc.i
@@ -184,7 +184,7 @@ bsa.i: bsa.cc.i
 
 # target to preprocess a source file
 bsa.cc.i:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/bsa.cc.i
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/bsa.cc.i
 .PHONY : bsa.cc.i
 
 bsa.s: bsa.cc.s
@@ -193,7 +193,7 @@ bsa.s: bsa.cc.s
 
 # target to generate assembly for a file
 bsa.cc.s:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/bsa.cc.s
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/bsa.cc.s
 .PHONY : bsa.cc.s
 
 # Help Target
@@ -223,6 +223,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

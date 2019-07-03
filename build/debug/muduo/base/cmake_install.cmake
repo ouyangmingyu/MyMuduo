@@ -1,8 +1,8 @@
-# Install script for directory: /home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base
+# Install script for directory: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug-install")
+  set(CMAKE_INSTALL_PREFIX "/home/mingyu/MyMuduo/MyMuduo/build/debug-install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,20 +33,22 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/lib/libmuduo_base.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/mingyu/MyMuduo/MyMuduo/build/debug/lib/libmuduo_base.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/base" TYPE FILE FILES
-    "/home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/Timestamp.h"
-    "/home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/copyable.h"
-    "/home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/Types.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests/cmake_install.cmake")
+  include("/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests/cmake_install.cmake")
 
 endif()
 

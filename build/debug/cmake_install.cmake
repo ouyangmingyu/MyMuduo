@@ -1,8 +1,8 @@
-# Install script for directory: /home/mingyu/MyMuduo/testmuduo/MyMuduo
+# Install script for directory: /home/mingyu/MyMuduo/MyMuduo/mymuduo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug-install")
+  set(CMAKE_INSTALL_PREFIX "/home/mingyu/MyMuduo/MyMuduo/build/debug-install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/cmake_install.cmake")
-  include("/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/tests/cmake_install.cmake")
+  include("/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/cmake_install.cmake")
+  include("/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mingyu/MyMuduo/MyMuduo/build/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

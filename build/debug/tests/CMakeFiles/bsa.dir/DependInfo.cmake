@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mingyu/MyMuduo/testmuduo/MyMuduo/tests/bsa.cc" "/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/tests/CMakeFiles/bsa.dir/bsa.cc.o"
+  "/home/mingyu/MyMuduo/MyMuduo/mymuduo/tests/bsa.cc" "/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/bsa.dir/bsa.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../../"
+  "/home/mingyu/MyMuduo/MyMuduo/mymuduo"
   )
 
 # Targets to which this target links.

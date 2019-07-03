@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mingyu/MyMuduo/testmuduo/MyMuduo
+CMAKE_SOURCE_DIR = /home/mingyu/MyMuduo/MyMuduo/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug
+CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/MyMuduo/build/debug
 
 # Include any dependencies generated for this target.
 include muduo/base/tests/CMakeFiles/timestamp_unittest.dir/depend.make
@@ -58,17 +58,17 @@ include muduo/base/tests/CMakeFiles/timestamp_unittest.dir/progress.make
 include muduo/base/tests/CMakeFiles/timestamp_unittest.dir/flags.make
 
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/flags.make
-muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o: ../../muduo/base/tests/Timestamp_unittest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o"
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o -c /home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/tests/Timestamp_unittest.cc
+muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests/Timestamp_unittest.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests/Timestamp_unittest.cc
 
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.i"
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/tests/Timestamp_unittest.cc > CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.i
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests/Timestamp_unittest.cc > CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.i
 
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.s"
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/tests/Timestamp_unittest.cc -o CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.s
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests/Timestamp_unittest.cc -o CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.s
 
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o.requires:
 
@@ -92,8 +92,8 @@ bin/timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Times
 bin/timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make
 bin/timestamp_unittest: lib/libmuduo_base.a
 bin/timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/timestamp_unittest"
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/timestamp_unittest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/timestamp_unittest"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/timestamp_unittest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build: bin/timestamp_unittest
@@ -105,10 +105,10 @@ muduo/base/tests/CMakeFiles/timestamp_unittest.dir/requires: muduo/base/tests/CM
 .PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/requires
 
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/clean:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests && $(CMAKE_COMMAND) -P CMakeFiles/timestamp_unittest.dir/cmake_clean.cmake
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests && $(CMAKE_COMMAND) -P CMakeFiles/timestamp_unittest.dir/cmake_clean.cmake
 .PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/clean
 
 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/depend:
-	cd /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mingyu/MyMuduo/testmuduo/MyMuduo /home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/tests /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests /home/mingyu/MyMuduo/testmuduo/MyMuduo/build/debug/muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mingyu/MyMuduo/MyMuduo/mymuduo /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests /home/mingyu/MyMuduo/MyMuduo/build/debug /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/depend
 

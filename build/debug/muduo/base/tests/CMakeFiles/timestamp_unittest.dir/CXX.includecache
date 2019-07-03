@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../..//muduo/base/Timestamp.h
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
 muduo/base/copyable.h
 -
 muduo/base/Types.h
@@ -14,7 +14,7 @@ muduo/base/Types.h
 boost/operators.hpp
 -
 
-../..//muduo/base/Types.h
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 stdint.h
 -
 string
@@ -24,9 +24,9 @@ ext/vstring.h
 ext/vstring_fwd.h
 -
 
-../..//muduo/base/copyable.h
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
 
-/home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/tests/Timestamp_unittest.cc
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests/Timestamp_unittest.cc
 muduo/base/Timestamp.h
 -
 vector

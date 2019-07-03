@@ -6,27 +6,25 @@
 
 #IncludeRegexTransform: 
 
-../..//muduo/base/Timestamp.h
-muduo/base/copyable.h
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.cc
+muduo/base/Exception.h
 -
+cxxabi.h
+-
+execinfo.h
+-
+stdlib.h
+-
+stdio.h
+-
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h
 muduo/base/Types.h
 -
-boost/operators.hpp
+exception
 -
 
-../..//muduo/base/Types.h
-stdint.h
--
-string
--
-ext/vstring.h
--
-ext/vstring_fwd.h
--
-
-../..//muduo/base/copyable.h
-
-/home/mingyu/MyMuduo/testmuduo/MyMuduo/muduo/base/Timestamp.cc
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.cc
 muduo/base/Timestamp.h
 -
 sys/time.h
@@ -37,4 +35,24 @@ inttypes.h
 -
 boost/static_assert.hpp
 -
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
+muduo/base/copyable.h
+-
+muduo/base/Types.h
+-
+boost/operators.hpp
+-
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+stdint.h
+-
+string
+-
+ext/vstring.h
+-
+ext/vstring_fwd.h
+-
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
 

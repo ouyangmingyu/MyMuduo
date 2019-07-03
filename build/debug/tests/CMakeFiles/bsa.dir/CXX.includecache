@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mingyu/MyMuduo/testmuduo/MyMuduo/tests/bsa.cc
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/tests/bsa.cc
 boost/static_assert.hpp
 -
 

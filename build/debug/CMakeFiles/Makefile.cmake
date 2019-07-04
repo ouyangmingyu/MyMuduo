@@ -54,6 +54,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "muduo/base/CMakeFiles/muduo_base.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/threadlocal_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/atomic_unittest.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/mutex_test.dir/DependInfo.cmake"
@@ -62,7 +64,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "muduo/base/tests/CMakeFiles/threadpool_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/blockingqueue_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/thread_test.dir/DependInfo.cmake"
-  "muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/singleton_test.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/DependInfo.cmake"
   "tests/CMakeFiles/countdownlatch_test1.dir/DependInfo.cmake"
   "tests/CMakeFiles/deadlock_test.dir/DependInfo.cmake"
   "tests/CMakeFiles/bsa.dir/DependInfo.cmake"

@@ -2,7 +2,7 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node35" [ label="deadlock_test2" shape="house"];
-    "node40" [ label="pthread" shape="ellipse"];
-    "node35" -> "node40" // deadlock_test2 -> pthread
+    "node38" [ label="deadlock_test2" shape="house"];
+    "node43" [ label="pthread" shape="ellipse"];
+    "node38" -> "node43" // deadlock_test2 -> pthread
 }

@@ -78,29 +78,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -121,6 +98,29 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -153,6 +153,36 @@ preinstall/fast:
 depend:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+
+# Convenience name for target.
+timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+
+.PHONY : timestamp_unittest
+
+# fast build rule for target.
+timestamp_unittest/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
+.PHONY : timestamp_unittest/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
+
+# Convenience name for target.
+threadlocal_test: muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
+
+.PHONY : threadlocal_test
+
+# fast build rule for target.
+threadlocal_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/build
+.PHONY : threadlocal_test/fast
 
 # Convenience name for target.
 muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule:
@@ -275,19 +305,34 @@ thread_test/fast:
 .PHONY : thread_test/fast
 
 # Convenience name for target.
-muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+muduo/base/tests/CMakeFiles/singleton_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/singleton_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/singleton_test.dir/rule
 
 # Convenience name for target.
-timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+singleton_test: muduo/base/tests/CMakeFiles/singleton_test.dir/rule
 
-.PHONY : timestamp_unittest
+.PHONY : singleton_test
 
 # fast build rule for target.
-timestamp_unittest/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
-.PHONY : timestamp_unittest/fast
+singleton_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singleton_test.dir/build.make muduo/base/tests/CMakeFiles/singleton_test.dir/build
+.PHONY : singleton_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
+
+# Convenience name for target.
+singletonthreadlocal_test: muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
+
+.PHONY : singletonthreadlocal_test
+
+# fast build rule for target.
+singletonthreadlocal_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build
+.PHONY : singletonthreadlocal_test/fast
 
 Atomic_unittest.o: Atomic_unittest.cc.o
 
@@ -451,6 +496,87 @@ Mutex_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/mutex_test.dir/build.make muduo/base/tests/CMakeFiles/mutex_test.dir/Mutex_test.cc.s
 .PHONY : Mutex_test.cc.s
 
+SingletonThreadLocal_test.o: SingletonThreadLocal_test.cc.o
+
+.PHONY : SingletonThreadLocal_test.o
+
+# target to build an object file
+SingletonThreadLocal_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/SingletonThreadLocal_test.cc.o
+.PHONY : SingletonThreadLocal_test.cc.o
+
+SingletonThreadLocal_test.i: SingletonThreadLocal_test.cc.i
+
+.PHONY : SingletonThreadLocal_test.i
+
+# target to preprocess a source file
+SingletonThreadLocal_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/SingletonThreadLocal_test.cc.i
+.PHONY : SingletonThreadLocal_test.cc.i
+
+SingletonThreadLocal_test.s: SingletonThreadLocal_test.cc.s
+
+.PHONY : SingletonThreadLocal_test.s
+
+# target to generate assembly for a file
+SingletonThreadLocal_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/SingletonThreadLocal_test.cc.s
+.PHONY : SingletonThreadLocal_test.cc.s
+
+Singleton_test.o: Singleton_test.cc.o
+
+.PHONY : Singleton_test.o
+
+# target to build an object file
+Singleton_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singleton_test.dir/build.make muduo/base/tests/CMakeFiles/singleton_test.dir/Singleton_test.cc.o
+.PHONY : Singleton_test.cc.o
+
+Singleton_test.i: Singleton_test.cc.i
+
+.PHONY : Singleton_test.i
+
+# target to preprocess a source file
+Singleton_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singleton_test.dir/build.make muduo/base/tests/CMakeFiles/singleton_test.dir/Singleton_test.cc.i
+.PHONY : Singleton_test.cc.i
+
+Singleton_test.s: Singleton_test.cc.s
+
+.PHONY : Singleton_test.s
+
+# target to generate assembly for a file
+Singleton_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singleton_test.dir/build.make muduo/base/tests/CMakeFiles/singleton_test.dir/Singleton_test.cc.s
+.PHONY : Singleton_test.cc.s
+
+ThreadLocal_test.o: ThreadLocal_test.cc.o
+
+.PHONY : ThreadLocal_test.o
+
+# target to build an object file
+ThreadLocal_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/ThreadLocal_test.cc.o
+.PHONY : ThreadLocal_test.cc.o
+
+ThreadLocal_test.i: ThreadLocal_test.cc.i
+
+.PHONY : ThreadLocal_test.i
+
+# target to preprocess a source file
+ThreadLocal_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/ThreadLocal_test.cc.i
+.PHONY : ThreadLocal_test.cc.i
+
+ThreadLocal_test.s: ThreadLocal_test.cc.s
+
+.PHONY : ThreadLocal_test.s
+
+# target to generate assembly for a file
+ThreadLocal_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/ThreadLocal_test.cc.s
+.PHONY : ThreadLocal_test.cc.s
+
 ThreadPool_test.o: ThreadPool_test.cc.o
 
 .PHONY : ThreadPool_test.o
@@ -540,7 +666,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... install/local"
+	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... timestamp_unittest"
+	@echo "... threadlocal_test"
 	@echo "... blockingqueue_bench"
 	@echo "... atomic_unittest"
 	@echo "... mutex_test"
@@ -550,9 +679,9 @@ help:
 	@echo "... threadpool_test"
 	@echo "... blockingqueue_test"
 	@echo "... thread_test"
-	@echo "... timestamp_unittest"
-	@echo "... list_install_components"
-	@echo "... install/strip"
+	@echo "... singleton_test"
+	@echo "... install/local"
+	@echo "... singletonthreadlocal_test"
 	@echo "... Atomic_unittest.o"
 	@echo "... Atomic_unittest.i"
 	@echo "... Atomic_unittest.s"
@@ -571,6 +700,15 @@ help:
 	@echo "... Mutex_test.o"
 	@echo "... Mutex_test.i"
 	@echo "... Mutex_test.s"
+	@echo "... SingletonThreadLocal_test.o"
+	@echo "... SingletonThreadLocal_test.i"
+	@echo "... SingletonThreadLocal_test.s"
+	@echo "... Singleton_test.o"
+	@echo "... Singleton_test.i"
+	@echo "... Singleton_test.s"
+	@echo "... ThreadLocal_test.o"
+	@echo "... ThreadLocal_test.i"
+	@echo "... ThreadLocal_test.s"
 	@echo "... ThreadPool_test.o"
 	@echo "... ThreadPool_test.i"
 	@echo "... ThreadPool_test.s"

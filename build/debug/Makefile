@@ -168,6 +168,32 @@ muduo_base/fast:
 .PHONY : muduo_base/fast
 
 #=============================================================================
+# Target rules for targets named timestamp_unittest
+
+# Build rule for target.
+timestamp_unittest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 timestamp_unittest
+.PHONY : timestamp_unittest
+
+# fast build rule for target.
+timestamp_unittest/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
+.PHONY : timestamp_unittest/fast
+
+#=============================================================================
+# Target rules for targets named threadlocal_test
+
+# Build rule for target.
+threadlocal_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 threadlocal_test
+.PHONY : threadlocal_test
+
+# fast build rule for target.
+threadlocal_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/build
+.PHONY : threadlocal_test/fast
+
+#=============================================================================
 # Target rules for targets named blockingqueue_bench
 
 # Build rule for target.
@@ -272,17 +298,30 @@ thread_test/fast:
 .PHONY : thread_test/fast
 
 #=============================================================================
-# Target rules for targets named timestamp_unittest
+# Target rules for targets named singleton_test
 
 # Build rule for target.
-timestamp_unittest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 timestamp_unittest
-.PHONY : timestamp_unittest
+singleton_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 singleton_test
+.PHONY : singleton_test
 
 # fast build rule for target.
-timestamp_unittest/fast:
-	$(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
-.PHONY : timestamp_unittest/fast
+singleton_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/singleton_test.dir/build.make muduo/base/tests/CMakeFiles/singleton_test.dir/build
+.PHONY : singleton_test/fast
+
+#=============================================================================
+# Target rules for targets named singletonthreadlocal_test
+
+# Build rule for target.
+singletonthreadlocal_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 singletonthreadlocal_test
+.PHONY : singletonthreadlocal_test
+
+# fast build rule for target.
+singletonthreadlocal_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build
+.PHONY : singletonthreadlocal_test/fast
 
 #=============================================================================
 # Target rules for targets named countdownlatch_test1
@@ -375,6 +414,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... muduo_base"
+	@echo "... timestamp_unittest"
+	@echo "... threadlocal_test"
 	@echo "... blockingqueue_bench"
 	@echo "... atomic_unittest"
 	@echo "... mutex_test"
@@ -383,7 +424,8 @@ help:
 	@echo "... threadpool_test"
 	@echo "... blockingqueue_test"
 	@echo "... thread_test"
-	@echo "... timestamp_unittest"
+	@echo "... singleton_test"
+	@echo "... singletonthreadlocal_test"
 	@echo "... countdownlatch_test1"
 	@echo "... deadlock_test"
 	@echo "... bsa"

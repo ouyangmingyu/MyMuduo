@@ -13,14 +13,13 @@ void print()
 void printString(const std::string& str)
 {
   printf("tid=%d, str=%s\n", muduo::CurrentThread::tid(), str.c_str());
-  sleep(1);
 }
 
 int main()
 {
   muduo::ThreadPool pool("MainThreadPool");
   pool.start(5);
-	printf("tid=%d\n", muduo::CurrentThread::tid());
+
   pool.run(print);
   pool.run(print);
   for (int i = 0; i < 100; ++i)

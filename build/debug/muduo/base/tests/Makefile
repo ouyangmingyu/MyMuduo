@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,6 +110,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -199,6 +199,21 @@ timestamp_unittest/fast:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
 .PHONY : timestamp_unittest/fast
 
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/thread_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/thread_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/thread_test.dir/rule
+
+# Convenience name for target.
+thread_test: muduo/base/tests/CMakeFiles/thread_test.dir/rule
+
+.PHONY : thread_test
+
+# fast build rule for target.
+thread_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/build
+.PHONY : thread_test/fast
+
 Atomic_unittest.o: Atomic_unittest.cc.o
 
 .PHONY : Atomic_unittest.o
@@ -253,6 +268,33 @@ Exception_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/exception_test.dir/build.make muduo/base/tests/CMakeFiles/exception_test.dir/Exception_test.cc.s
 .PHONY : Exception_test.cc.s
 
+Thread_test.o: Thread_test.cc.o
+
+.PHONY : Thread_test.o
+
+# target to build an object file
+Thread_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/Thread_test.cc.o
+.PHONY : Thread_test.cc.o
+
+Thread_test.i: Thread_test.cc.i
+
+.PHONY : Thread_test.i
+
+# target to preprocess a source file
+Thread_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/Thread_test.cc.i
+.PHONY : Thread_test.cc.i
+
+Thread_test.s: Thread_test.cc.s
+
+.PHONY : Thread_test.s
+
+# target to generate assembly for a file
+Thread_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/Thread_test.cc.s
+.PHONY : Thread_test.cc.s
+
 Timestamp_unittest.o: Timestamp_unittest.cc.o
 
 .PHONY : Timestamp_unittest.o
@@ -289,18 +331,22 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... atomic_unittest"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... edit_cache"
+	@echo "... atomic_unittest"
 	@echo "... exception_test"
 	@echo "... timestamp_unittest"
+	@echo "... thread_test"
 	@echo "... Atomic_unittest.o"
 	@echo "... Atomic_unittest.i"
 	@echo "... Atomic_unittest.s"
 	@echo "... Exception_test.o"
 	@echo "... Exception_test.i"
 	@echo "... Exception_test.s"
+	@echo "... Thread_test.o"
+	@echo "... Thread_test.i"
+	@echo "... Thread_test.s"
 	@echo "... Timestamp_unittest.o"
 	@echo "... Timestamp_unittest.i"
 	@echo "... Timestamp_unittest.s"

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h
+boost/noncopyable.hpp
+-
+stdint.h
+-
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h
+
 /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.cc
 muduo/base/Exception.h
 -
@@ -22,6 +30,42 @@ stdio.h
 muduo/base/Types.h
 -
 exception
+-
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.cc
+muduo/base/Thread.h
+-
+muduo/base/CurrentThread.h
+-
+muduo/base/Exception.h
+-
+boost/static_assert.hpp
+-
+boost/type_traits/is_same.hpp
+-
+errno.h
+-
+stdio.h
+-
+unistd.h
+-
+sys/syscall.h
+-
+sys/types.h
+-
+linux/unistd.h
+-
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.h
+muduo/base/Atomic.h
+-
+muduo/base/Types.h
+-
+boost/function.hpp
+-
+boost/noncopyable.hpp
+-
+pthread.h
 -
 
 /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.cc

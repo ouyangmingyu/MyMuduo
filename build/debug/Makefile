@@ -207,6 +207,19 @@ timestamp_unittest/fast:
 .PHONY : timestamp_unittest/fast
 
 #=============================================================================
+# Target rules for targets named thread_test
+
+# Build rule for target.
+thread_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 thread_test
+.PHONY : thread_test
+
+# fast build rule for target.
+thread_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/build
+.PHONY : thread_test/fast
+
+#=============================================================================
 # Target rules for targets named bsa
 
 # Build rule for target.
@@ -218,6 +231,45 @@ bsa: cmake_check_build_system
 bsa/fast:
 	$(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
 .PHONY : bsa/fast
+
+#=============================================================================
+# Target rules for targets named deadlock_test
+
+# Build rule for target.
+deadlock_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 deadlock_test
+.PHONY : deadlock_test
+
+# fast build rule for target.
+deadlock_test/fast:
+	$(MAKE) -f tests/CMakeFiles/deadlock_test.dir/build.make tests/CMakeFiles/deadlock_test.dir/build
+.PHONY : deadlock_test/fast
+
+#=============================================================================
+# Target rules for targets named deadlock_test2
+
+# Build rule for target.
+deadlock_test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 deadlock_test2
+.PHONY : deadlock_test2
+
+# fast build rule for target.
+deadlock_test2/fast:
+	$(MAKE) -f tests/CMakeFiles/deadlock_test2.dir/build.make tests/CMakeFiles/deadlock_test2.dir/build
+.PHONY : deadlock_test2/fast
+
+#=============================================================================
+# Target rules for targets named pthread_atfork_test
+
+# Build rule for target.
+pthread_atfork_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pthread_atfork_test
+.PHONY : pthread_atfork_test
+
+# fast build rule for target.
+pthread_atfork_test/fast:
+	$(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/build
+.PHONY : pthread_atfork_test/fast
 
 # Help Target
 help:
@@ -235,7 +287,11 @@ help:
 	@echo "... atomic_unittest"
 	@echo "... exception_test"
 	@echo "... timestamp_unittest"
+	@echo "... thread_test"
 	@echo "... bsa"
+	@echo "... deadlock_test"
+	@echo "... deadlock_test2"
+	@echo "... pthread_atfork_test"
 .PHONY : help
 
 

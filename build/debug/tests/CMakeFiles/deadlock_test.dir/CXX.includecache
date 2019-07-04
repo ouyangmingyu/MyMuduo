@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mingyu/MyMuduo/MyMuduo/mymuduo/tests/Deadlock_test.cc
+stdio.h
+-
+time.h
+-
+pthread.h
+-
+unistd.h
+-
+

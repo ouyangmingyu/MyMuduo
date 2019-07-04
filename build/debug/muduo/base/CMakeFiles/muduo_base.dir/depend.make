@@ -5,6 +5,13 @@ muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o: /home/mingyu/MyMuduo/MyMudu
 muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h
 muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 
+muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h
+muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h
+muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h
+muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.cc
+muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.h
+muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+
 muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.cc
 muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
 muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h

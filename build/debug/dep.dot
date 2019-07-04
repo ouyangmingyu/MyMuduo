@@ -2,15 +2,23 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node17" [ label="atomic_unittest" shape="house"];
-    "node25" [ label="bsa" shape="house"];
+    "node19" [ label="atomic_unittest" shape="house"];
+    "node27" [ label="bsa" shape="house"];
+    "node28" [ label="deadlock_test" shape="house"];
+    "node33" [ label="pthread" shape="ellipse"];
+    "node28" -> "node33" // deadlock_test -> pthread
+    "node31" [ label="deadlock_test2" shape="house"];
+    "node31" -> "node33" // deadlock_test2 -> pthread
     "node20" [ label="exception_test" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
     "node20" -> "node9" // exception_test -> muduo_base
-    "node29" [ label="pthread" shape="ellipse"];
-    "node9" -> "node29" // muduo_base -> pthread
-    "node30" [ label="rt" shape="ellipse"];
-    "node9" -> "node30" // muduo_base -> rt
+    "node9" -> "node33" // muduo_base -> pthread
+    "node34" [ label="rt" shape="ellipse"];
+    "node9" -> "node34" // muduo_base -> rt
+    "node32" [ label="pthread_atfork_test" shape="house"];
+    "node32" -> "node33" // pthread_atfork_test -> pthread
+    "node22" [ label="thread_test" shape="house"];
+    "node22" -> "node9" // thread_test -> muduo_base
     "node21" [ label="timestamp_unittest" shape="house"];
     "node21" -> "node9" // timestamp_unittest -> muduo_base
 }

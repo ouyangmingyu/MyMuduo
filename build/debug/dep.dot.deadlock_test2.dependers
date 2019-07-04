@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node31" [ label="deadlock_test2" shape="house"];
+}

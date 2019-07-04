@@ -5,6 +5,8 @@ node [
     "node9" [ label="muduo_base" shape="diamond"];
     "node20" [ label="exception_test" shape="house"];
     "node20" -> "node9" // muduo_base -> exception_test
+    "node22" [ label="thread_test" shape="house"];
+    "node22" -> "node9" // muduo_base -> thread_test
     "node21" [ label="timestamp_unittest" shape="house"];
     "node21" -> "node9" // muduo_base -> timestamp_unittest
 }

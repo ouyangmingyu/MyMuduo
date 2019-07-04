@@ -196,6 +196,33 @@ Exception.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.s
 .PHONY : Exception.cc.s
 
+Thread.o: Thread.cc.o
+
+.PHONY : Thread.o
+
+# target to build an object file
+Thread.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o
+.PHONY : Thread.cc.o
+
+Thread.i: Thread.cc.i
+
+.PHONY : Thread.i
+
+# target to preprocess a source file
+Thread.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.i
+.PHONY : Thread.cc.i
+
+Thread.s: Thread.cc.s
+
+.PHONY : Thread.s
+
+# target to generate assembly for a file
+Thread.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.s
+.PHONY : Thread.cc.s
+
 Timestamp.o: Timestamp.cc.o
 
 .PHONY : Timestamp.o
@@ -239,6 +266,9 @@ help:
 	@echo "... Exception.o"
 	@echo "... Exception.i"
 	@echo "... Exception.s"
+	@echo "... Thread.o"
+	@echo "... Thread.i"
+	@echo "... Thread.s"
 	@echo "... Timestamp.o"
 	@echo "... Timestamp.i"
 	@echo "... Timestamp.s"

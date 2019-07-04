@@ -40,7 +40,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/base" TYPE FILE FILES
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h"
     )

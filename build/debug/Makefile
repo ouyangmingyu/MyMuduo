@@ -168,6 +168,19 @@ muduo_base/fast:
 .PHONY : muduo_base/fast
 
 #=============================================================================
+# Target rules for targets named blockingqueue_bench
+
+# Build rule for target.
+blockingqueue_bench: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blockingqueue_bench
+.PHONY : blockingqueue_bench
+
+# fast build rule for target.
+blockingqueue_bench/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/build.make muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/build
+.PHONY : blockingqueue_bench/fast
+
+#=============================================================================
 # Target rules for targets named atomic_unittest
 
 # Build rule for target.
@@ -179,6 +192,32 @@ atomic_unittest: cmake_check_build_system
 atomic_unittest/fast:
 	$(MAKE) -f muduo/base/tests/CMakeFiles/atomic_unittest.dir/build.make muduo/base/tests/CMakeFiles/atomic_unittest.dir/build
 .PHONY : atomic_unittest/fast
+
+#=============================================================================
+# Target rules for targets named mutex_test
+
+# Build rule for target.
+mutex_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mutex_test
+.PHONY : mutex_test
+
+# fast build rule for target.
+mutex_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/mutex_test.dir/build.make muduo/base/tests/CMakeFiles/mutex_test.dir/build
+.PHONY : mutex_test/fast
+
+#=============================================================================
+# Target rules for targets named boundedblockingqueue_test
+
+# Build rule for target.
+boundedblockingqueue_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 boundedblockingqueue_test
+.PHONY : boundedblockingqueue_test
+
+# fast build rule for target.
+boundedblockingqueue_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/build.make muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/build
+.PHONY : boundedblockingqueue_test/fast
 
 #=============================================================================
 # Target rules for targets named exception_test
@@ -194,17 +233,17 @@ exception_test/fast:
 .PHONY : exception_test/fast
 
 #=============================================================================
-# Target rules for targets named timestamp_unittest
+# Target rules for targets named blockingqueue_test
 
 # Build rule for target.
-timestamp_unittest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 timestamp_unittest
-.PHONY : timestamp_unittest
+blockingqueue_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blockingqueue_test
+.PHONY : blockingqueue_test
 
 # fast build rule for target.
-timestamp_unittest/fast:
-	$(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
-.PHONY : timestamp_unittest/fast
+blockingqueue_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/blockingqueue_test.dir/build.make muduo/base/tests/CMakeFiles/blockingqueue_test.dir/build
+.PHONY : blockingqueue_test/fast
 
 #=============================================================================
 # Target rules for targets named thread_test
@@ -220,17 +259,30 @@ thread_test/fast:
 .PHONY : thread_test/fast
 
 #=============================================================================
-# Target rules for targets named bsa
+# Target rules for targets named timestamp_unittest
 
 # Build rule for target.
-bsa: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bsa
-.PHONY : bsa
+timestamp_unittest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 timestamp_unittest
+.PHONY : timestamp_unittest
 
 # fast build rule for target.
-bsa/fast:
-	$(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
-.PHONY : bsa/fast
+timestamp_unittest/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
+.PHONY : timestamp_unittest/fast
+
+#=============================================================================
+# Target rules for targets named countdownlatch_test1
+
+# Build rule for target.
+countdownlatch_test1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 countdownlatch_test1
+.PHONY : countdownlatch_test1
+
+# fast build rule for target.
+countdownlatch_test1/fast:
+	$(MAKE) -f tests/CMakeFiles/countdownlatch_test1.dir/build.make tests/CMakeFiles/countdownlatch_test1.dir/build
+.PHONY : countdownlatch_test1/fast
 
 #=============================================================================
 # Target rules for targets named deadlock_test
@@ -244,6 +296,19 @@ deadlock_test: cmake_check_build_system
 deadlock_test/fast:
 	$(MAKE) -f tests/CMakeFiles/deadlock_test.dir/build.make tests/CMakeFiles/deadlock_test.dir/build
 .PHONY : deadlock_test/fast
+
+#=============================================================================
+# Target rules for targets named bsa
+
+# Build rule for target.
+bsa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bsa
+.PHONY : bsa
+
+# fast build rule for target.
+bsa/fast:
+	$(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
+.PHONY : bsa/fast
 
 #=============================================================================
 # Target rules for targets named deadlock_test2
@@ -271,6 +336,19 @@ pthread_atfork_test/fast:
 	$(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/build
 .PHONY : pthread_atfork_test/fast
 
+#=============================================================================
+# Target rules for targets named countdownlatch_test2
+
+# Build rule for target.
+countdownlatch_test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 countdownlatch_test2
+.PHONY : countdownlatch_test2
+
+# fast build rule for target.
+countdownlatch_test2/fast:
+	$(MAKE) -f tests/CMakeFiles/countdownlatch_test2.dir/build.make tests/CMakeFiles/countdownlatch_test2.dir/build
+.PHONY : countdownlatch_test2/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -284,14 +362,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... muduo_base"
+	@echo "... blockingqueue_bench"
 	@echo "... atomic_unittest"
+	@echo "... mutex_test"
+	@echo "... boundedblockingqueue_test"
 	@echo "... exception_test"
-	@echo "... timestamp_unittest"
+	@echo "... blockingqueue_test"
 	@echo "... thread_test"
-	@echo "... bsa"
+	@echo "... timestamp_unittest"
+	@echo "... countdownlatch_test1"
 	@echo "... deadlock_test"
+	@echo "... bsa"
 	@echo "... deadlock_test2"
 	@echo "... pthread_atfork_test"
+	@echo "... countdownlatch_test2"
 .PHONY : help
 
 

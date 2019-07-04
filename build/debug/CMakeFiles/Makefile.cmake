@@ -54,12 +54,18 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "muduo/base/CMakeFiles/muduo_base.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/atomic_unittest.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/mutex_test.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/exception_test.dir/DependInfo.cmake"
-  "muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/blockingqueue_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/thread_test.dir/DependInfo.cmake"
-  "tests/CMakeFiles/bsa.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake"
+  "tests/CMakeFiles/countdownlatch_test1.dir/DependInfo.cmake"
   "tests/CMakeFiles/deadlock_test.dir/DependInfo.cmake"
+  "tests/CMakeFiles/bsa.dir/DependInfo.cmake"
   "tests/CMakeFiles/deadlock_test2.dir/DependInfo.cmake"
   "tests/CMakeFiles/pthread_atfork_test.dir/DependInfo.cmake"
+  "tests/CMakeFiles/countdownlatch_test2.dir/DependInfo.cmake"
   )

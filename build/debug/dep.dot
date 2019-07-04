@@ -2,23 +2,35 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node19" [ label="atomic_unittest" shape="house"];
-    "node27" [ label="bsa" shape="house"];
-    "node28" [ label="deadlock_test" shape="house"];
-    "node33" [ label="pthread" shape="ellipse"];
-    "node28" -> "node33" // deadlock_test -> pthread
-    "node31" [ label="deadlock_test2" shape="house"];
-    "node31" -> "node33" // deadlock_test2 -> pthread
-    "node20" [ label="exception_test" shape="house"];
+    "node16" [ label="atomic_unittest" shape="house"];
+    "node15" [ label="blockingqueue_bench" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
+    "node15" -> "node9" // blockingqueue_bench -> muduo_base
+    "node39" [ label="pthread" shape="ellipse"];
+    "node9" -> "node39" // muduo_base -> pthread
+    "node40" [ label="rt" shape="ellipse"];
+    "node9" -> "node40" // muduo_base -> rt
+    "node21" [ label="blockingqueue_test" shape="house"];
+    "node21" -> "node9" // blockingqueue_test -> muduo_base
+    "node19" [ label="boundedblockingqueue_test" shape="house"];
+    "node19" -> "node9" // boundedblockingqueue_test -> muduo_base
+    "node30" [ label="bsa" shape="house"];
+    "node27" [ label="countdownlatch_test1" shape="house"];
+    "node27" -> "node9" // countdownlatch_test1 -> muduo_base
+    "node37" [ label="countdownlatch_test2" shape="house"];
+    "node37" -> "node9" // countdownlatch_test2 -> muduo_base
+    "node29" [ label="deadlock_test" shape="house"];
+    "node29" -> "node39" // deadlock_test -> pthread
+    "node34" [ label="deadlock_test2" shape="house"];
+    "node34" -> "node39" // deadlock_test2 -> pthread
+    "node20" [ label="exception_test" shape="house"];
     "node20" -> "node9" // exception_test -> muduo_base
-    "node9" -> "node33" // muduo_base -> pthread
-    "node34" [ label="rt" shape="ellipse"];
-    "node9" -> "node34" // muduo_base -> rt
-    "node32" [ label="pthread_atfork_test" shape="house"];
-    "node32" -> "node33" // pthread_atfork_test -> pthread
+    "node17" [ label="mutex_test" shape="house"];
+    "node17" -> "node9" // mutex_test -> muduo_base
+    "node35" [ label="pthread_atfork_test" shape="house"];
+    "node35" -> "node39" // pthread_atfork_test -> pthread
     "node22" [ label="thread_test" shape="house"];
     "node22" -> "node9" // thread_test -> muduo_base
-    "node21" [ label="timestamp_unittest" shape="house"];
-    "node21" -> "node9" // timestamp_unittest -> muduo_base
+    "node23" [ label="timestamp_unittest" shape="house"];
+    "node23" -> "node9" // timestamp_unittest -> muduo_base
 }

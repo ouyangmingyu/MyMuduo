@@ -38,13 +38,18 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/base" TYPE FILE FILES
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/BlockingQueue.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Condition.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Mutex.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/BoundedBlockingQueue.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CountDownLatch.h"
     )
 endif()
 

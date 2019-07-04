@@ -96,7 +96,9 @@ pthread_atfork：int pthread_atfork(void (*prepare)(void), void (*parent)(void), 
 	加上（void），防止变量在release状态未使用而报错，因为assert语句只有debug模式会执行
 	
 	
-（5）mutex
+（5）mutex和condition
+
+mutex
 
 功能：
 互斥锁的封装
@@ -115,7 +117,7 @@ pthread_atfork：int pthread_atfork(void (*prepare)(void), void (*parent)(void), 
 		
 	技巧：通过定义匿名对象宏来报错
 	
-(5) condiotion
+condiotion
 
 功能：
 封装条件变量

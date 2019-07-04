@@ -233,6 +233,19 @@ exception_test/fast:
 .PHONY : exception_test/fast
 
 #=============================================================================
+# Target rules for targets named threadpool_test
+
+# Build rule for target.
+threadpool_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 threadpool_test
+.PHONY : threadpool_test
+
+# fast build rule for target.
+threadpool_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/threadpool_test.dir/build.make muduo/base/tests/CMakeFiles/threadpool_test.dir/build
+.PHONY : threadpool_test/fast
+
+#=============================================================================
 # Target rules for targets named blockingqueue_test
 
 # Build rule for target.
@@ -367,6 +380,7 @@ help:
 	@echo "... mutex_test"
 	@echo "... boundedblockingqueue_test"
 	@echo "... exception_test"
+	@echo "... threadpool_test"
 	@echo "... blockingqueue_test"
 	@echo "... thread_test"
 	@echo "... timestamp_unittest"

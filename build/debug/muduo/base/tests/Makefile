@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -110,17 +121,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -228,6 +228,21 @@ exception_test: muduo/base/tests/CMakeFiles/exception_test.dir/rule
 exception_test/fast:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/exception_test.dir/build.make muduo/base/tests/CMakeFiles/exception_test.dir/build
 .PHONY : exception_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/threadpool_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadpool_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/threadpool_test.dir/rule
+
+# Convenience name for target.
+threadpool_test: muduo/base/tests/CMakeFiles/threadpool_test.dir/rule
+
+.PHONY : threadpool_test
+
+# fast build rule for target.
+threadpool_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadpool_test.dir/build.make muduo/base/tests/CMakeFiles/threadpool_test.dir/build
+.PHONY : threadpool_test/fast
 
 # Convenience name for target.
 muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule:
@@ -436,6 +451,33 @@ Mutex_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/mutex_test.dir/build.make muduo/base/tests/CMakeFiles/mutex_test.dir/Mutex_test.cc.s
 .PHONY : Mutex_test.cc.s
 
+ThreadPool_test.o: ThreadPool_test.cc.o
+
+.PHONY : ThreadPool_test.o
+
+# target to build an object file
+ThreadPool_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadpool_test.dir/build.make muduo/base/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cc.o
+.PHONY : ThreadPool_test.cc.o
+
+ThreadPool_test.i: ThreadPool_test.cc.i
+
+.PHONY : ThreadPool_test.i
+
+# target to preprocess a source file
+ThreadPool_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadpool_test.dir/build.make muduo/base/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cc.i
+.PHONY : ThreadPool_test.cc.i
+
+ThreadPool_test.s: ThreadPool_test.cc.s
+
+.PHONY : ThreadPool_test.s
+
+# target to generate assembly for a file
+ThreadPool_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadpool_test.dir/build.make muduo/base/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cc.s
+.PHONY : ThreadPool_test.cc.s
+
 Thread_test.o: Thread_test.cc.o
 
 .PHONY : Thread_test.o
@@ -498,18 +540,19 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... install/local"
 	@echo "... blockingqueue_bench"
 	@echo "... atomic_unittest"
 	@echo "... mutex_test"
 	@echo "... install"
 	@echo "... boundedblockingqueue_test"
 	@echo "... exception_test"
+	@echo "... threadpool_test"
 	@echo "... blockingqueue_test"
 	@echo "... thread_test"
 	@echo "... timestamp_unittest"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... Atomic_unittest.o"
 	@echo "... Atomic_unittest.i"
 	@echo "... Atomic_unittest.s"
@@ -528,6 +571,9 @@ help:
 	@echo "... Mutex_test.o"
 	@echo "... Mutex_test.i"
 	@echo "... Mutex_test.s"
+	@echo "... ThreadPool_test.o"
+	@echo "... ThreadPool_test.i"
+	@echo "... ThreadPool_test.s"
 	@echo "... Thread_test.o"
 	@echo "... Thread_test.i"
 	@echo "... Thread_test.s"

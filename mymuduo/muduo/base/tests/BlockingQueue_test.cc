@@ -6,11 +6,6 @@
 #include <boost/ptr_container/ptr_vector.hpp>
 #include <string>
 #include <stdio.h>
-#include <iostream>
-#include <unistd.h>
-#include "stdlib.h"
-
-using namespace std;
 
 class Test
 {
@@ -82,11 +77,6 @@ class Test
 
 int main()
 {
-	char szBuf[128];
-	memset(szBuf, 0x00, sizeof( szBuf));  
-	getcwd(szBuf, sizeof(szBuf)-1);
-	string s(szBuf);
-	cout<<s<<endl;
   printf("pid=%d, tid=%d\n", ::getpid(), muduo::CurrentThread::tid());
   Test t(5);
   t.run(100);

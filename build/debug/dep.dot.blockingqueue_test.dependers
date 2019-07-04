@@ -2,5 +2,5 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node21" [ label="blockingqueue_test" shape="house"];
+    "node23" [ label="blockingqueue_test" shape="house"];
 }

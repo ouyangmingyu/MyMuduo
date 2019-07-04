@@ -39,6 +39,7 @@ endif()
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/base" TYPE FILE FILES
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/BlockingQueue.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadPool.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Condition.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Mutex.h"

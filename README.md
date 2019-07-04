@@ -134,7 +134,7 @@ pthread_atfork：int pthread_atfork(void (*prepare)(void), void (*parent)(void), 
 (6) 无界缓冲BlockinngQueue和有界缓冲BoundedBlockingQueue
 
 功能：
-生产者消费者里面存放资源的缓冲
+生产者消费者里面存放资源使用的缓冲
 
 知识点：
 	对于无界缓冲
@@ -147,7 +147,15 @@ pthread_atfork：int pthread_atfork(void (*prepare)(void), void (*parent)(void), 
 	需要两个条件变量来判断满了和空了
 
 
-（7）
+（7）ThreadPool实现
+
+目的：
+实现线程池的生产者消费者模型
+
+知识点：
+	是一个固定的线程池(由传入线程数为准)，run为向任务队列加任务，runInThread为线程队列执行的函数
+	typedef boost::function<void ()> Task; 定义了一个类类型
+	
 
 
 Part2: muduo_net 部分的实现

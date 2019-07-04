@@ -89,10 +89,4 @@ string
 -
 stdio.h
 -
-iostream
--
-unistd.h
--
-stdlib.h
-/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/tests/stdlib.h
 

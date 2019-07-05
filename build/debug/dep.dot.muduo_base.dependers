@@ -3,30 +3,32 @@ node [
   fontsize = "12"
 ];
     "node9" [ label="muduo_base" shape="diamond"];
-    "node19" [ label="blockingqueue_bench" shape="house"];
-    "node19" -> "node9" // muduo_base -> blockingqueue_bench
-    "node26" [ label="blockingqueue_test" shape="house"];
-    "node26" -> "node9" // muduo_base -> blockingqueue_test
-    "node23" [ label="boundedblockingqueue_test" shape="house"];
-    "node23" -> "node9" // muduo_base -> boundedblockingqueue_test
-    "node31" [ label="countdownlatch_test1" shape="house"];
-    "node31" -> "node9" // muduo_base -> countdownlatch_test1
-    "node41" [ label="countdownlatch_test2" shape="house"];
-    "node41" -> "node9" // muduo_base -> countdownlatch_test2
-    "node24" [ label="exception_test" shape="house"];
-    "node24" -> "node9" // muduo_base -> exception_test
-    "node21" [ label="mutex_test" shape="house"];
-    "node21" -> "node9" // muduo_base -> mutex_test
-    "node28" [ label="singleton_test" shape="house"];
-    "node28" -> "node9" // muduo_base -> singleton_test
-    "node30" [ label="singletonthreadlocal_test" shape="house"];
-    "node30" -> "node9" // muduo_base -> singletonthreadlocal_test
-    "node27" [ label="thread_test" shape="house"];
-    "node27" -> "node9" // muduo_base -> thread_test
-    "node18" [ label="threadlocal_test" shape="house"];
-    "node18" -> "node9" // muduo_base -> threadlocal_test
-    "node25" [ label="threadpool_test" shape="house"];
-    "node25" -> "node9" // muduo_base -> threadpool_test
+    "node20" [ label="blockingqueue_bench" shape="house"];
+    "node20" -> "node9" // muduo_base -> blockingqueue_bench
+    "node27" [ label="blockingqueue_test" shape="house"];
+    "node27" -> "node9" // muduo_base -> blockingqueue_test
+    "node24" [ label="boundedblockingqueue_test" shape="house"];
+    "node24" -> "node9" // muduo_base -> boundedblockingqueue_test
+    "node32" [ label="countdownlatch_test1" shape="house"];
+    "node32" -> "node9" // muduo_base -> countdownlatch_test1
+    "node42" [ label="countdownlatch_test2" shape="house"];
+    "node42" -> "node9" // muduo_base -> countdownlatch_test2
+    "node25" [ label="exception_test" shape="house"];
+    "node25" -> "node9" // muduo_base -> exception_test
+    "node22" [ label="mutex_test" shape="house"];
+    "node22" -> "node9" // muduo_base -> mutex_test
+    "node29" [ label="singleton_test" shape="house"];
+    "node29" -> "node9" // muduo_base -> singleton_test
+    "node31" [ label="singletonthreadlocal_test" shape="house"];
+    "node31" -> "node9" // muduo_base -> singletonthreadlocal_test
+    "node28" [ label="thread_test" shape="house"];
+    "node28" -> "node9" // muduo_base -> thread_test
+    "node19" [ label="threadlocal_test" shape="house"];
+    "node19" -> "node9" // muduo_base -> threadlocal_test
+    "node18" [ label="threadlocalsingleton_test" shape="house"];
+    "node18" -> "node9" // muduo_base -> threadlocalsingleton_test
+    "node26" [ label="threadpool_test" shape="house"];
+    "node26" -> "node9" // muduo_base -> threadpool_test
     "node17" [ label="timestamp_unittest" shape="house"];
     "node17" -> "node9" // muduo_base -> timestamp_unittest
 }

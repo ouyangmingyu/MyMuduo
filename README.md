@@ -205,6 +205,13 @@ POSIX对于TSD的封装实现（通过四个函数）
 但在其他线程中不会有这种效果
 
 
+SingletonThreadLocal（整个程序只有一个单例对象,每个线程里面的test是单独拥有）：
+	#define STL muduo::Singleton<muduo::ThreadLocal<Test> >::instance().value()
+	
+	为了说明muduo::ThreadLocal<Test>只有一个单例对象，而每个线程依旧有自己的Test
+
+
+
 
 
 

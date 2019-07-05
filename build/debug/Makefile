@@ -181,6 +181,19 @@ timestamp_unittest/fast:
 .PHONY : timestamp_unittest/fast
 
 #=============================================================================
+# Target rules for targets named threadlocalsingleton_test
+
+# Build rule for target.
+threadlocalsingleton_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 threadlocalsingleton_test
+.PHONY : threadlocalsingleton_test
+
+# fast build rule for target.
+threadlocalsingleton_test/fast:
+	$(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build
+.PHONY : threadlocalsingleton_test/fast
+
+#=============================================================================
 # Target rules for targets named threadlocal_test
 
 # Build rule for target.
@@ -415,6 +428,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... muduo_base"
 	@echo "... timestamp_unittest"
+	@echo "... threadlocalsingleton_test"
 	@echo "... threadlocal_test"
 	@echo "... blockingqueue_bench"
 	@echo "... atomic_unittest"

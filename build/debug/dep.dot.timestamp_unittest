@@ -5,8 +5,8 @@ node [
     "node17" [ label="timestamp_unittest" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
     "node17" -> "node9" // timestamp_unittest -> muduo_base
-    "node43" [ label="pthread" shape="ellipse"];
-    "node9" -> "node43" // muduo_base -> pthread
-    "node44" [ label="rt" shape="ellipse"];
-    "node9" -> "node44" // muduo_base -> rt
+    "node44" [ label="pthread" shape="ellipse"];
+    "node9" -> "node44" // muduo_base -> pthread
+    "node45" [ label="rt" shape="ellipse"];
+    "node9" -> "node45" // muduo_base -> rt
 }

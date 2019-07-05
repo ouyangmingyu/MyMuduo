@@ -170,6 +170,21 @@ timestamp_unittest/fast:
 .PHONY : timestamp_unittest/fast
 
 # Convenience name for target.
+muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
+
+# Convenience name for target.
+threadlocalsingleton_test: muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
+
+.PHONY : threadlocalsingleton_test
+
+# fast build rule for target.
+threadlocalsingleton_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build
+.PHONY : threadlocalsingleton_test/fast
+
+# Convenience name for target.
 muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
 .PHONY : muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
@@ -550,6 +565,33 @@ Singleton_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singleton_test.dir/build.make muduo/base/tests/CMakeFiles/singleton_test.dir/Singleton_test.cc.s
 .PHONY : Singleton_test.cc.s
 
+ThreadLocalSingleton_test.o: ThreadLocalSingleton_test.cc.o
+
+.PHONY : ThreadLocalSingleton_test.o
+
+# target to build an object file
+ThreadLocalSingleton_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/ThreadLocalSingleton_test.cc.o
+.PHONY : ThreadLocalSingleton_test.cc.o
+
+ThreadLocalSingleton_test.i: ThreadLocalSingleton_test.cc.i
+
+.PHONY : ThreadLocalSingleton_test.i
+
+# target to preprocess a source file
+ThreadLocalSingleton_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/ThreadLocalSingleton_test.cc.i
+.PHONY : ThreadLocalSingleton_test.cc.i
+
+ThreadLocalSingleton_test.s: ThreadLocalSingleton_test.cc.s
+
+.PHONY : ThreadLocalSingleton_test.s
+
+# target to generate assembly for a file
+ThreadLocalSingleton_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/ThreadLocalSingleton_test.cc.s
+.PHONY : ThreadLocalSingleton_test.cc.s
+
 ThreadLocal_test.o: ThreadLocal_test.cc.o
 
 .PHONY : ThreadLocal_test.o
@@ -669,6 +711,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... timestamp_unittest"
+	@echo "... threadlocalsingleton_test"
 	@echo "... threadlocal_test"
 	@echo "... blockingqueue_bench"
 	@echo "... atomic_unittest"
@@ -706,6 +749,9 @@ help:
 	@echo "... Singleton_test.o"
 	@echo "... Singleton_test.i"
 	@echo "... Singleton_test.s"
+	@echo "... ThreadLocalSingleton_test.o"
+	@echo "... ThreadLocalSingleton_test.i"
+	@echo "... ThreadLocalSingleton_test.s"
 	@echo "... ThreadLocal_test.o"
 	@echo "... ThreadLocal_test.i"
 	@echo "... ThreadLocal_test.s"

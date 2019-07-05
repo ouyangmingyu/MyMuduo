@@ -2,9 +2,9 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node28" [ label="thread_test" shape="house"];
+    "node18" [ label="threadlocalsingleton_test" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
-    "node28" -> "node9" // thread_test -> muduo_base
+    "node18" -> "node9" // threadlocalsingleton_test -> muduo_base
     "node44" [ label="pthread" shape="ellipse"];
     "node9" -> "node44" // muduo_base -> pthread
     "node45" [ label="rt" shape="ellipse"];

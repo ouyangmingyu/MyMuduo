@@ -44,6 +44,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Condition.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Mutex.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadLocalSingleton.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadLocal.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Singleton.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h"

@@ -55,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "muduo/base/CMakeFiles/muduo_base.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/timestamp_unittest.dir/DependInfo.cmake"
+  "muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/threadlocal_test.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/DependInfo.cmake"
   "muduo/base/tests/CMakeFiles/atomic_unittest.dir/DependInfo.cmake"

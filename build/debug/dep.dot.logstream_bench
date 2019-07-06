@@ -1,0 +1,12 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node31" [ label="logstream_bench" shape="house"];
+    "node9" [ label="muduo_base" shape="diamond"];
+    "node31" -> "node9" // logstream_bench -> muduo_base
+    "node48" [ label="pthread" shape="ellipse"];
+    "node9" -> "node48" // muduo_base -> pthread
+    "node49" [ label="rt" shape="ellipse"];
+    "node9" -> "node49" // muduo_base -> rt
+}

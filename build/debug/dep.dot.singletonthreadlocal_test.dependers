@@ -2,5 +2,5 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node31" [ label="singletonthreadlocal_test" shape="house"];
+    "node21" [ label="singletonthreadlocal_test" shape="house"];
 }

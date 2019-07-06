@@ -250,6 +250,60 @@ Exception.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.s
 .PHONY : Exception.cc.s
 
+LogStream.o: LogStream.cc.o
+
+.PHONY : LogStream.o
+
+# target to build an object file
+LogStream.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o
+.PHONY : LogStream.cc.o
+
+LogStream.i: LogStream.cc.i
+
+.PHONY : LogStream.i
+
+# target to preprocess a source file
+LogStream.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.i
+.PHONY : LogStream.cc.i
+
+LogStream.s: LogStream.cc.s
+
+.PHONY : LogStream.s
+
+# target to generate assembly for a file
+LogStream.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.s
+.PHONY : LogStream.cc.s
+
+Logging.o: Logging.cc.o
+
+.PHONY : Logging.o
+
+# target to build an object file
+Logging.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o
+.PHONY : Logging.cc.o
+
+Logging.i: Logging.cc.i
+
+.PHONY : Logging.i
+
+# target to preprocess a source file
+Logging.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.i
+.PHONY : Logging.cc.i
+
+Logging.s: Logging.cc.s
+
+.PHONY : Logging.s
+
+# target to generate assembly for a file
+Logging.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.s
+.PHONY : Logging.cc.s
+
 Thread.o: Thread.cc.o
 
 .PHONY : Thread.o
@@ -353,6 +407,12 @@ help:
 	@echo "... Exception.o"
 	@echo "... Exception.i"
 	@echo "... Exception.s"
+	@echo "... LogStream.o"
+	@echo "... LogStream.i"
+	@echo "... LogStream.s"
+	@echo "... Logging.o"
+	@echo "... Logging.i"
+	@echo "... Logging.s"
 	@echo "... Thread.o"
 	@echo "... Thread.i"
 	@echo "... Thread.s"

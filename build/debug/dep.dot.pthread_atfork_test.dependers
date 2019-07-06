@@ -2,5 +2,5 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node40" [ label="pthread_atfork_test" shape="house"];
+    "node47" [ label="pthread_atfork_test" shape="house"];
 }

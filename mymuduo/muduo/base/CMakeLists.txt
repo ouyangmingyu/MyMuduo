@@ -2,6 +2,8 @@ set(base_SRCS
   Condition.cc
   CountDownLatch.cc
   Exception.cc
+  Logging.cc
+  LogStream.cc
   Thread.cc
   ThreadPool.cc
   Timestamp.cc

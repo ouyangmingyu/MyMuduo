@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node31" [ label="logstream_bench" shape="house"];
+}

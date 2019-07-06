@@ -56,6 +56,28 @@ CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/MyMuduo/build/debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -100,28 +122,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/progress.marks
@@ -153,6 +153,21 @@ preinstall/fast:
 depend:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+tests/CMakeFiles/countdownlatch_test2.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test2.dir/rule
+.PHONY : tests/CMakeFiles/countdownlatch_test2.dir/rule
+
+# Convenience name for target.
+countdownlatch_test2: tests/CMakeFiles/countdownlatch_test2.dir/rule
+
+.PHONY : countdownlatch_test2
+
+# fast build rule for target.
+countdownlatch_test2/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/countdownlatch_test2.dir/build.make tests/CMakeFiles/countdownlatch_test2.dir/build
+.PHONY : countdownlatch_test2/fast
 
 # Convenience name for target.
 tests/CMakeFiles/countdownlatch_test1.dir/rule:
@@ -215,6 +230,36 @@ deadlock_test2/fast:
 .PHONY : deadlock_test2/fast
 
 # Convenience name for target.
+tests/CMakeFiles/log_test1.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/log_test1.dir/rule
+.PHONY : tests/CMakeFiles/log_test1.dir/rule
+
+# Convenience name for target.
+log_test1: tests/CMakeFiles/log_test1.dir/rule
+
+.PHONY : log_test1
+
+# fast build rule for target.
+log_test1/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test1.dir/build.make tests/CMakeFiles/log_test1.dir/build
+.PHONY : log_test1/fast
+
+# Convenience name for target.
+tests/CMakeFiles/log_test2.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/log_test2.dir/rule
+.PHONY : tests/CMakeFiles/log_test2.dir/rule
+
+# Convenience name for target.
+log_test2: tests/CMakeFiles/log_test2.dir/rule
+
+.PHONY : log_test2
+
+# fast build rule for target.
+log_test2/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test2.dir/build.make tests/CMakeFiles/log_test2.dir/build
+.PHONY : log_test2/fast
+
+# Convenience name for target.
 tests/CMakeFiles/pthread_atfork_test.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pthread_atfork_test.dir/rule
 .PHONY : tests/CMakeFiles/pthread_atfork_test.dir/rule
@@ -228,21 +273,6 @@ pthread_atfork_test: tests/CMakeFiles/pthread_atfork_test.dir/rule
 pthread_atfork_test/fast:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/build
 .PHONY : pthread_atfork_test/fast
-
-# Convenience name for target.
-tests/CMakeFiles/countdownlatch_test2.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test2.dir/rule
-.PHONY : tests/CMakeFiles/countdownlatch_test2.dir/rule
-
-# Convenience name for target.
-countdownlatch_test2: tests/CMakeFiles/countdownlatch_test2.dir/rule
-
-.PHONY : countdownlatch_test2
-
-# fast build rule for target.
-countdownlatch_test2/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/countdownlatch_test2.dir/build.make tests/CMakeFiles/countdownlatch_test2.dir/build
-.PHONY : countdownlatch_test2/fast
 
 CountDownLatch_test1.o: CountDownLatch_test1.cc.o
 
@@ -352,6 +382,60 @@ Deadlock_test2.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/deadlock_test2.dir/build.make tests/CMakeFiles/deadlock_test2.dir/Deadlock_test2.cc.s
 .PHONY : Deadlock_test2.cc.s
 
+Log_test1.o: Log_test1.cc.o
+
+.PHONY : Log_test1.o
+
+# target to build an object file
+Log_test1.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test1.dir/build.make tests/CMakeFiles/log_test1.dir/Log_test1.cc.o
+.PHONY : Log_test1.cc.o
+
+Log_test1.i: Log_test1.cc.i
+
+.PHONY : Log_test1.i
+
+# target to preprocess a source file
+Log_test1.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test1.dir/build.make tests/CMakeFiles/log_test1.dir/Log_test1.cc.i
+.PHONY : Log_test1.cc.i
+
+Log_test1.s: Log_test1.cc.s
+
+.PHONY : Log_test1.s
+
+# target to generate assembly for a file
+Log_test1.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test1.dir/build.make tests/CMakeFiles/log_test1.dir/Log_test1.cc.s
+.PHONY : Log_test1.cc.s
+
+Log_test2.o: Log_test2.cc.o
+
+.PHONY : Log_test2.o
+
+# target to build an object file
+Log_test2.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test2.dir/build.make tests/CMakeFiles/log_test2.dir/Log_test2.cc.o
+.PHONY : Log_test2.cc.o
+
+Log_test2.i: Log_test2.cc.i
+
+.PHONY : Log_test2.i
+
+# target to preprocess a source file
+Log_test2.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test2.dir/build.make tests/CMakeFiles/log_test2.dir/Log_test2.cc.i
+.PHONY : Log_test2.cc.i
+
+Log_test2.s: Log_test2.cc.s
+
+.PHONY : Log_test2.s
+
+# target to generate assembly for a file
+Log_test2.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test2.dir/build.make tests/CMakeFiles/log_test2.dir/Log_test2.cc.s
+.PHONY : Log_test2.cc.s
+
 Pthread_atfork_test.o: Pthread_atfork_test.cc.o
 
 .PHONY : Pthread_atfork_test.o
@@ -412,6 +496,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... countdownlatch_test2"
 	@echo "... countdownlatch_test1"
 	@echo "... install"
 	@echo "... deadlock_test"
@@ -420,10 +507,9 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... deadlock_test2"
+	@echo "... log_test1"
+	@echo "... log_test2"
 	@echo "... pthread_atfork_test"
-	@echo "... edit_cache"
-	@echo "... countdownlatch_test2"
-	@echo "... rebuild_cache"
 	@echo "... CountDownLatch_test1.o"
 	@echo "... CountDownLatch_test1.i"
 	@echo "... CountDownLatch_test1.s"
@@ -436,6 +522,12 @@ help:
 	@echo "... Deadlock_test2.o"
 	@echo "... Deadlock_test2.i"
 	@echo "... Deadlock_test2.s"
+	@echo "... Log_test1.o"
+	@echo "... Log_test1.i"
+	@echo "... Log_test1.s"
+	@echo "... Log_test2.o"
+	@echo "... Log_test2.i"
+	@echo "... Log_test2.s"
 	@echo "... Pthread_atfork_test.o"
 	@echo "... Pthread_atfork_test.i"
 	@echo "... Pthread_atfork_test.s"

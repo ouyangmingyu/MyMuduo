@@ -48,8 +48,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadLocalSingleton.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadLocal.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Singleton.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Logging.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.h"
@@ -57,6 +59,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/BoundedBlockingQueue.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CountDownLatch.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.h"
     )
 endif()
 

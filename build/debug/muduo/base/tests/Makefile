@@ -56,27 +56,17 @@ CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/MyMuduo/build/debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -87,17 +77,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -110,17 +89,38 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -153,171 +153,6 @@ preinstall/fast:
 depend:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
-
-# Convenience name for target.
-timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
-
-.PHONY : timestamp_unittest
-
-# fast build rule for target.
-timestamp_unittest/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
-.PHONY : timestamp_unittest/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
-
-# Convenience name for target.
-threadlocalsingleton_test: muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
-
-.PHONY : threadlocalsingleton_test
-
-# fast build rule for target.
-threadlocalsingleton_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build
-.PHONY : threadlocalsingleton_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
-
-# Convenience name for target.
-threadlocal_test: muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
-
-.PHONY : threadlocal_test
-
-# fast build rule for target.
-threadlocal_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/build
-.PHONY : threadlocal_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
-
-# Convenience name for target.
-singletonthreadlocal_test: muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
-
-.PHONY : singletonthreadlocal_test
-
-# fast build rule for target.
-singletonthreadlocal_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build
-.PHONY : singletonthreadlocal_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule
-
-# Convenience name for target.
-blockingqueue_bench: muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule
-
-.PHONY : blockingqueue_bench
-
-# fast build rule for target.
-blockingqueue_bench/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/build.make muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/build
-.PHONY : blockingqueue_bench/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule
-
-# Convenience name for target.
-atomic_unittest: muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule
-
-.PHONY : atomic_unittest
-
-# fast build rule for target.
-atomic_unittest/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/atomic_unittest.dir/build.make muduo/base/tests/CMakeFiles/atomic_unittest.dir/build
-.PHONY : atomic_unittest/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/mutex_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/mutex_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/mutex_test.dir/rule
-
-# Convenience name for target.
-mutex_test: muduo/base/tests/CMakeFiles/mutex_test.dir/rule
-
-.PHONY : mutex_test
-
-# fast build rule for target.
-mutex_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/mutex_test.dir/build.make muduo/base/tests/CMakeFiles/mutex_test.dir/build
-.PHONY : mutex_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule
-
-# Convenience name for target.
-boundedblockingqueue_test: muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule
-
-.PHONY : boundedblockingqueue_test
-
-# fast build rule for target.
-boundedblockingqueue_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/build.make muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/build
-.PHONY : boundedblockingqueue_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/exception_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/exception_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/exception_test.dir/rule
-
-# Convenience name for target.
-exception_test: muduo/base/tests/CMakeFiles/exception_test.dir/rule
-
-.PHONY : exception_test
-
-# fast build rule for target.
-exception_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/exception_test.dir/build.make muduo/base/tests/CMakeFiles/exception_test.dir/build
-.PHONY : exception_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/thread_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/thread_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/thread_test.dir/rule
-
-# Convenience name for target.
-thread_test: muduo/base/tests/CMakeFiles/thread_test.dir/rule
-
-.PHONY : thread_test
-
-# fast build rule for target.
-thread_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/build
-.PHONY : thread_test/fast
-
-# Convenience name for target.
-muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule
-.PHONY : muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule
-
-# Convenience name for target.
-blockingqueue_test: muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule
-
-.PHONY : blockingqueue_test
-
-# fast build rule for target.
-blockingqueue_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/blockingqueue_test.dir/build.make muduo/base/tests/CMakeFiles/blockingqueue_test.dir/build
-.PHONY : blockingqueue_test/fast
 
 # Convenience name for target.
 muduo/base/tests/CMakeFiles/logstream_test.dir/rule:
@@ -365,6 +200,186 @@ singleton_test/fast:
 .PHONY : singleton_test/fast
 
 # Convenience name for target.
+muduo/base/tests/CMakeFiles/logging_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/logging_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/logging_test.dir/rule
+
+# Convenience name for target.
+logging_test: muduo/base/tests/CMakeFiles/logging_test.dir/rule
+
+.PHONY : logging_test
+
+# fast build rule for target.
+logging_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logging_test.dir/build.make muduo/base/tests/CMakeFiles/logging_test.dir/build
+.PHONY : logging_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/logfile_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/logfile_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/logfile_test.dir/rule
+
+# Convenience name for target.
+logfile_test: muduo/base/tests/CMakeFiles/logfile_test.dir/rule
+
+.PHONY : logfile_test
+
+# fast build rule for target.
+logfile_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logfile_test.dir/build.make muduo/base/tests/CMakeFiles/logfile_test.dir/build
+.PHONY : logfile_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
+
+# Convenience name for target.
+singletonthreadlocal_test: muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/rule
+
+.PHONY : singletonthreadlocal_test
+
+# fast build rule for target.
+singletonthreadlocal_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/singletonthreadlocal_test.dir/build
+.PHONY : singletonthreadlocal_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule
+
+# Convenience name for target.
+blockingqueue_test: muduo/base/tests/CMakeFiles/blockingqueue_test.dir/rule
+
+.PHONY : blockingqueue_test
+
+# fast build rule for target.
+blockingqueue_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/blockingqueue_test.dir/build.make muduo/base/tests/CMakeFiles/blockingqueue_test.dir/build
+.PHONY : blockingqueue_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/thread_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/thread_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/thread_test.dir/rule
+
+# Convenience name for target.
+thread_test: muduo/base/tests/CMakeFiles/thread_test.dir/rule
+
+.PHONY : thread_test
+
+# fast build rule for target.
+thread_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/thread_test.dir/build.make muduo/base/tests/CMakeFiles/thread_test.dir/build
+.PHONY : thread_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
+
+# Convenience name for target.
+threadlocal_test: muduo/base/tests/CMakeFiles/threadlocal_test.dir/rule
+
+.PHONY : threadlocal_test
+
+# fast build rule for target.
+threadlocal_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocal_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocal_test.dir/build
+.PHONY : threadlocal_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
+
+# Convenience name for target.
+threadlocalsingleton_test: muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/rule
+
+.PHONY : threadlocalsingleton_test
+
+# fast build rule for target.
+threadlocalsingleton_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build.make muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/build
+.PHONY : threadlocalsingleton_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/exception_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/exception_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/exception_test.dir/rule
+
+# Convenience name for target.
+exception_test: muduo/base/tests/CMakeFiles/exception_test.dir/rule
+
+.PHONY : exception_test
+
+# fast build rule for target.
+exception_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/exception_test.dir/build.make muduo/base/tests/CMakeFiles/exception_test.dir/build
+.PHONY : exception_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule
+
+# Convenience name for target.
+boundedblockingqueue_test: muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/rule
+
+.PHONY : boundedblockingqueue_test
+
+# fast build rule for target.
+boundedblockingqueue_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/build.make muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/build
+.PHONY : boundedblockingqueue_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule
+
+# Convenience name for target.
+atomic_unittest: muduo/base/tests/CMakeFiles/atomic_unittest.dir/rule
+
+.PHONY : atomic_unittest
+
+# fast build rule for target.
+atomic_unittest/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/atomic_unittest.dir/build.make muduo/base/tests/CMakeFiles/atomic_unittest.dir/build
+.PHONY : atomic_unittest/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/mutex_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/mutex_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/mutex_test.dir/rule
+
+# Convenience name for target.
+mutex_test: muduo/base/tests/CMakeFiles/mutex_test.dir/rule
+
+.PHONY : mutex_test
+
+# fast build rule for target.
+mutex_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/mutex_test.dir/build.make muduo/base/tests/CMakeFiles/mutex_test.dir/build
+.PHONY : mutex_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule
+
+# Convenience name for target.
+blockingqueue_bench: muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/rule
+
+.PHONY : blockingqueue_bench
+
+# fast build rule for target.
+blockingqueue_bench/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/build.make muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/build
+.PHONY : blockingqueue_bench/fast
+
+# Convenience name for target.
 muduo/base/tests/CMakeFiles/threadpool_test.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/threadpool_test.dir/rule
 .PHONY : muduo/base/tests/CMakeFiles/threadpool_test.dir/rule
@@ -378,6 +393,36 @@ threadpool_test: muduo/base/tests/CMakeFiles/threadpool_test.dir/rule
 threadpool_test/fast:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/threadpool_test.dir/build.make muduo/base/tests/CMakeFiles/threadpool_test.dir/build
 .PHONY : threadpool_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/fileutil_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/fileutil_test.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/fileutil_test.dir/rule
+
+# Convenience name for target.
+fileutil_test: muduo/base/tests/CMakeFiles/fileutil_test.dir/rule
+
+.PHONY : fileutil_test
+
+# fast build rule for target.
+fileutil_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/fileutil_test.dir/build.make muduo/base/tests/CMakeFiles/fileutil_test.dir/build
+.PHONY : fileutil_test/fast
+
+# Convenience name for target.
+muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+.PHONY : muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+
+# Convenience name for target.
+timestamp_unittest: muduo/base/tests/CMakeFiles/timestamp_unittest.dir/rule
+
+.PHONY : timestamp_unittest
+
+# fast build rule for target.
+timestamp_unittest/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build.make muduo/base/tests/CMakeFiles/timestamp_unittest.dir/build
+.PHONY : timestamp_unittest/fast
 
 Atomic_unittest.o: Atomic_unittest.cc.o
 
@@ -514,6 +559,60 @@ Exception_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/exception_test.dir/build.make muduo/base/tests/CMakeFiles/exception_test.dir/Exception_test.cc.s
 .PHONY : Exception_test.cc.s
 
+FileUtil_test.o: FileUtil_test.cc.o
+
+.PHONY : FileUtil_test.o
+
+# target to build an object file
+FileUtil_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/fileutil_test.dir/build.make muduo/base/tests/CMakeFiles/fileutil_test.dir/FileUtil_test.cc.o
+.PHONY : FileUtil_test.cc.o
+
+FileUtil_test.i: FileUtil_test.cc.i
+
+.PHONY : FileUtil_test.i
+
+# target to preprocess a source file
+FileUtil_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/fileutil_test.dir/build.make muduo/base/tests/CMakeFiles/fileutil_test.dir/FileUtil_test.cc.i
+.PHONY : FileUtil_test.cc.i
+
+FileUtil_test.s: FileUtil_test.cc.s
+
+.PHONY : FileUtil_test.s
+
+# target to generate assembly for a file
+FileUtil_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/fileutil_test.dir/build.make muduo/base/tests/CMakeFiles/fileutil_test.dir/FileUtil_test.cc.s
+.PHONY : FileUtil_test.cc.s
+
+LogFile_test.o: LogFile_test.cc.o
+
+.PHONY : LogFile_test.o
+
+# target to build an object file
+LogFile_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logfile_test.dir/build.make muduo/base/tests/CMakeFiles/logfile_test.dir/LogFile_test.cc.o
+.PHONY : LogFile_test.cc.o
+
+LogFile_test.i: LogFile_test.cc.i
+
+.PHONY : LogFile_test.i
+
+# target to preprocess a source file
+LogFile_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logfile_test.dir/build.make muduo/base/tests/CMakeFiles/logfile_test.dir/LogFile_test.cc.i
+.PHONY : LogFile_test.cc.i
+
+LogFile_test.s: LogFile_test.cc.s
+
+.PHONY : LogFile_test.s
+
+# target to generate assembly for a file
+LogFile_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logfile_test.dir/build.make muduo/base/tests/CMakeFiles/logfile_test.dir/LogFile_test.cc.s
+.PHONY : LogFile_test.cc.s
+
 LogStream_bench.o: LogStream_bench.cc.o
 
 .PHONY : LogStream_bench.o
@@ -567,6 +666,33 @@ LogStream_test.s: LogStream_test.cc.s
 LogStream_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logstream_test.dir/build.make muduo/base/tests/CMakeFiles/logstream_test.dir/LogStream_test.cc.s
 .PHONY : LogStream_test.cc.s
+
+Logging_test.o: Logging_test.cc.o
+
+.PHONY : Logging_test.o
+
+# target to build an object file
+Logging_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logging_test.dir/build.make muduo/base/tests/CMakeFiles/logging_test.dir/Logging_test.cc.o
+.PHONY : Logging_test.cc.o
+
+Logging_test.i: Logging_test.cc.i
+
+.PHONY : Logging_test.i
+
+# target to preprocess a source file
+Logging_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logging_test.dir/build.make muduo/base/tests/CMakeFiles/logging_test.dir/Logging_test.cc.i
+.PHONY : Logging_test.cc.i
+
+Logging_test.s: Logging_test.cc.s
+
+.PHONY : Logging_test.s
+
+# target to generate assembly for a file
+Logging_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/base/tests/CMakeFiles/logging_test.dir/build.make muduo/base/tests/CMakeFiles/logging_test.dir/Logging_test.cc.s
+.PHONY : Logging_test.cc.s
 
 Mutex_test.o: Mutex_test.cc.o
 
@@ -790,27 +916,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... timestamp_unittest"
-	@echo "... threadlocalsingleton_test"
-	@echo "... threadlocal_test"
-	@echo "... install/local"
-	@echo "... singletonthreadlocal_test"
-	@echo "... blockingqueue_bench"
-	@echo "... atomic_unittest"
-	@echo "... mutex_test"
 	@echo "... install"
-	@echo "... boundedblockingqueue_test"
-	@echo "... exception_test"
-	@echo "... thread_test"
-	@echo "... blockingqueue_test"
+	@echo "... list_install_components"
 	@echo "... logstream_test"
 	@echo "... logstream_bench"
 	@echo "... singleton_test"
+	@echo "... logging_test"
+	@echo "... logfile_test"
+	@echo "... singletonthreadlocal_test"
+	@echo "... install/local"
+	@echo "... blockingqueue_test"
+	@echo "... thread_test"
+	@echo "... threadlocal_test"
+	@echo "... threadlocalsingleton_test"
+	@echo "... exception_test"
+	@echo "... boundedblockingqueue_test"
+	@echo "... atomic_unittest"
+	@echo "... mutex_test"
+	@echo "... blockingqueue_bench"
 	@echo "... threadpool_test"
+	@echo "... fileutil_test"
+	@echo "... timestamp_unittest"
+	@echo "... install/strip"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... Atomic_unittest.o"
 	@echo "... Atomic_unittest.i"
 	@echo "... Atomic_unittest.s"
@@ -826,12 +955,21 @@ help:
 	@echo "... Exception_test.o"
 	@echo "... Exception_test.i"
 	@echo "... Exception_test.s"
+	@echo "... FileUtil_test.o"
+	@echo "... FileUtil_test.i"
+	@echo "... FileUtil_test.s"
+	@echo "... LogFile_test.o"
+	@echo "... LogFile_test.i"
+	@echo "... LogFile_test.s"
 	@echo "... LogStream_bench.o"
 	@echo "... LogStream_bench.i"
 	@echo "... LogStream_bench.s"
 	@echo "... LogStream_test.o"
 	@echo "... LogStream_test.i"
 	@echo "... LogStream_test.s"
+	@echo "... Logging_test.o"
+	@echo "... Logging_test.i"
+	@echo "... Logging_test.s"
 	@echo "... Mutex_test.o"
 	@echo "... Mutex_test.i"
 	@echo "... Mutex_test.s"

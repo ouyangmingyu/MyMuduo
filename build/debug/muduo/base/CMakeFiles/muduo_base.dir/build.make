@@ -129,9 +129,57 @@ muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o.provides: muduo/base/CMakeFi
 muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o.provides.build: muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o
 
 
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/FileUtil.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.cc
+
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/muduo_base.dir/FileUtil.cc.i"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.cc > CMakeFiles/muduo_base.dir/FileUtil.cc.i
+
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/muduo_base.dir/FileUtil.cc.s"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.cc -o CMakeFiles/muduo_base.dir/FileUtil.cc.s
+
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.requires:
+
+.PHONY : muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.requires
+
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.provides: muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.requires
+	$(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.provides.build
+.PHONY : muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.provides
+
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.provides.build: muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o
+
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/LogFile.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.cc
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/muduo_base.dir/LogFile.cc.i"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.cc > CMakeFiles/muduo_base.dir/LogFile.cc.i
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/muduo_base.dir/LogFile.cc.s"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.cc -o CMakeFiles/muduo_base.dir/LogFile.cc.s
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.requires:
+
+.PHONY : muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.requires
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.provides: muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.requires
+	$(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.provides.build
+.PHONY : muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.provides
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.provides.build: muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o
+
+
 muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
 muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Logging.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/Logging.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Logging.cc
 
 muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.i: cmake_force
@@ -155,7 +203,7 @@ muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o.provides.build: muduo/base/CMa
 
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/LogStream.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.cc
 
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.i: cmake_force
@@ -177,9 +225,33 @@ muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o.provides: muduo/base/CMakeFi
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o.provides.build: muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o
 
 
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/ProcessInfo.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.cc
+
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/muduo_base.dir/ProcessInfo.cc.i"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.cc > CMakeFiles/muduo_base.dir/ProcessInfo.cc.i
+
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/muduo_base.dir/ProcessInfo.cc.s"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.cc -o CMakeFiles/muduo_base.dir/ProcessInfo.cc.s
+
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.requires:
+
+.PHONY : muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.requires
+
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.provides: muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.requires
+	$(MAKE) -f muduo/base/CMakeFiles/muduo_base.dir/build.make muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.provides.build
+.PHONY : muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.provides
+
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.provides.build: muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o
+
+
 muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
 muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/Thread.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Thread.cc
 
 muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.i: cmake_force
@@ -203,7 +275,7 @@ muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o.provides.build: muduo/base/CMak
 
 muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
 muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/ThreadPool.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ThreadPool.cc
 
 muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.i: cmake_force
@@ -227,7 +299,7 @@ muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o.provides.build: muduo/base/
 
 muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o: muduo/base/CMakeFiles/muduo_base.dir/flags.make
 muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_base.dir/Timestamp.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.cc
 
 muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.i: cmake_force
@@ -254,8 +326,11 @@ muduo_base_OBJECTS = \
 "CMakeFiles/muduo_base.dir/Condition.cc.o" \
 "CMakeFiles/muduo_base.dir/CountDownLatch.cc.o" \
 "CMakeFiles/muduo_base.dir/Exception.cc.o" \
+"CMakeFiles/muduo_base.dir/FileUtil.cc.o" \
+"CMakeFiles/muduo_base.dir/LogFile.cc.o" \
 "CMakeFiles/muduo_base.dir/Logging.cc.o" \
 "CMakeFiles/muduo_base.dir/LogStream.cc.o" \
+"CMakeFiles/muduo_base.dir/ProcessInfo.cc.o" \
 "CMakeFiles/muduo_base.dir/Thread.cc.o" \
 "CMakeFiles/muduo_base.dir/ThreadPool.cc.o" \
 "CMakeFiles/muduo_base.dir/Timestamp.cc.o"
@@ -266,14 +341,17 @@ muduo_base_EXTERNAL_OBJECTS =
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/Condition.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/CountDownLatch.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o
+lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o
+lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o
+lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/build.make
 lib/libmuduo_base.a: muduo/base/CMakeFiles/muduo_base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library ../../lib/libmuduo_base.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library ../../lib/libmuduo_base.a"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && $(CMAKE_COMMAND) -P CMakeFiles/muduo_base.dir/cmake_clean_target.cmake
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/muduo_base.dir/link.txt --verbose=$(VERBOSE)
 
@@ -285,8 +363,11 @@ muduo/base/CMakeFiles/muduo_base.dir/build: lib/libmuduo_base.a
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/Condition.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/CountDownLatch.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o.requires
+muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o.requires
+muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o.requires
+muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o.requires
 muduo/base/CMakeFiles/muduo_base.dir/requires: muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o.requires

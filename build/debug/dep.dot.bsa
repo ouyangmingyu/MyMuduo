@@ -2,5 +2,5 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node40" [ label="bsa" shape="house"];
+    "node43" [ label="bsa" shape="house"];
 }

@@ -16,6 +16,23 @@ muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o: /home/mingyu/MyMuduo/MyMudu
 muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Exception.h
 muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.cc
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.h
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.cc
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogFile.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Logging.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Mutex.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.cc
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.h
 muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
@@ -29,6 +46,14 @@ muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o: /home/mingyu/MyMuduo/MyMuduo/
 muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
 muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/FileUtil.h
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.cc
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/ProcessInfo.h
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
 
 muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h
 muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h

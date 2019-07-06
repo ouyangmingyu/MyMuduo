@@ -5,6 +5,9 @@ using namespace muduo;
 
 int main()
 {
+	LogStream s;
+	Fmt  fmt("%.6f",1.23);
+	operator<<(s,fmt);
 	LOG_TRACE<<"trace ...";
 	LOG_DEBUG<<"debug ...";
 	LOG_INFO<<"info ...";

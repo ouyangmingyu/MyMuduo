@@ -229,7 +229,7 @@ SingletonThreadLocal（整个程序只有一个单例对象,每个线程里面的test是单独拥有）：
 
 
 (11) 日志的作用、级别、使用时序
-	（1）作用：
+作用：
 	开发过程中：
 	调试错误
 	更好的理解程序
@@ -239,7 +239,7 @@ SingletonThreadLocal（整个程序只有一个单例对象,每个线程里面的test是单独拥有）：
 	
 	Linux程序员很少使用gdb找错误，一般使用日志，编译运行还可以，逻辑错误还用gdb的话如大海捞针
 	
-	（2）日志级别
+日志级别
 	TRACE
 	指出比DEBUG粒度更细的一些信息事件（开发过程中使用）
 	DEBUG
@@ -262,12 +262,29 @@ SingletonThreadLocal（整个程序只有一个单例对象,每个线程里面的test是单独拥有）：
 	
 	通过setoutput选择输出到特定的文件
 
-（3）使用时序
+使用时序
 
 	Logger外层类，Impl为嵌套的实际的实现（格式化日志），借助LogStream输出，先输出到FixedBuffer缓冲区，然后通过g_output输出到文件或者标准输出的缓冲里（Log类的析构函数里实现），通过g_flush将对应缓冲输出到文件或设备(标准输入输出是行缓冲，文件是全缓冲，运行过程中无需flush,只有当出错时才需要flush)
 	
 	fopen文件的a选项表示追加，e选项exec函数不会被继承该文件指针
 
+
+(12) 	Logger类和LogStream类封装
+
+作用：
+封装日志类
+
+知识点：
+	SIZE为非类型参数，直接传递值就行
+	is_arithmetic：算术类型
+	std::numeric_limits<int16_t>::min() 基值
+	#pragma GCC diagnostic ignored "-Wold-style-cast" 当前忽略掉警告
+	
+	经测试，Logstream写缓存性能居中，对比ssprintf和streamstream
+
+	StringPiece类：谷歌提供的，用于实现高效的字符串传递，避免了拷贝，因为是用指针
+
+	__type_traits：类型特性，用于模板的特化，实现更高的运行效率（程序中判断是否有这些特性）
 
 
 

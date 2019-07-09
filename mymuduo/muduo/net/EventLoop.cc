@@ -94,6 +94,7 @@ void EventLoop::loop()
   looping_ = false;
 }
 
+// 该函数可以跨线程调用
 void EventLoop::quit()
 {
   quit_ = true;

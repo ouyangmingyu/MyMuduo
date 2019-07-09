@@ -402,6 +402,19 @@ timestamp_unittest/fast:
 .PHONY : timestamp_unittest/fast
 
 #=============================================================================
+# Target rules for targets named muduo_net
+
+# Build rule for target.
+muduo_net: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 muduo_net
+.PHONY : muduo_net
+
+# fast build rule for target.
+muduo_net/fast:
+	$(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/build
+.PHONY : muduo_net/fast
+
+#=============================================================================
 # Target rules for targets named countdownlatch_test2
 
 # Build rule for target.
@@ -452,6 +465,19 @@ bsa: cmake_check_build_system
 bsa/fast:
 	$(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
 .PHONY : bsa/fast
+
+#=============================================================================
+# Target rules for targets named reactor_test01
+
+# Build rule for target.
+reactor_test01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reactor_test01
+.PHONY : reactor_test01
+
+# fast build rule for target.
+reactor_test01/fast:
+	$(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/build
+.PHONY : reactor_test01/fast
 
 #=============================================================================
 # Target rules for targets named deadlock_test2
@@ -505,6 +531,19 @@ pthread_atfork_test/fast:
 	$(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/build
 .PHONY : pthread_atfork_test/fast
 
+#=============================================================================
+# Target rules for targets named reactor_test02
+
+# Build rule for target.
+reactor_test02: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reactor_test02
+.PHONY : reactor_test02
+
+# fast build rule for target.
+reactor_test02/fast:
+	$(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/build
+.PHONY : reactor_test02/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -536,14 +575,17 @@ help:
 	@echo "... threadpool_test"
 	@echo "... fileutil_test"
 	@echo "... timestamp_unittest"
+	@echo "... muduo_net"
 	@echo "... countdownlatch_test2"
 	@echo "... countdownlatch_test1"
 	@echo "... deadlock_test"
 	@echo "... bsa"
+	@echo "... reactor_test01"
 	@echo "... deadlock_test2"
 	@echo "... log_test1"
 	@echo "... log_test2"
 	@echo "... pthread_atfork_test"
+	@echo "... reactor_test02"
 .PHONY : help
 
 

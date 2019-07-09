@@ -67,28 +67,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+.PHONY : install/local/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -111,16 +99,28 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/local/fast
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -215,6 +215,21 @@ bsa/fast:
 .PHONY : bsa/fast
 
 # Convenience name for target.
+tests/CMakeFiles/reactor_test01.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test01.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test01.dir/rule
+
+# Convenience name for target.
+reactor_test01: tests/CMakeFiles/reactor_test01.dir/rule
+
+.PHONY : reactor_test01
+
+# fast build rule for target.
+reactor_test01/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/build
+.PHONY : reactor_test01/fast
+
+# Convenience name for target.
 tests/CMakeFiles/deadlock_test2.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test2.dir/rule
 .PHONY : tests/CMakeFiles/deadlock_test2.dir/rule
@@ -273,6 +288,21 @@ pthread_atfork_test: tests/CMakeFiles/pthread_atfork_test.dir/rule
 pthread_atfork_test/fast:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/build
 .PHONY : pthread_atfork_test/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test02.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test02.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test02.dir/rule
+
+# Convenience name for target.
+reactor_test02: tests/CMakeFiles/reactor_test02.dir/rule
+
+.PHONY : reactor_test02
+
+# fast build rule for target.
+reactor_test02/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/build
+.PHONY : reactor_test02/fast
 
 CountDownLatch_test1.o: CountDownLatch_test1.cc.o
 
@@ -463,6 +493,60 @@ Pthread_atfork_test.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/Pthread_atfork_test.cc.s
 .PHONY : Pthread_atfork_test.cc.s
 
+Reactor_test01.o: Reactor_test01.cc.o
+
+.PHONY : Reactor_test01.o
+
+# target to build an object file
+Reactor_test01.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o
+.PHONY : Reactor_test01.cc.o
+
+Reactor_test01.i: Reactor_test01.cc.i
+
+.PHONY : Reactor_test01.i
+
+# target to preprocess a source file
+Reactor_test01.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.i
+.PHONY : Reactor_test01.cc.i
+
+Reactor_test01.s: Reactor_test01.cc.s
+
+.PHONY : Reactor_test01.s
+
+# target to generate assembly for a file
+Reactor_test01.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.s
+.PHONY : Reactor_test01.cc.s
+
+Reactor_test02.o: Reactor_test02.cc.o
+
+.PHONY : Reactor_test02.o
+
+# target to build an object file
+Reactor_test02.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/Reactor_test02.cc.o
+.PHONY : Reactor_test02.cc.o
+
+Reactor_test02.i: Reactor_test02.cc.i
+
+.PHONY : Reactor_test02.i
+
+# target to preprocess a source file
+Reactor_test02.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/Reactor_test02.cc.i
+.PHONY : Reactor_test02.cc.i
+
+Reactor_test02.s: Reactor_test02.cc.s
+
+.PHONY : Reactor_test02.s
+
+# target to generate assembly for a file
+Reactor_test02.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/Reactor_test02.cc.s
+.PHONY : Reactor_test02.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -497,19 +581,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... rebuild_cache"
 	@echo "... countdownlatch_test2"
 	@echo "... countdownlatch_test1"
 	@echo "... install"
 	@echo "... deadlock_test"
 	@echo "... bsa"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... install/local"
+	@echo "... reactor_test01"
 	@echo "... deadlock_test2"
 	@echo "... log_test1"
 	@echo "... log_test2"
 	@echo "... pthread_atfork_test"
+	@echo "... reactor_test02"
 	@echo "... CountDownLatch_test1.o"
 	@echo "... CountDownLatch_test1.i"
 	@echo "... CountDownLatch_test1.s"
@@ -531,6 +617,12 @@ help:
 	@echo "... Pthread_atfork_test.o"
 	@echo "... Pthread_atfork_test.i"
 	@echo "... Pthread_atfork_test.s"
+	@echo "... Reactor_test01.o"
+	@echo "... Reactor_test01.i"
+	@echo "... Reactor_test01.s"
+	@echo "... Reactor_test02.o"
+	@echo "... Reactor_test02.i"
+	@echo "... Reactor_test02.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

@@ -1,21 +1,26 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a5e36/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a5e36.dir/build.make CMakeFiles/cmTC_a5e36.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d95e4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d95e4.dir/build.make CMakeFiles/cmTC_d95e4.dir/build
 make[1]: Entering directory '/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a5e36.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++     -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic    -o CMakeFiles/cmTC_a5e36.dir/CheckSymbolExists.cxx.o -c /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_d95e4.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic    -o CMakeFiles/cmTC_d95e4.dir/CheckSymbolExists.cxx.o -c /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:33: error: use of old-style cast [-Werror=old-style-cast]
+/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:33: warning: use of old-style cast [-Wold-style-cast]
    return ((int*)(&pthread_create))[argc];
                                  ^
-cc1plus: all warnings being treated as errors
-CMakeFiles/cmTC_a5e36.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a5e36.dir/CheckSymbolExists.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_a5e36.dir/CheckSymbolExists.cxx.o] Error 1
+Linking CXX executable cmTC_d95e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d95e4.dir/link.txt --verbose=1
+/usr/bin/c++   -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic     CMakeFiles/cmTC_d95e4.dir/CheckSymbolExists.cxx.o  -o cmTC_d95e4 -rdynamic 
+CMakeFiles/cmTC_d95e4.dir/CheckSymbolExists.cxx.o：在函数‘main’中：
+/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d95e4.dir/build.make:97: recipe for target 'cmTC_d95e4' failed
+make[1]: *** [cmTC_d95e4] Error 1
 make[1]: Leaving directory '/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_a5e36/fast' failed
-make: *** [cmTC_a5e36/fast] Error 2
+Makefile:126: recipe for target 'cmTC_d95e4/fast' failed
+make: *** [cmTC_d95e4/fast] Error 2
 
 File /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -35,20 +40,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_18869/fast"
-/usr/bin/make -f CMakeFiles/cmTC_18869.dir/build.make CMakeFiles/cmTC_18869.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_00647/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00647.dir/build.make CMakeFiles/cmTC_00647.dir/build
 make[1]: Entering directory '/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_18869.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++     -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_18869.dir/CheckFunctionExists.cxx.o -c /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_18869
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18869.dir/link.txt --verbose=1
-/usr/bin/c++   -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_18869.dir/CheckFunctionExists.cxx.o  -o cmTC_18869 -rdynamic -lpthreads 
+Building CXX object CMakeFiles/cmTC_00647.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++     -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_00647.dir/CheckFunctionExists.cxx.o -c /home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_00647
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00647.dir/link.txt --verbose=1
+/usr/bin/c++   -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_00647.dir/CheckFunctionExists.cxx.o  -o cmTC_00647 -rdynamic -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_18869.dir/build.make:97: recipe for target 'cmTC_18869' failed
-make[1]: *** [cmTC_18869] Error 1
+CMakeFiles/cmTC_00647.dir/build.make:97: recipe for target 'cmTC_00647' failed
+make[1]: *** [cmTC_00647] Error 1
 make[1]: Leaving directory '/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_18869/fast' failed
-make: *** [cmTC_18869/fast] Error 2
+Makefile:126: recipe for target 'cmTC_00647/fast' failed
+make: *** [cmTC_00647/fast] Error 2
 
 

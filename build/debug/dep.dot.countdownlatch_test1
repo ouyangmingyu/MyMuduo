@@ -2,11 +2,11 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node40" [ label="countdownlatch_test1" shape="house"];
+    "node50" [ label="countdownlatch_test1" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
-    "node40" -> "node9" // countdownlatch_test1 -> muduo_base
-    "node51" [ label="pthread" shape="ellipse"];
-    "node9" -> "node51" // muduo_base -> pthread
-    "node52" [ label="rt" shape="ellipse"];
-    "node9" -> "node52" // muduo_base -> rt
+    "node50" -> "node9" // countdownlatch_test1 -> muduo_base
+    "node60" [ label="pthread" shape="ellipse"];
+    "node9" -> "node60" // muduo_base -> pthread
+    "node61" [ label="rt" shape="ellipse"];
+    "node9" -> "node61" // muduo_base -> rt
 }

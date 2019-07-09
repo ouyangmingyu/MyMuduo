@@ -9,18 +9,18 @@ node [
     "node22" -> "node9" // muduo_base -> blockingqueue_test
     "node27" [ label="boundedblockingqueue_test" shape="house"];
     "node27" -> "node9" // muduo_base -> boundedblockingqueue_test
-    "node40" [ label="countdownlatch_test1" shape="house"];
-    "node40" -> "node9" // muduo_base -> countdownlatch_test1
-    "node39" [ label="countdownlatch_test2" shape="house"];
-    "node39" -> "node9" // muduo_base -> countdownlatch_test2
+    "node50" [ label="countdownlatch_test1" shape="house"];
+    "node50" -> "node9" // muduo_base -> countdownlatch_test1
+    "node49" [ label="countdownlatch_test2" shape="house"];
+    "node49" -> "node9" // muduo_base -> countdownlatch_test2
     "node26" [ label="exception_test" shape="house"];
     "node26" -> "node9" // muduo_base -> exception_test
     "node32" [ label="fileutil_test" shape="house"];
     "node32" -> "node9" // muduo_base -> fileutil_test
-    "node48" [ label="log_test1" shape="house"];
-    "node48" -> "node9" // muduo_base -> log_test1
-    "node49" [ label="log_test2" shape="house"];
-    "node49" -> "node9" // muduo_base -> log_test2
+    "node56" [ label="log_test1" shape="house"];
+    "node56" -> "node9" // muduo_base -> log_test1
+    "node57" [ label="log_test2" shape="house"];
+    "node57" -> "node9" // muduo_base -> log_test2
     "node19" [ label="logfile_test" shape="house"];
     "node19" -> "node9" // muduo_base -> logfile_test
     "node18" [ label="logging_test" shape="house"];
@@ -29,6 +29,12 @@ node [
     "node16" -> "node9" // muduo_base -> logstream_bench
     "node15" [ label="logstream_test" shape="house"];
     "node15" -> "node9" // muduo_base -> logstream_test
+    "node40" [ label="muduo_net" shape="diamond"];
+    "node40" -> "node9" // muduo_base -> muduo_net
+    "node54" [ label="reactor_test01" shape="house"];
+    "node54" -> "node40" // muduo_net -> reactor_test01
+    "node59" [ label="reactor_test02" shape="house"];
+    "node59" -> "node40" // muduo_net -> reactor_test02
     "node29" [ label="mutex_test" shape="house"];
     "node29" -> "node9" // muduo_base -> mutex_test
     "node17" [ label="singleton_test" shape="house"];

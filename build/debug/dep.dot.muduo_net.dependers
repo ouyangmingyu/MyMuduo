@@ -3,8 +3,10 @@ node [
   fontsize = "12"
 ];
     "node40" [ label="muduo_net" shape="diamond"];
-    "node54" [ label="reactor_test01" shape="house"];
-    "node54" -> "node40" // muduo_net -> reactor_test01
-    "node59" [ label="reactor_test02" shape="house"];
-    "node59" -> "node40" // muduo_net -> reactor_test02
+    "node55" [ label="reactor_test01" shape="house"];
+    "node55" -> "node40" // muduo_net -> reactor_test01
+    "node60" [ label="reactor_test02" shape="house"];
+    "node60" -> "node40" // muduo_net -> reactor_test02
+    "node54" [ label="reactor_test03" shape="house"];
+    "node54" -> "node40" // muduo_net -> reactor_test03
 }

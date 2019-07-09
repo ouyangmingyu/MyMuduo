@@ -215,6 +215,21 @@ bsa/fast:
 .PHONY : bsa/fast
 
 # Convenience name for target.
+tests/CMakeFiles/reactor_test03.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test03.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test03.dir/rule
+
+# Convenience name for target.
+reactor_test03: tests/CMakeFiles/reactor_test03.dir/rule
+
+.PHONY : reactor_test03
+
+# fast build rule for target.
+reactor_test03/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/build
+.PHONY : reactor_test03/fast
+
+# Convenience name for target.
 tests/CMakeFiles/reactor_test01.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test01.dir/rule
 .PHONY : tests/CMakeFiles/reactor_test01.dir/rule
@@ -547,6 +562,33 @@ Reactor_test02.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/Reactor_test02.cc.s
 .PHONY : Reactor_test02.cc.s
 
+Reactor_test03.o: Reactor_test03.cc.o
+
+.PHONY : Reactor_test03.o
+
+# target to build an object file
+Reactor_test03.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/Reactor_test03.cc.o
+.PHONY : Reactor_test03.cc.o
+
+Reactor_test03.i: Reactor_test03.cc.i
+
+.PHONY : Reactor_test03.i
+
+# target to preprocess a source file
+Reactor_test03.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/Reactor_test03.cc.i
+.PHONY : Reactor_test03.cc.i
+
+Reactor_test03.s: Reactor_test03.cc.s
+
+.PHONY : Reactor_test03.s
+
+# target to generate assembly for a file
+Reactor_test03.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/Reactor_test03.cc.s
+.PHONY : Reactor_test03.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -590,6 +632,7 @@ help:
 	@echo "... install"
 	@echo "... deadlock_test"
 	@echo "... bsa"
+	@echo "... reactor_test03"
 	@echo "... reactor_test01"
 	@echo "... deadlock_test2"
 	@echo "... log_test1"
@@ -623,6 +666,9 @@ help:
 	@echo "... Reactor_test02.o"
 	@echo "... Reactor_test02.i"
 	@echo "... Reactor_test02.s"
+	@echo "... Reactor_test03.o"
+	@echo "... Reactor_test03.i"
+	@echo "... Reactor_test03.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

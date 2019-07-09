@@ -5,10 +5,10 @@ node [
     "node15" [ label="logstream_test" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
     "node15" -> "node9" // logstream_test -> muduo_base
-    "node60" [ label="pthread" shape="ellipse"];
-    "node9" -> "node60" // muduo_base -> pthread
-    "node61" [ label="rt" shape="ellipse"];
-    "node9" -> "node61" // muduo_base -> rt
-    "node62" [ label="boost_unit_test_framework" shape="ellipse"];
-    "node15" -> "node62" // logstream_test -> boost_unit_test_framework
+    "node61" [ label="pthread" shape="ellipse"];
+    "node9" -> "node61" // muduo_base -> pthread
+    "node62" [ label="rt" shape="ellipse"];
+    "node9" -> "node62" // muduo_base -> rt
+    "node63" [ label="boost_unit_test_framework" shape="ellipse"];
+    "node15" -> "node63" // logstream_test -> boost_unit_test_framework
 }

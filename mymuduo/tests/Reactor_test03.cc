@@ -17,7 +17,7 @@ void timeout(Timestamp receiveTime)
 	printf("Timeout!\n");
 	uint64_t howmany;
 	::read(timerfd, &howmany, sizeof howmany);
-	//g_loop->quit();
+	g_loop->quit();
 }
 
 int main(void)

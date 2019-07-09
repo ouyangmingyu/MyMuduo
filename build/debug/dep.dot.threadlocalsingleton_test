@@ -5,8 +5,8 @@ node [
     "node25" [ label="threadlocalsingleton_test" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
     "node25" -> "node9" // threadlocalsingleton_test -> muduo_base
-    "node60" [ label="pthread" shape="ellipse"];
-    "node9" -> "node60" // muduo_base -> pthread
-    "node61" [ label="rt" shape="ellipse"];
-    "node9" -> "node61" // muduo_base -> rt
+    "node61" [ label="pthread" shape="ellipse"];
+    "node9" -> "node61" // muduo_base -> pthread
+    "node62" [ label="rt" shape="ellipse"];
+    "node9" -> "node62" // muduo_base -> rt
 }

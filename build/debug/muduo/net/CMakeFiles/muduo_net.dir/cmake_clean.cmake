@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/muduo_net.dir/poller/DefaultPoller.cc.o"
   "CMakeFiles/muduo_net.dir/poller/EPollPoller.cc.o"
   "CMakeFiles/muduo_net.dir/poller/PollPoller.cc.o"
+  "CMakeFiles/muduo_net.dir/Timer.cc.o"
+  "CMakeFiles/muduo_net.dir/TimerQueue.cc.o"
   "../../lib/libmuduo_net.pdb"
   "../../lib/libmuduo_net.a"
 )

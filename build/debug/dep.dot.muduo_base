@@ -3,8 +3,8 @@ node [
   fontsize = "12"
 ];
     "node9" [ label="muduo_base" shape="diamond"];
-    "node61" [ label="pthread" shape="ellipse"];
-    "node9" -> "node61" // muduo_base -> pthread
-    "node62" [ label="rt" shape="ellipse"];
-    "node9" -> "node62" // muduo_base -> rt
+    "node62" [ label="pthread" shape="ellipse"];
+    "node9" -> "node62" // muduo_base -> pthread
+    "node63" [ label="rt" shape="ellipse"];
+    "node9" -> "node63" // muduo_base -> rt
 }

@@ -7,6 +7,8 @@ tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/My
 tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
 tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Callbacks.h
 tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h
+tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h
 tests/CMakeFiles/reactor_test01.dir/Reactor_test01.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/tests/Reactor_test01.cc
 

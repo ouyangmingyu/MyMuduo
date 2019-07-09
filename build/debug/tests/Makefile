@@ -155,6 +155,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/reactor_test04.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test04.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test04.dir/rule
+
+# Convenience name for target.
+reactor_test04: tests/CMakeFiles/reactor_test04.dir/rule
+
+.PHONY : reactor_test04
+
+# fast build rule for target.
+reactor_test04/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/build
+.PHONY : reactor_test04/fast
+
+# Convenience name for target.
 tests/CMakeFiles/countdownlatch_test2.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test2.dir/rule
 .PHONY : tests/CMakeFiles/countdownlatch_test2.dir/rule
@@ -589,6 +604,33 @@ Reactor_test03.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/Reactor_test03.cc.s
 .PHONY : Reactor_test03.cc.s
 
+Reactor_test04.o: Reactor_test04.cc.o
+
+.PHONY : Reactor_test04.o
+
+# target to build an object file
+Reactor_test04.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/Reactor_test04.cc.o
+.PHONY : Reactor_test04.cc.o
+
+Reactor_test04.i: Reactor_test04.cc.i
+
+.PHONY : Reactor_test04.i
+
+# target to preprocess a source file
+Reactor_test04.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/Reactor_test04.cc.i
+.PHONY : Reactor_test04.cc.i
+
+Reactor_test04.s: Reactor_test04.cc.s
+
+.PHONY : Reactor_test04.s
+
+# target to generate assembly for a file
+Reactor_test04.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/Reactor_test04.cc.s
+.PHONY : Reactor_test04.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -626,6 +668,7 @@ help:
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... reactor_test04"
 	@echo "... rebuild_cache"
 	@echo "... countdownlatch_test2"
 	@echo "... countdownlatch_test1"
@@ -669,6 +712,9 @@ help:
 	@echo "... Reactor_test03.o"
 	@echo "... Reactor_test03.i"
 	@echo "... Reactor_test03.s"
+	@echo "... Reactor_test04.o"
+	@echo "... Reactor_test04.i"
+	@echo "... Reactor_test04.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

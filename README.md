@@ -397,10 +397,50 @@ TCP网络编程本质
 	quit函数可以跨线程调用，因为如果是其他线程，可能poll会阻塞，需要唤醒（通过添加监听管道fd，或者用eventfd）才能走到while判断
 	
 	bool类型quit操作本来就是原子性，所以不需要保护
-
-
-
 	
+（4） muduo定时器的实现：
+
+
+作用：
+muduo里面对于定时器的封装
+
+知识点：
+
+muduo的定时器由三个类实现，TimerId、Timer、TimerQueue，用户只能看到第一个类，其它两个都是内部实现细节
+	TimerQueue的接口很简单，只有两个函数addTimer和cancel
+	其实最终是通过EventLoop调用
+	EventLoop
+		runAt		           在某个时刻运行定时器
+		runAfter		过一段时间运行定时器
+		runEvery		每隔一段时间运行定时器
+		cancel		           取消定时器
+	TimerQueue数据结构的选择，能快速根据当前时间找到已到期的定时器，也要高效的添加和删除Timer，因而可以用二叉搜索树，用map或者set
+		typedef std::pair<Timestamp, Timer*> Entry;
+		typedef std::set<Entry> TimerList;
+		
+	
+	用到的三个类：
+	timer类：对定是操作一个高层次的抽象，并没有调用定时器三个函数
+	通过原子操作保证定时器序号唯一
+	只有一个数据成员的类用值传递效率比引用传递更高（利用寄存器），比如时间戳类
+	
+	TimerQueue类：定时器的管理器（一个定时器列表），定时器时间如何产生由其负责，调用那三个函数，属于一个loop
+	add返回一个Timeid类，cancel参数就是timeid，不会直接调用这俩，而是调用Eventloop中的上面几个函数，EV前三个调用到addtime
+	尽量用set而不是map保存，因为可能会用相同时间戳的timer，而map键值不能重复
+	cancel、addtimer线程安全，可以跨线程调用
+	
+	TimerId类：供外部使用，用来取消定时器
+	
+	
+	lower_bound（ele）:返回set里面第一个>=ele的位置的迭代器
+	upper_bound（ele）:返回第一个>ele的位置的迭代器
+	
+	由于用到了entry类，所以可以用lower_bound来保证时间大于now而不是等于（将值设置为最大值）
+	Entry 以键值对（key-value pair）的形式定义
+
+	由于RVO优化，在获取到期定时器列表时不会拷贝构造
+	
+	linux下面有RVO优化，vs的debug模式没有优化，release模式有优化
 
 
 

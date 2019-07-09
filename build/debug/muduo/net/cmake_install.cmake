@@ -40,6 +40,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/net" TYPE FILE FILES
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h"
     )
 endif()
 

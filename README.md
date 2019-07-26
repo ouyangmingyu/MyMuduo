@@ -550,6 +550,22 @@ muduoµÄ¶¨Ê±Æ÷ÓÉÈý¸öÀàÊµÏÖ£¬TimerId¡¢Timer¡¢TimerQueue£¬ÓÃ»§Ö»ÄÜ¿´µ½µÚÒ»¸öÀà£¬ÆäË
 	
 	scoped_ptrÓëauto_ptrÀàËÆ,µ«×î´óµÄÇø±ð¾ÍÊÇËü²»ÄÜ×ªÈÃ¹ÜÀíÈ¨.Ò²¾ÍÊÇËµ,scoped_ptr½ûÖ¹ÓÃ»§½øÐÐ¿½±´Óë¸³Öµ
 	get_pointer¿ÉÒÔ·µ»ØÖÇÄÜÖ¸ÕëµÄÔ­ÉúÖ¸Õë
+	
+	
+(10) TcpConnectionÉú´æÆÚ¹ÜÀí
+²»ÄÜÖ±½ÓÏú»ÙTC£¬·ñÔòCH¸ú×Å±ðÏú»Ù£¬¶ø´ËÊ±CHÔÚÖ´ÐÐhandeventº¯Êý£¬ÈõÏú»Ù¾Í»ácore dump£¬¼´TCµÄÉú´æÆÚÒª³¤ÓÚheº¯Êý£¬ËùÒÔÓÃÖÇÄÜÖ¸Õë¹ÜÀíTC¶ÔÏó
+
+	¾ßÌå°ì·¨£¨ÖÐ¼äºÜ¶àÏ¸½ÚÃ»Ëµ,ÏÂÃæËµµÄÒýÓÃ¼ÆÊý²»¶Ô£¬Ö»ÊÇ´óÖÂµÄÒ»¸öÔö¼õ¹ý³Ì£¬×Ô¼º¿´Ô´Âë£©£º
+	Á¬½Óµ½À´Ê±£¬´´½¨Ò»¸öÓÃsp¹ÜÀíµÄTC£¬ÒýÓÃ¼ÆÊýÎª1£¬Í¬Ê±ÔÚChannelÖÐÎ¬»¤Ò»¸öwp£¬½«Ç°ÃæµÄsp¸³Öµ¸øËü£¬´ËÊ±ÒýÓÃ¼ÆÊýÒÀ¾ÉÎª1
+	1->1
+	
+	µ±Á¬½Ó¹Ø±Õ£¬HEÖÐ½«wpÌáÉýÎªsp£¬´ËÊ±ÒýÓÃ¼ÆÊýÎª2£¬eraseÖ´ÐÐ£¬±äÎª1£¬½«CD¼ÓÈëfunctorsÖÐ£¬ÒýÓÃ¼ÆÊýÓÖ±äÎª2£¬ ´ËÊ±HE·µ»Ø£¬ÒýÓÃ¼ÆÊýÓÖ¼ôÎª1£¬CDÈ»ºó»Øµ÷ÓÃ»§µÄCC£¨ºÍÁ¬½ÓµÄ»Øµ÷ÊÇÍ¬Ò»¸ö£©£¬ÍêÁËÒÔºóÒýÓÃ¼ÆÊý±äÎª0£¬TC¶ÔÏóÏú»Ù
+
+	ÀûÓÃshared_from_this()ÁÙÊ±¶ÔÏó£¨»áµ¼ÖÂÒýÓÃ¼ÆÊý++ÔÙ--£©À´´«µÝ¶ÔÏóµÄSP¶ø²»ÊÇÖ±½Ó´«thisÖ¸Õë£¬ÕâÑù²»»áµ¼ÖÂÒýÓÃ¼ÆÊý++
+	
+	
+	ÎªÊ²Ã´TCÒª¼Ì³Ðenable_shared_from_this£¿¶ø²»Ö±½ÓÓÃthis
+	ÒòÎªÓÃÂãÖ¸Õë³õÊ¼»¯Ò»¸öSPÎÞ·¨µ¼ÖÂÒýÓÃ¼ÆÊý++£¨¸ÃÐÂµÄSPÒýÓÃ¼ÆÊý½«Îª1£©£¬´Ó¶øÎÞ·¨´ïµ½¿ØÖÆÉúÃüµÄÄ¿µÄ
 
 
 

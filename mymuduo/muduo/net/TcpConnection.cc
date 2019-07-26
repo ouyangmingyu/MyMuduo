@@ -53,6 +53,12 @@ TcpConnection::TcpConnection(EventLoop* loop,
   // 通道可读事件到来的时候，回调TcpConnection::handleRead，_1是事件发生时间
   channel_->setReadCallback(
       boost::bind(&TcpConnection::handleRead, this, _1));
+  // 连接关闭，回调TcpConnection::handleClose
+  channel_->setCloseCallback(
+      boost::bind(&TcpConnection::handleClose, this));
+  // 发生错误，回调TcpConnection::handleError
+  channel_->setErrorCallback(
+      boost::bind(&TcpConnection::handleError, this));
   LOG_DEBUG << "TcpConnection::ctor[" <<  name_ << "] at " << this
             << " fd=" << sockfd;
   socket_->setKeepAlive(true);
@@ -69,10 +75,26 @@ void TcpConnection::connectEstablished()
   loop_->assertInLoopThread();
   assert(state_ == kConnecting);
   setState(kConnected);
+  LOG_TRACE << "[3] usecount=" << shared_from_this().use_count();
   channel_->tie(shared_from_this());
   channel_->enableReading();	// TcpConnection所对应的通道加入到Poller关注
 
   connectionCallback_(shared_from_this());
+  LOG_TRACE << "[4] usecount=" << shared_from_this().use_count();
+}
+
+void TcpConnection::connectDestroyed()
+{
+  loop_->assertInLoopThread();
+  if (state_ == kConnected)
+  {
+    setState(kDisconnected);
+    channel_->disableAll();
+
+    connectionCallback_(shared_from_this());
+  }
+  channel_->remove();
+ 	LOG_TRACE << "HELLO";
 }
 
 void TcpConnection::handleRead(Timestamp receiveTime)
@@ -97,9 +119,46 @@ void TcpConnection::handleRead(Timestamp receiveTime)
   }
   */
   loop_->assertInLoopThread();
+  int savedErrno = 0;
   char buf[65536];
   ssize_t n = ::read(channel_->fd(), buf, sizeof buf);
-  messageCallback_(shared_from_this(), buf, n);
+  if (n > 0)
+  {
+    messageCallback_(shared_from_this(), buf, n);
+  }
+  else if (n == 0)
+  {
+    handleClose();
+  }
+  else
+  {
+    errno = savedErrno;
+    LOG_SYSERR << "TcpConnection::handleRead";
+    handleError();
+  }
+  
 }
 
+void TcpConnection::handleClose()
+{
+  loop_->assertInLoopThread();
+  LOG_TRACE << "fd = " << channel_->fd() << " state = " << state_;
+  assert(state_ == kConnected || state_ == kDisconnecting);
+  // we don't close fd, leave it to dtor, so we can find leaks easily.
+  setState(kDisconnected);
+  channel_->disableAll();
 
+  TcpConnectionPtr guardThis(shared_from_this());
+  connectionCallback_(guardThis);		// 这一行，可以不调用
+  LOG_TRACE << "[7] usecount=" << guardThis.use_count();
+  // must be the last line
+  closeCallback_(guardThis);	// 调用TcpServer::removeConnection
+  LOG_TRACE << "[11] usecount=" << guardThis.use_count();
+}
+
+void TcpConnection::handleError()
+{
+  int err = sockets::getSocketError(channel_->fd());
+  LOG_ERROR << "TcpConnection::handleError [" << name_
+            << "] - SO_ERROR = " << err << " " << strerror_tl(err);
+}

@@ -39,9 +39,17 @@ endif()
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/net" TYPE FILE FILES
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoopThread.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h"
     )
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/cmake_install.cmake")
+
 endif()
 

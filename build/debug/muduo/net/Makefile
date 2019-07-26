@@ -250,6 +250,33 @@ EventLoopThread.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/EventLoopThread.cc.s
 .PHONY : EventLoopThread.cc.s
 
+InetAddress.o: InetAddress.cc.o
+
+.PHONY : InetAddress.o
+
+# target to build an object file
+InetAddress.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o
+.PHONY : InetAddress.cc.o
+
+InetAddress.i: InetAddress.cc.i
+
+.PHONY : InetAddress.i
+
+# target to preprocess a source file
+InetAddress.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.i
+.PHONY : InetAddress.cc.i
+
+InetAddress.s: InetAddress.cc.s
+
+.PHONY : InetAddress.s
+
+# target to generate assembly for a file
+InetAddress.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.s
+.PHONY : InetAddress.cc.s
+
 Poller.o: Poller.cc.o
 
 .PHONY : Poller.o
@@ -276,6 +303,60 @@ Poller.s: Poller.cc.s
 Poller.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.s
 .PHONY : Poller.cc.s
+
+Socket.o: Socket.cc.o
+
+.PHONY : Socket.o
+
+# target to build an object file
+Socket.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o
+.PHONY : Socket.cc.o
+
+Socket.i: Socket.cc.i
+
+.PHONY : Socket.i
+
+# target to preprocess a source file
+Socket.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.i
+.PHONY : Socket.cc.i
+
+Socket.s: Socket.cc.s
+
+.PHONY : Socket.s
+
+# target to generate assembly for a file
+Socket.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.s
+.PHONY : Socket.cc.s
+
+SocketsOps.o: SocketsOps.cc.o
+
+.PHONY : SocketsOps.o
+
+# target to build an object file
+SocketsOps.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o
+.PHONY : SocketsOps.cc.o
+
+SocketsOps.i: SocketsOps.cc.i
+
+.PHONY : SocketsOps.i
+
+# target to preprocess a source file
+SocketsOps.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.i
+.PHONY : SocketsOps.cc.i
+
+SocketsOps.s: SocketsOps.cc.s
+
+.PHONY : SocketsOps.s
+
+# target to generate assembly for a file
+SocketsOps.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.s
+.PHONY : SocketsOps.cc.s
 
 Timer.o: Timer.cc.o
 
@@ -434,9 +515,18 @@ help:
 	@echo "... EventLoopThread.o"
 	@echo "... EventLoopThread.i"
 	@echo "... EventLoopThread.s"
+	@echo "... InetAddress.o"
+	@echo "... InetAddress.i"
+	@echo "... InetAddress.s"
 	@echo "... Poller.o"
 	@echo "... Poller.i"
 	@echo "... Poller.s"
+	@echo "... Socket.o"
+	@echo "... Socket.i"
+	@echo "... Socket.s"
+	@echo "... SocketsOps.o"
+	@echo "... SocketsOps.i"
+	@echo "... SocketsOps.s"
 	@echo "... Timer.o"
 	@echo "... Timer.i"
 	@echo "... Timer.s"

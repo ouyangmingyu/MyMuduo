@@ -42,6 +42,13 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/CMakeFiles/edit_cache.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/CMakeFiles/install/strip.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/CMakeFiles/install/local.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/install.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/list_install_components.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/rebuild_cache.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/inetaddress_unittest.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/install/strip.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/install/local.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/edit_cache.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/edit_cache.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/install/local.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/list_install_components.dir

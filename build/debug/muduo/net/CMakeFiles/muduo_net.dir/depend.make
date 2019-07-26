@@ -49,6 +49,14 @@ muduo/net/CMakeFiles/muduo_net.dir/EventLoopThread.cc.o: /home/mingyu/MyMuduo/My
 muduo/net/CMakeFiles/muduo_net.dir/EventLoopThread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoopThread.h
 muduo/net/CMakeFiles/muduo_net.dir/EventLoopThread.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h
 
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.cc
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h
+muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/SocketsOps.h
+
 muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h
 muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h
 muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Mutex.h
@@ -61,6 +69,24 @@ muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mym
 muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Poller.cc
 muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Poller.h
 muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h
+
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Socket.cc
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Socket.h
+muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/SocketsOps.h
+
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Logging.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/SocketsOps.cc
+muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/SocketsOps.h
 
 muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h
 muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h

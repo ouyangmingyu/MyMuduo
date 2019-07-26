@@ -415,6 +415,19 @@ muduo_net/fast:
 .PHONY : muduo_net/fast
 
 #=============================================================================
+# Target rules for targets named inetaddress_unittest
+
+# Build rule for target.
+inetaddress_unittest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inetaddress_unittest
+.PHONY : inetaddress_unittest
+
+# fast build rule for target.
+inetaddress_unittest/fast:
+	$(MAKE) -f muduo/net/tests/CMakeFiles/inetaddress_unittest.dir/build.make muduo/net/tests/CMakeFiles/inetaddress_unittest.dir/build
+.PHONY : inetaddress_unittest/fast
+
+#=============================================================================
 # Target rules for targets named reactor_test06
 
 # Build rule for target.
@@ -628,6 +641,7 @@ help:
 	@echo "... fileutil_test"
 	@echo "... timestamp_unittest"
 	@echo "... muduo_net"
+	@echo "... inetaddress_unittest"
 	@echo "... reactor_test06"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test2"

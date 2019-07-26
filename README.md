@@ -540,6 +540,19 @@ muduoµÄ¶¨Ê±Æ÷ÓÉÈı¸öÀàÊµÏÖ£¬TimerId¡¢Timer¡¢TimerQueue£¬ÓÃ»§Ö»ÄÜ¿´µ½µÚÒ»¸öÀà£¬ÆäË
 	ÉèÖÃÁËÒ»¸ö¿ÕÏĞfd·ÀÖ¹EMFILE´íÎó
 
 
+(9) TcpServer/TcpConnection·â×°
+	·â×°TcpServerµÄÔ­Òò
+	AcceptorÀàµÄÖ÷Òª¹¦ÄÜÊÇsocket¡¢bind¡¢listen
+	Ò»°ãÀ´Ëµ£¬ÔÚÉÏ²ãÓ¦ÓÃ³ÌĞòÖĞ£¬ÎÒÃÇ²»Ö±½ÓÊ¹ÓÃAcceptor£¬¶øÊÇ°ÑËü×÷ÎªTcpServerµÄ³ÉÔ±
+	TcpServer»¹°üº¬ÁËÒ»¸öTcpConnectionÁĞ±í
+	TcpConnectionÓëAcceptorÀàËÆ£¬ÓĞÁ½¸öÖØÒªµÄÊı¾İ³ÉÔ±£¬SocketÓëChannel
+	
+	
+	scoped_ptrÓëauto_ptrÀàËÆ,µ«×î´óµÄÇø±ğ¾ÍÊÇËü²»ÄÜ×ªÈÃ¹ÜÀíÈ¨.Ò²¾ÍÊÇËµ,scoped_ptr½ûÖ¹ÓÃ»§½øĞĞ¿½±´Óë¸³Öµ
+	get_pointer¿ÉÒÔ·µ»ØÖÇÄÜÖ¸ÕëµÄÔ­ÉúÖ¸Õë
+
+
+
 
 
 Part3: muduo¿âÊ¹ÓÃÊ¾Àı

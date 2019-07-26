@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/muduo_net.dir/poller/PollPoller.cc.o"
   "CMakeFiles/muduo_net.dir/Socket.cc.o"
   "CMakeFiles/muduo_net.dir/SocketsOps.cc.o"
+  "CMakeFiles/muduo_net.dir/TcpConnection.cc.o"
+  "CMakeFiles/muduo_net.dir/TcpServer.cc.o"
   "CMakeFiles/muduo_net.dir/Timer.cc.o"
   "CMakeFiles/muduo_net.dir/TimerQueue.cc.o"
   "../../lib/libmuduo_net.pdb"

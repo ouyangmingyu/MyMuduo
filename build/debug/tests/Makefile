@@ -56,48 +56,17 @@ CMAKE_BINARY_DIR = /home/mingyu/MyMuduo/MyMuduo/build/debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -110,17 +79,48 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,199 +155,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/reactor_test07.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test07.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test07.dir/rule
+tests/CMakeFiles/reactor_test02.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test02.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test02.dir/rule
 
 # Convenience name for target.
-reactor_test07: tests/CMakeFiles/reactor_test07.dir/rule
+reactor_test02: tests/CMakeFiles/reactor_test02.dir/rule
 
-.PHONY : reactor_test07
+.PHONY : reactor_test02
 
 # fast build rule for target.
-reactor_test07/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/build
-.PHONY : reactor_test07/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test06.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test06.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test06.dir/rule
-
-# Convenience name for target.
-reactor_test06: tests/CMakeFiles/reactor_test06.dir/rule
-
-.PHONY : reactor_test06
-
-# fast build rule for target.
-reactor_test06/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test06.dir/build.make tests/CMakeFiles/reactor_test06.dir/build
-.PHONY : reactor_test06/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test04.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test04.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test04.dir/rule
-
-# Convenience name for target.
-reactor_test04: tests/CMakeFiles/reactor_test04.dir/rule
-
-.PHONY : reactor_test04
-
-# fast build rule for target.
-reactor_test04/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/build
-.PHONY : reactor_test04/fast
-
-# Convenience name for target.
-tests/CMakeFiles/countdownlatch_test2.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test2.dir/rule
-.PHONY : tests/CMakeFiles/countdownlatch_test2.dir/rule
-
-# Convenience name for target.
-countdownlatch_test2: tests/CMakeFiles/countdownlatch_test2.dir/rule
-
-.PHONY : countdownlatch_test2
-
-# fast build rule for target.
-countdownlatch_test2/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/countdownlatch_test2.dir/build.make tests/CMakeFiles/countdownlatch_test2.dir/build
-.PHONY : countdownlatch_test2/fast
-
-# Convenience name for target.
-tests/CMakeFiles/countdownlatch_test1.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test1.dir/rule
-.PHONY : tests/CMakeFiles/countdownlatch_test1.dir/rule
-
-# Convenience name for target.
-countdownlatch_test1: tests/CMakeFiles/countdownlatch_test1.dir/rule
-
-.PHONY : countdownlatch_test1
-
-# fast build rule for target.
-countdownlatch_test1/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/countdownlatch_test1.dir/build.make tests/CMakeFiles/countdownlatch_test1.dir/build
-.PHONY : countdownlatch_test1/fast
-
-# Convenience name for target.
-tests/CMakeFiles/deadlock_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test.dir/rule
-.PHONY : tests/CMakeFiles/deadlock_test.dir/rule
-
-# Convenience name for target.
-deadlock_test: tests/CMakeFiles/deadlock_test.dir/rule
-
-.PHONY : deadlock_test
-
-# fast build rule for target.
-deadlock_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/deadlock_test.dir/build.make tests/CMakeFiles/deadlock_test.dir/build
-.PHONY : deadlock_test/fast
-
-# Convenience name for target.
-tests/CMakeFiles/bsa.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bsa.dir/rule
-.PHONY : tests/CMakeFiles/bsa.dir/rule
-
-# Convenience name for target.
-bsa: tests/CMakeFiles/bsa.dir/rule
-
-.PHONY : bsa
-
-# fast build rule for target.
-bsa/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
-.PHONY : bsa/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test03.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test03.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test03.dir/rule
-
-# Convenience name for target.
-reactor_test03: tests/CMakeFiles/reactor_test03.dir/rule
-
-.PHONY : reactor_test03
-
-# fast build rule for target.
-reactor_test03/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/build
-.PHONY : reactor_test03/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test01.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test01.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test01.dir/rule
-
-# Convenience name for target.
-reactor_test01: tests/CMakeFiles/reactor_test01.dir/rule
-
-.PHONY : reactor_test01
-
-# fast build rule for target.
-reactor_test01/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/build
-.PHONY : reactor_test01/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test05.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test05.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test05.dir/rule
-
-# Convenience name for target.
-reactor_test05: tests/CMakeFiles/reactor_test05.dir/rule
-
-.PHONY : reactor_test05
-
-# fast build rule for target.
-reactor_test05/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test05.dir/build.make tests/CMakeFiles/reactor_test05.dir/build
-.PHONY : reactor_test05/fast
-
-# Convenience name for target.
-tests/CMakeFiles/deadlock_test2.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test2.dir/rule
-.PHONY : tests/CMakeFiles/deadlock_test2.dir/rule
-
-# Convenience name for target.
-deadlock_test2: tests/CMakeFiles/deadlock_test2.dir/rule
-
-.PHONY : deadlock_test2
-
-# fast build rule for target.
-deadlock_test2/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/deadlock_test2.dir/build.make tests/CMakeFiles/deadlock_test2.dir/build
-.PHONY : deadlock_test2/fast
-
-# Convenience name for target.
-tests/CMakeFiles/log_test1.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/log_test1.dir/rule
-.PHONY : tests/CMakeFiles/log_test1.dir/rule
-
-# Convenience name for target.
-log_test1: tests/CMakeFiles/log_test1.dir/rule
-
-.PHONY : log_test1
-
-# fast build rule for target.
-log_test1/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test1.dir/build.make tests/CMakeFiles/log_test1.dir/build
-.PHONY : log_test1/fast
-
-# Convenience name for target.
-tests/CMakeFiles/log_test2.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/log_test2.dir/rule
-.PHONY : tests/CMakeFiles/log_test2.dir/rule
-
-# Convenience name for target.
-log_test2: tests/CMakeFiles/log_test2.dir/rule
-
-.PHONY : log_test2
-
-# fast build rule for target.
-log_test2/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test2.dir/build.make tests/CMakeFiles/log_test2.dir/build
-.PHONY : log_test2/fast
+reactor_test02/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/build
+.PHONY : reactor_test02/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pthread_atfork_test.dir/rule:
@@ -365,19 +185,229 @@ pthread_atfork_test/fast:
 .PHONY : pthread_atfork_test/fast
 
 # Convenience name for target.
-tests/CMakeFiles/reactor_test02.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test02.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test02.dir/rule
+tests/CMakeFiles/reactor_test08.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test08.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test08.dir/rule
 
 # Convenience name for target.
-reactor_test02: tests/CMakeFiles/reactor_test02.dir/rule
+reactor_test08: tests/CMakeFiles/reactor_test08.dir/rule
 
-.PHONY : reactor_test02
+.PHONY : reactor_test08
 
 # fast build rule for target.
-reactor_test02/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test02.dir/build.make tests/CMakeFiles/reactor_test02.dir/build
-.PHONY : reactor_test02/fast
+reactor_test08/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/build
+.PHONY : reactor_test08/fast
+
+# Convenience name for target.
+tests/CMakeFiles/log_test2.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/log_test2.dir/rule
+.PHONY : tests/CMakeFiles/log_test2.dir/rule
+
+# Convenience name for target.
+log_test2: tests/CMakeFiles/log_test2.dir/rule
+
+.PHONY : log_test2
+
+# fast build rule for target.
+log_test2/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test2.dir/build.make tests/CMakeFiles/log_test2.dir/build
+.PHONY : log_test2/fast
+
+# Convenience name for target.
+tests/CMakeFiles/log_test1.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/log_test1.dir/rule
+.PHONY : tests/CMakeFiles/log_test1.dir/rule
+
+# Convenience name for target.
+log_test1: tests/CMakeFiles/log_test1.dir/rule
+
+.PHONY : log_test1
+
+# fast build rule for target.
+log_test1/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/log_test1.dir/build.make tests/CMakeFiles/log_test1.dir/build
+.PHONY : log_test1/fast
+
+# Convenience name for target.
+tests/CMakeFiles/deadlock_test2.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test2.dir/rule
+.PHONY : tests/CMakeFiles/deadlock_test2.dir/rule
+
+# Convenience name for target.
+deadlock_test2: tests/CMakeFiles/deadlock_test2.dir/rule
+
+.PHONY : deadlock_test2
+
+# fast build rule for target.
+deadlock_test2/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/deadlock_test2.dir/build.make tests/CMakeFiles/deadlock_test2.dir/build
+.PHONY : deadlock_test2/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test05.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test05.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test05.dir/rule
+
+# Convenience name for target.
+reactor_test05: tests/CMakeFiles/reactor_test05.dir/rule
+
+.PHONY : reactor_test05
+
+# fast build rule for target.
+reactor_test05/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test05.dir/build.make tests/CMakeFiles/reactor_test05.dir/build
+.PHONY : reactor_test05/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test01.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test01.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test01.dir/rule
+
+# Convenience name for target.
+reactor_test01: tests/CMakeFiles/reactor_test01.dir/rule
+
+.PHONY : reactor_test01
+
+# fast build rule for target.
+reactor_test01/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test01.dir/build.make tests/CMakeFiles/reactor_test01.dir/build
+.PHONY : reactor_test01/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test03.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test03.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test03.dir/rule
+
+# Convenience name for target.
+reactor_test03: tests/CMakeFiles/reactor_test03.dir/rule
+
+.PHONY : reactor_test03
+
+# fast build rule for target.
+reactor_test03/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test03.dir/build.make tests/CMakeFiles/reactor_test03.dir/build
+.PHONY : reactor_test03/fast
+
+# Convenience name for target.
+tests/CMakeFiles/bsa.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bsa.dir/rule
+.PHONY : tests/CMakeFiles/bsa.dir/rule
+
+# Convenience name for target.
+bsa: tests/CMakeFiles/bsa.dir/rule
+
+.PHONY : bsa
+
+# fast build rule for target.
+bsa/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
+.PHONY : bsa/fast
+
+# Convenience name for target.
+tests/CMakeFiles/deadlock_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test.dir/rule
+.PHONY : tests/CMakeFiles/deadlock_test.dir/rule
+
+# Convenience name for target.
+deadlock_test: tests/CMakeFiles/deadlock_test.dir/rule
+
+.PHONY : deadlock_test
+
+# fast build rule for target.
+deadlock_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/deadlock_test.dir/build.make tests/CMakeFiles/deadlock_test.dir/build
+.PHONY : deadlock_test/fast
+
+# Convenience name for target.
+tests/CMakeFiles/countdownlatch_test2.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test2.dir/rule
+.PHONY : tests/CMakeFiles/countdownlatch_test2.dir/rule
+
+# Convenience name for target.
+countdownlatch_test2: tests/CMakeFiles/countdownlatch_test2.dir/rule
+
+.PHONY : countdownlatch_test2
+
+# fast build rule for target.
+countdownlatch_test2/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/countdownlatch_test2.dir/build.make tests/CMakeFiles/countdownlatch_test2.dir/build
+.PHONY : countdownlatch_test2/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test04.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test04.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test04.dir/rule
+
+# Convenience name for target.
+reactor_test04: tests/CMakeFiles/reactor_test04.dir/rule
+
+.PHONY : reactor_test04
+
+# fast build rule for target.
+reactor_test04/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/build
+.PHONY : reactor_test04/fast
+
+# Convenience name for target.
+tests/CMakeFiles/countdownlatch_test1.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test1.dir/rule
+.PHONY : tests/CMakeFiles/countdownlatch_test1.dir/rule
+
+# Convenience name for target.
+countdownlatch_test1: tests/CMakeFiles/countdownlatch_test1.dir/rule
+
+.PHONY : countdownlatch_test1
+
+# fast build rule for target.
+countdownlatch_test1/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/countdownlatch_test1.dir/build.make tests/CMakeFiles/countdownlatch_test1.dir/build
+.PHONY : countdownlatch_test1/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test06.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test06.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test06.dir/rule
+
+# Convenience name for target.
+reactor_test06: tests/CMakeFiles/reactor_test06.dir/rule
+
+.PHONY : reactor_test06
+
+# fast build rule for target.
+reactor_test06/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test06.dir/build.make tests/CMakeFiles/reactor_test06.dir/build
+.PHONY : reactor_test06/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test07.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test07.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test07.dir/rule
+
+# Convenience name for target.
+reactor_test07: tests/CMakeFiles/reactor_test07.dir/rule
+
+.PHONY : reactor_test07
+
+# fast build rule for target.
+reactor_test07/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/build
+.PHONY : reactor_test07/fast
+
+# Convenience name for target.
+tests/CMakeFiles/reactor_test09.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test09.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test09.dir/rule
+
+# Convenience name for target.
+reactor_test09: tests/CMakeFiles/reactor_test09.dir/rule
+
+.PHONY : reactor_test09
+
+# fast build rule for target.
+reactor_test09/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/build
+.PHONY : reactor_test09/fast
 
 CountDownLatch_test1.o: CountDownLatch_test1.cc.o
 
@@ -757,6 +787,60 @@ Reactor_test07.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/Reactor_test07.cc.s
 .PHONY : Reactor_test07.cc.s
 
+Reactor_test08.o: Reactor_test08.cc.o
+
+.PHONY : Reactor_test08.o
+
+# target to build an object file
+Reactor_test08.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/Reactor_test08.cc.o
+.PHONY : Reactor_test08.cc.o
+
+Reactor_test08.i: Reactor_test08.cc.i
+
+.PHONY : Reactor_test08.i
+
+# target to preprocess a source file
+Reactor_test08.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/Reactor_test08.cc.i
+.PHONY : Reactor_test08.cc.i
+
+Reactor_test08.s: Reactor_test08.cc.s
+
+.PHONY : Reactor_test08.s
+
+# target to generate assembly for a file
+Reactor_test08.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/Reactor_test08.cc.s
+.PHONY : Reactor_test08.cc.s
+
+Reactor_test09.o: Reactor_test09.cc.o
+
+.PHONY : Reactor_test09.o
+
+# target to build an object file
+Reactor_test09.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/Reactor_test09.cc.o
+.PHONY : Reactor_test09.cc.o
+
+Reactor_test09.i: Reactor_test09.cc.i
+
+.PHONY : Reactor_test09.i
+
+# target to preprocess a source file
+Reactor_test09.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/Reactor_test09.cc.i
+.PHONY : Reactor_test09.cc.i
+
+Reactor_test09.s: Reactor_test09.cc.s
+
+.PHONY : Reactor_test09.s
+
+# target to generate assembly for a file
+Reactor_test09.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/Reactor_test09.cc.s
+.PHONY : Reactor_test09.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -790,27 +874,29 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... reactor_test07"
-	@echo "... reactor_test06"
-	@echo "... reactor_test04"
-	@echo "... rebuild_cache"
-	@echo "... countdownlatch_test2"
-	@echo "... countdownlatch_test1"
 	@echo "... install"
-	@echo "... deadlock_test"
-	@echo "... bsa"
-	@echo "... reactor_test03"
-	@echo "... reactor_test01"
-	@echo "... reactor_test05"
-	@echo "... deadlock_test2"
-	@echo "... log_test1"
-	@echo "... log_test2"
-	@echo "... pthread_atfork_test"
 	@echo "... reactor_test02"
+	@echo "... pthread_atfork_test"
+	@echo "... reactor_test08"
+	@echo "... log_test2"
+	@echo "... log_test1"
+	@echo "... deadlock_test2"
+	@echo "... reactor_test05"
+	@echo "... reactor_test01"
+	@echo "... reactor_test03"
+	@echo "... bsa"
+	@echo "... deadlock_test"
+	@echo "... countdownlatch_test2"
+	@echo "... rebuild_cache"
+	@echo "... reactor_test04"
+	@echo "... countdownlatch_test1"
+	@echo "... reactor_test06"
+	@echo "... reactor_test07"
+	@echo "... reactor_test09"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... install/local"
+	@echo "... edit_cache"
 	@echo "... CountDownLatch_test1.o"
 	@echo "... CountDownLatch_test1.i"
 	@echo "... CountDownLatch_test1.s"
@@ -853,6 +939,12 @@ help:
 	@echo "... Reactor_test07.o"
 	@echo "... Reactor_test07.i"
 	@echo "... Reactor_test07.s"
+	@echo "... Reactor_test08.o"
+	@echo "... Reactor_test08.i"
+	@echo "... Reactor_test08.s"
+	@echo "... Reactor_test09.o"
+	@echo "... Reactor_test09.i"
+	@echo "... Reactor_test09.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

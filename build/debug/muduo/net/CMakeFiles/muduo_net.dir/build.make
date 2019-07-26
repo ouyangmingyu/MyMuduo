@@ -321,9 +321,57 @@ muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o.provides: muduo/net/CMakeFile
 muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o.provides.build: muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o
 
 
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: muduo/net/CMakeFiles/muduo_net.dir/flags.make
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpConnection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_net.dir/TcpConnection.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpConnection.cc
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/muduo_net.dir/TcpConnection.cc.i"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpConnection.cc > CMakeFiles/muduo_net.dir/TcpConnection.cc.i
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/muduo_net.dir/TcpConnection.cc.s"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpConnection.cc -o CMakeFiles/muduo_net.dir/TcpConnection.cc.s
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.requires:
+
+.PHONY : muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.requires
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.provides: muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.requires
+	$(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.provides.build
+.PHONY : muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.provides
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.provides.build: muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o
+
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: muduo/net/CMakeFiles/muduo_net.dir/flags.make
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpServer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_net.dir/TcpServer.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpServer.cc
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/muduo_net.dir/TcpServer.cc.i"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpServer.cc > CMakeFiles/muduo_net.dir/TcpServer.cc.i
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/muduo_net.dir/TcpServer.cc.s"
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpServer.cc -o CMakeFiles/muduo_net.dir/TcpServer.cc.s
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.requires:
+
+.PHONY : muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.requires
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.provides: muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.requires
+	$(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.provides.build
+.PHONY : muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.provides
+
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.provides.build: muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o
+
+
 muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o: muduo/net/CMakeFiles/muduo_net.dir/flags.make
 muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_net.dir/Timer.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Timer.cc
 
 muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.i: cmake_force
@@ -347,7 +395,7 @@ muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o.provides.build: muduo/net/CMakeFil
 
 muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o: muduo/net/CMakeFiles/muduo_net.dir/flags.make
 muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerQueue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/muduo_net.dir/TimerQueue.cc.o -c /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerQueue.cc
 
 muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.i: cmake_force
@@ -382,6 +430,8 @@ muduo_net_OBJECTS = \
 "CMakeFiles/muduo_net.dir/poller/PollPoller.cc.o" \
 "CMakeFiles/muduo_net.dir/Socket.cc.o" \
 "CMakeFiles/muduo_net.dir/SocketsOps.cc.o" \
+"CMakeFiles/muduo_net.dir/TcpConnection.cc.o" \
+"CMakeFiles/muduo_net.dir/TcpServer.cc.o" \
 "CMakeFiles/muduo_net.dir/Timer.cc.o" \
 "CMakeFiles/muduo_net.dir/TimerQueue.cc.o"
 
@@ -399,11 +449,13 @@ lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/poller/EPollPoller.cc.o
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/poller/PollPoller.cc.o
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o
+lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o
+lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/build.make
 lib/libmuduo_net.a: muduo/net/CMakeFiles/muduo_net.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library ../../lib/libmuduo_net.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mingyu/MyMuduo/MyMuduo/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX static library ../../lib/libmuduo_net.a"
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && $(CMAKE_COMMAND) -P CMakeFiles/muduo_net.dir/cmake_clean_target.cmake
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/muduo_net.dir/link.txt --verbose=$(VERBOSE)
 
@@ -423,6 +475,8 @@ muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/
 muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/poller/PollPoller.cc.o.requires
 muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o.requires
 muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o.requires
+muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o.requires
+muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o.requires
 muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o.requires
 muduo/net/CMakeFiles/muduo_net.dir/requires: muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o.requires
 

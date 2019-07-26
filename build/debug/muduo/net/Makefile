@@ -385,6 +385,60 @@ SocketsOps.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.s
 .PHONY : SocketsOps.cc.s
 
+TcpConnection.o: TcpConnection.cc.o
+
+.PHONY : TcpConnection.o
+
+# target to build an object file
+TcpConnection.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o
+.PHONY : TcpConnection.cc.o
+
+TcpConnection.i: TcpConnection.cc.i
+
+.PHONY : TcpConnection.i
+
+# target to preprocess a source file
+TcpConnection.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.i
+.PHONY : TcpConnection.cc.i
+
+TcpConnection.s: TcpConnection.cc.s
+
+.PHONY : TcpConnection.s
+
+# target to generate assembly for a file
+TcpConnection.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.s
+.PHONY : TcpConnection.cc.s
+
+TcpServer.o: TcpServer.cc.o
+
+.PHONY : TcpServer.o
+
+# target to build an object file
+TcpServer.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o
+.PHONY : TcpServer.cc.o
+
+TcpServer.i: TcpServer.cc.i
+
+.PHONY : TcpServer.i
+
+# target to preprocess a source file
+TcpServer.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.i
+.PHONY : TcpServer.cc.i
+
+TcpServer.s: TcpServer.cc.s
+
+.PHONY : TcpServer.s
+
+# target to generate assembly for a file
+TcpServer.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.s
+.PHONY : TcpServer.cc.s
+
 Timer.o: Timer.cc.o
 
 .PHONY : Timer.o
@@ -557,6 +611,12 @@ help:
 	@echo "... SocketsOps.o"
 	@echo "... SocketsOps.i"
 	@echo "... SocketsOps.s"
+	@echo "... TcpConnection.o"
+	@echo "... TcpConnection.i"
+	@echo "... TcpConnection.s"
+	@echo "... TcpServer.o"
+	@echo "... TcpServer.i"
+	@echo "... TcpServer.s"
 	@echo "... Timer.o"
 	@echo "... Timer.i"
 	@echo "... Timer.s"

@@ -10,6 +10,8 @@ set(net_SRCS
   poller/PollPoller.cc
   Socket.cc
   SocketsOps.cc
+  TcpConnection.cc
+  TcpServer.cc
   Timer.cc
   TimerQueue.cc
   )
@@ -25,6 +27,8 @@ set(HEADERS
   EventLoop.h
   EventLoopThread.h
   InetAddress.h
+  TcpConnection.h
+  TcpServer.h
   TimerId.h
   )
 install(FILES ${HEADERS} DESTINATION include/muduo/net)

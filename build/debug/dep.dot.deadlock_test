@@ -3,6 +3,6 @@ node [
   fontsize = "12"
 ];
     "node62" [ label="deadlock_test" shape="house"];
-    "node72" [ label="pthread" shape="ellipse"];
-    "node62" -> "node72" // deadlock_test -> pthread
+    "node74" [ label="pthread" shape="ellipse"];
+    "node62" -> "node74" // deadlock_test -> pthread
 }

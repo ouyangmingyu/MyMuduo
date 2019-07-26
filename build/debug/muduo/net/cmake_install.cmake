@@ -38,6 +38,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/muduo/net" TYPE FILE FILES
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Acceptor.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h"

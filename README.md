@@ -530,6 +530,15 @@ muduoµÄ¶¨Ê±Æ÷ÓÉÈı¸öÀàÊµÏÖ£¬TimerId¡¢Timer¡¢TimerQueue£¬ÓÃ»§Ö»ÄÜ¿´µ½µÚÒ»¸öÀà£¬ÆäË
 		__attribute__ĞŞÊÎº¯Êı±íÊ¾Õâ¸öº¯ÊıÊÇ¹ıÊ±µÄ£¬Èç¹ûµ÷ÓÃ»á¾¯¸æ
 		
 
+£¨8£©Acceptor·â×°
+	×÷ÓÃ: AcceptorÓÃÓÚaccept(2)½ÓÊÜTCPÁ¬½Ó
+	
+	AcceptorµÄÊı¾İ³ÉÔ±°üÀ¨Socket¡¢Channel£¬AcceptorµÄsocketÊÇlistening socket£¨¼´server socket£©¡£ChannelÓÃÓÚ¹Û²ì´ËsocketµÄreadableÊÂ¼ş£¬
+	²¢»Øµ÷Accptor::handleRead()£¬ºóÕßµ÷ÓÃaccept(2)À´½ÓÊÜĞÂÁ¬½Ó£¬²¢»Øµ÷ÓÃ»§callback¡£
+	
+	
+	ÉèÖÃÁËÒ»¸ö¿ÕÏĞfd·ÀÖ¹EMFILE´íÎó
+
 
 
 

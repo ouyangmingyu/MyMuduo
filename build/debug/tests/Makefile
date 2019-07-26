@@ -155,6 +155,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/reactor_test07.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test07.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test07.dir/rule
+
+# Convenience name for target.
+reactor_test07: tests/CMakeFiles/reactor_test07.dir/rule
+
+.PHONY : reactor_test07
+
+# fast build rule for target.
+reactor_test07/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/build
+.PHONY : reactor_test07/fast
+
+# Convenience name for target.
 tests/CMakeFiles/reactor_test06.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test06.dir/rule
 .PHONY : tests/CMakeFiles/reactor_test06.dir/rule
@@ -715,6 +730,33 @@ Reactor_test06.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test06.dir/build.make tests/CMakeFiles/reactor_test06.dir/Reactor_test06.cc.s
 .PHONY : Reactor_test06.cc.s
 
+Reactor_test07.o: Reactor_test07.cc.o
+
+.PHONY : Reactor_test07.o
+
+# target to build an object file
+Reactor_test07.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/Reactor_test07.cc.o
+.PHONY : Reactor_test07.cc.o
+
+Reactor_test07.i: Reactor_test07.cc.i
+
+.PHONY : Reactor_test07.i
+
+# target to preprocess a source file
+Reactor_test07.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/Reactor_test07.cc.i
+.PHONY : Reactor_test07.cc.i
+
+Reactor_test07.s: Reactor_test07.cc.s
+
+.PHONY : Reactor_test07.s
+
+# target to generate assembly for a file
+Reactor_test07.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/Reactor_test07.cc.s
+.PHONY : Reactor_test07.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -752,6 +794,7 @@ help:
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... reactor_test07"
 	@echo "... reactor_test06"
 	@echo "... reactor_test04"
 	@echo "... rebuild_cache"
@@ -807,6 +850,9 @@ help:
 	@echo "... Reactor_test06.o"
 	@echo "... Reactor_test06.i"
 	@echo "... Reactor_test06.s"
+	@echo "... Reactor_test07.o"
+	@echo "... Reactor_test07.i"
+	@echo "... Reactor_test07.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

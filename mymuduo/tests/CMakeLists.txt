@@ -38,3 +38,6 @@ target_link_libraries(reactor_test05 muduo_net)
 
 add_executable(reactor_test06 Reactor_test06.cc)
 target_link_libraries(reactor_test06 muduo_net)
+
+add_executable(reactor_test07 Reactor_test07.cc)
+target_link_libraries(reactor_test07 muduo_net)

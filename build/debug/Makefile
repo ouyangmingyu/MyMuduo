@@ -428,6 +428,19 @@ inetaddress_unittest/fast:
 .PHONY : inetaddress_unittest/fast
 
 #=============================================================================
+# Target rules for targets named reactor_test07
+
+# Build rule for target.
+reactor_test07: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reactor_test07
+.PHONY : reactor_test07
+
+# fast build rule for target.
+reactor_test07/fast:
+	$(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/build
+.PHONY : reactor_test07/fast
+
+#=============================================================================
 # Target rules for targets named reactor_test06
 
 # Build rule for target.
@@ -642,6 +655,7 @@ help:
 	@echo "... timestamp_unittest"
 	@echo "... muduo_net"
 	@echo "... inetaddress_unittest"
+	@echo "... reactor_test07"
 	@echo "... reactor_test06"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test2"

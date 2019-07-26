@@ -482,6 +482,20 @@ muduoµÄ¶¨Ê±Æ÷ÓÉÈý¸öÀàÊµÏÖ£¬TimerId¡¢Timer¡¢TimerQueue£¬ÓÃ»§Ö»ÄÜ¿´µ½µÚÒ»¸öÀà£¬ÆäË
 	²»ÊÇ¼òµ¥µØÔÚÁÙ½çÇøÄÚÒÀ´Îµ÷ÓÃFunctor£¬¶øÊÇ°Ñ»Øµ÷ÁÐ±íswapµ½functorsÖÐ£¬ÕâÑùÒ»·½Ãæ¼õÐ¡ÁËÁÙ½çÇøµÄ³¤¶È£¨ÒâÎ¶×Å²»»á×èÈûÆäËüÏß³ÌµÄqueueInLoop()£©£¬ÁíÒ»·½Ãæ£¬Ò²±ÜÃâÁËËÀËø£¨ÒòÎªFunctor¿ÉÄÜÔÙ´Îµ÷ÓÃqueueInLoop()£©
 	ÓÉÓÚdoPendingFunctors()µ÷ÓÃµÄFunctor¿ÉÄÜÔÙ´Îµ÷ÓÃqueueInLoop(cb)£¬ÕâÊ±£¬queueInLoop()¾Í±ØÐëwakeup()£¬·ñÔòÐÂÔöµÄcb¿ÉÄÜ¾Í²»ÄÜ¼°Ê±µ÷ÓÃÁË
 	muduoÃ»ÓÐ·´¸´Ö´ÐÐdoPendingFunctors()Ö±µ½pendingFunctorsÎª¿Õ£¬ÕâÊÇÓÐÒâµÄ£¬·ñÔòIOÏß³Ì¿ÉÄÜÏÝÈëËÀÑ­»·£¬ÎÞ·¨´¦ÀíIOÊÂ¼þ¡£
+	
+	£¨6£©	EventLoopThread
+	
+	  ×÷ÓÃ£º·â×°IOÏß³Ì
+	
+		ÈÎºÎÒ»¸öÏß³Ì£¬Ö»Òª´´½¨²¢ÔËÐÐÁËEventLoop£¬¶¼³ÆÖ®ÎªIOÏß³Ì
+		IOÏß³Ì²»Ò»¶¨ÊÇÖ÷Ïß³Ì
+	  muduo²¢·¢Ä£ÐÍone loop per thread£¨IOÏß³Ì³Ø£¬Ò²¿ÉÒÔµ÷ÓÃELÀ´½øÐÐÒ»Ð©¼ÆËãÈÎÎñ£© + threadpool£¨¼ÆËãÏß³Ì³Ø£©
+	  ÎªÁË·½±ã½ñºóÊ¹ÓÃ£¬¶¨ÒåÁËEventLoopThreadÀà£¬¸ÃÀà·â×°ÁËIOÏß³Ì
+	              EventLoopThread´´½¨ÁËÒ»¸öÏß³Ì
+	              ÔÚÏß³Ìº¯ÊýÖÐ´´½¨ÁËÒ»¸öEvenLoop¶ÔÏó²¢µ÷ÓÃEventLoop::loop
+	
+	³õÊ¼»¯µÄ»Øµ÷º¯ÊýÎª¿Õ£¬ÈôÓÐ´«Èë»áÔÚloopÖ®Ç°±»µ÷ÓÃ
+
 
 
 

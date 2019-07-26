@@ -119,7 +119,7 @@ TimerId TimerQueue::addTimer(const TimerCallback& cb,
                              double interval)
 {
   Timer* timer = new Timer(cb, when, interval);
-  
+
   loop_->runInLoop(
       boost::bind(&TimerQueue::addTimerInLoop, this, timer));
 	  

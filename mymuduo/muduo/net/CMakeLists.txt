@@ -1,6 +1,7 @@
 set(net_SRCS
   Channel.cc
   EventLoop.cc
+  EventLoopThread.cc
   Poller.cc
   poller/DefaultPoller.cc
   poller/EPollPoller.cc
@@ -16,6 +17,7 @@ install(TARGETS muduo_net DESTINATION lib)
 set(HEADERS
   Channel.h
   EventLoop.h
+  EventLoopThread.h
   TimerId.h
   )
 install(FILES ${HEADERS} DESTINATION include/muduo/net)

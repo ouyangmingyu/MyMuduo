@@ -415,6 +415,19 @@ muduo_net/fast:
 .PHONY : muduo_net/fast
 
 #=============================================================================
+# Target rules for targets named reactor_test06
+
+# Build rule for target.
+reactor_test06: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reactor_test06
+.PHONY : reactor_test06
+
+# fast build rule for target.
+reactor_test06/fast:
+	$(MAKE) -f tests/CMakeFiles/reactor_test06.dir/build.make tests/CMakeFiles/reactor_test06.dir/build
+.PHONY : reactor_test06/fast
+
+#=============================================================================
 # Target rules for targets named reactor_test04
 
 # Build rule for target.
@@ -615,6 +628,7 @@ help:
 	@echo "... fileutil_test"
 	@echo "... timestamp_unittest"
 	@echo "... muduo_net"
+	@echo "... reactor_test06"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test2"
 	@echo "... countdownlatch_test1"

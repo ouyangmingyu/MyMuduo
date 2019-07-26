@@ -441,6 +441,49 @@ muduoµÄ¶¨Ê±Æ÷ÓÉÈý¸öÀàÊµÏÖ£¬TimerId¡¢Timer¡¢TimerQueue£¬ÓÃ»§Ö»ÄÜ¿´µ½µÚÒ»¸öÀà£¬ÆäË
 	ÓÉÓÚRVOÓÅ»¯£¬ÔÚ»ñÈ¡µ½ÆÚ¶¨Ê±Æ÷ÁÐ±íÊ±²»»á¿½±´¹¹Ôì
 	
 	linuxÏÂÃæÓÐRVOÓÅ»¯£¬vsµÄdebugÄ£Ê½Ã»ÓÐÓÅ»¯£¬releaseÄ£Ê½ÓÐÓÅ»¯
+	
+	(5) Ïß³Ì¼äÊÂ¼þÍ¨Öª»úÖÆ
+	
+	×÷ÓÃ£ºÍ¨¹ýwakeupfd»½ÐÑpollÒÔ´¦Àípendingfunctor£¬runinloopÊ¹µÃIOÏß³Ì¿ÉÒÔ×öÆäËûµÄÈÎÎñ£¬²»ÖÁÓÚÒ»Ö±×èÈûÀË·Ñ×ÊÔ´
+	
+	ÖªÊ¶µã£º
+	
+	½ø³Ì(Ïß³Ì)wait/notify
+	pipe£ºf0¶Á£¬f1Ð´£¬ÊÇµ¥ÏòµÄ
+	socketpair£ºÁ½¸öÎÄ¼þÃèÊö·û¼´¿É¶ÁÓÖ¿ÉÐ´£¬Ë«ÏòÍ¨ÐÅ
+	eventfd£¨muduo¿âËùÊ¹ÓÃµÄ£©£ºÖ»ÓÐÒ»¸öÎÄ¼þÃèÊö·û£¬µÈ´ýÏß³ÌºÍÍ¨ÖªÏß³Ì¶¼²Ù×÷Õâ¸öÎÄ¼þÃèÊö·û
+	eventfd ÊÇÒ»¸ö±È pipe ¸ü¸ßÐ§µÄÏß³Ì¼äÊÂ¼þÍ¨Öª»úÖÆ£¬Ò»·½ÃæËü±È pipe ÉÙÓÃÒ»¸ö file descripor£¬½ÚÊ¡ÁË×ÊÔ´£»ÁíÒ»·½Ãæ£¬eventfd µÄ»º³åÇø¹ÜÀíÒ²¼òµ¥µÃ¶à£¬È«²¿¡°buffer¡± Ö»ÓÐ¶¨³¤8 bytes£¬²»Ïñ pipe ÄÇÑù¿ÉÄÜÓÐ²»¶¨³¤µÄÕæÕý buffer¡£
+	
+	Ïß³Ì³ýÁËÒÔÉÏÈýÖÖ£¬»¹¿ÉÒÔÓÃÌõ¼þ±äÁ¿£¬ÓëÉÏÃæÈýÕßÇø±ðÊÇÌõ¼þ±äÁ¿Ã»ÓÐÎÄ¼þÃèÊö·û£¬¶øÉÏÃæÈýÖÖ¶¼ÓÐ
+	
+	eventfdº¯Êý
+	
+	À´×Ô <https://blog.csdn.net/hustfoxy/article/details/23613101> 
+	
+	
+	
+	muduoµÄÊµÏÖ
+	 ÀûÓÃeventfdÀ´ÊµÏÖÏß³ÌÍ¨Öª£¬ÔÚÕâÀïµÄwakeupchannelºÍEVÊÇ×éºÏ¹ØÏµ£¬ÕâÊÇÎ¨Ò»muduoÖÐÎ¨Ò»ÓÉEV¸ºÔðÉú´æÆÚµÄCH
+	
+	 EventLoop::runInLoop£¨±£Ö¤ÁËÔÚ²»ÓÃËøµÄÇé¿öÏß³Ì°²È«£¬ÊµÏÖÁËÏß³Ì°²È«µÄÒì²½µ÷ÓÃ£¬µ«ÊÇ×îÖÕÖ´ÐÐÈÎÎñµÄ»¹ÊÇIOÏß³Ì£©
+	ÔÚI/OÏß³ÌÖÐÖ´ÐÐÄ³¸ö»Øµ÷º¯Êý£¬¸Ãº¯Êý¿ÉÒÔ¿çÏß³Ìµ÷ÓÃ
+	 Èç¹ûÊÇµ±Ç°IOÏß³Ìµ÷ÓÃrunInLoop£¬ÔòÍ¬²½µ÷ÓÃcb
+	Èç¹ûÊÇÆäËüÏß³Ìµ÷ÓÃrunInLoop£¬ÔòÒì²½µØ½«cbÌí¼Óµ½¶ÓÁÐ ÒòÎªÖ®ºóÖ´ÐÐÊ±ÓÐswapµÄ¿½±´²Ù×÷£¬ËæÒâÊ¹µÃthreadidºÍcurrentidÒ»Ñù
+	
+	EventLoop::queueInLoop
+	µ÷ÓÃqueueInLoopµÄÏß³Ì²»ÊÇµ±Ç°IOÏß³ÌÐèÒª»½ÐÑ
+	 »òÕßµ÷ÓÃqueueInLoopµÄÏß³ÌÊÇµ±Ç°IOÏß³Ì£¬²¢ÇÒ´ËÊ±ÕýÔÚµ÷ÓÃpending functor£¬ÐèÒª»½ÐÑ
+	 Ö»ÓÐµ±Ç°IOÏß³ÌµÄÊÂ¼þ»Øµ÷ÖÐµ÷ÓÃqueueInLoop²Å²»ÐèÒª»½ÐÑ
+	
+	
+	doPendingFunctors();Ê¹µÃIOÏß³ÌÒ²ÄÜÖ´ÐÐÒ»Ð©¼ÆËãÈÎÎñ£¨¼´ÆäËûÏß³Ì¼Ó½øÀ´µÄ»Øµ÷£©£¬·ñÔòµ±IO²»ÊÇºÜ·±Ã¦Ê±×èÈû¾ÍÀË·ÑÁË×ÊÔ´
+	
+		doPendingFunctors£º
+	²»ÊÇ¼òµ¥µØÔÚÁÙ½çÇøÄÚÒÀ´Îµ÷ÓÃFunctor£¬¶øÊÇ°Ñ»Øµ÷ÁÐ±íswapµ½functorsÖÐ£¬ÕâÑùÒ»·½Ãæ¼õÐ¡ÁËÁÙ½çÇøµÄ³¤¶È£¨ÒâÎ¶×Å²»»á×èÈûÆäËüÏß³ÌµÄqueueInLoop()£©£¬ÁíÒ»·½Ãæ£¬Ò²±ÜÃâÁËËÀËø£¨ÒòÎªFunctor¿ÉÄÜÔÙ´Îµ÷ÓÃqueueInLoop()£©
+	ÓÉÓÚdoPendingFunctors()µ÷ÓÃµÄFunctor¿ÉÄÜÔÙ´Îµ÷ÓÃqueueInLoop(cb)£¬ÕâÊ±£¬queueInLoop()¾Í±ØÐëwakeup()£¬·ñÔòÐÂÔöµÄcb¿ÉÄÜ¾Í²»ÄÜ¼°Ê±µ÷ÓÃÁË
+	muduoÃ»ÓÐ·´¸´Ö´ÐÐdoPendingFunctors()Ö±µ½pendingFunctorsÎª¿Õ£¬ÕâÊÇÓÐÒâµÄ£¬·ñÔòIOÏß³Ì¿ÉÄÜÏÝÈëËÀÑ­»·£¬ÎÞ·¨´¦ÀíIOÊÂ¼þ¡£
+
+
 
 
 

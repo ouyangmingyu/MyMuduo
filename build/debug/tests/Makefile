@@ -260,6 +260,21 @@ reactor_test01/fast:
 .PHONY : reactor_test01/fast
 
 # Convenience name for target.
+tests/CMakeFiles/reactor_test05.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test05.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test05.dir/rule
+
+# Convenience name for target.
+reactor_test05: tests/CMakeFiles/reactor_test05.dir/rule
+
+.PHONY : reactor_test05
+
+# fast build rule for target.
+reactor_test05/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test05.dir/build.make tests/CMakeFiles/reactor_test05.dir/build
+.PHONY : reactor_test05/fast
+
+# Convenience name for target.
 tests/CMakeFiles/deadlock_test2.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test2.dir/rule
 .PHONY : tests/CMakeFiles/deadlock_test2.dir/rule
@@ -631,6 +646,33 @@ Reactor_test04.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test04.dir/build.make tests/CMakeFiles/reactor_test04.dir/Reactor_test04.cc.s
 .PHONY : Reactor_test04.cc.s
 
+Reactor_test05.o: Reactor_test05.cc.o
+
+.PHONY : Reactor_test05.o
+
+# target to build an object file
+Reactor_test05.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test05.dir/build.make tests/CMakeFiles/reactor_test05.dir/Reactor_test05.cc.o
+.PHONY : Reactor_test05.cc.o
+
+Reactor_test05.i: Reactor_test05.cc.i
+
+.PHONY : Reactor_test05.i
+
+# target to preprocess a source file
+Reactor_test05.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test05.dir/build.make tests/CMakeFiles/reactor_test05.dir/Reactor_test05.cc.i
+.PHONY : Reactor_test05.cc.i
+
+Reactor_test05.s: Reactor_test05.cc.s
+
+.PHONY : Reactor_test05.s
+
+# target to generate assembly for a file
+Reactor_test05.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test05.dir/build.make tests/CMakeFiles/reactor_test05.dir/Reactor_test05.cc.s
+.PHONY : Reactor_test05.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -677,6 +719,7 @@ help:
 	@echo "... bsa"
 	@echo "... reactor_test03"
 	@echo "... reactor_test01"
+	@echo "... reactor_test05"
 	@echo "... deadlock_test2"
 	@echo "... log_test1"
 	@echo "... log_test2"
@@ -715,6 +758,9 @@ help:
 	@echo "... Reactor_test04.o"
 	@echo "... Reactor_test04.i"
 	@echo "... Reactor_test04.s"
+	@echo "... Reactor_test05.o"
+	@echo "... Reactor_test05.i"
+	@echo "... Reactor_test05.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

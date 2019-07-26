@@ -55,6 +55,7 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/bsa.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test03.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test01.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test05.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/deadlock_test2.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/log_test1.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/log_test2.dir

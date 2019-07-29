@@ -21,7 +21,7 @@
 
 using namespace muduo;
 using namespace muduo::net;
-/*
+
 void muduo::net::defaultConnectionCallback(const TcpConnectionPtr& conn)
 {
   LOG_TRACE << conn->localAddress().toIpPort() << " -> "
@@ -35,7 +35,7 @@ void muduo::net::defaultMessageCallback(const TcpConnectionPtr&,
 {
   buf->retrieveAll();
 }
-*/
+
 TcpConnection::TcpConnection(EventLoop* loop,
                              const string& nameArg,
                              int sockfd,
@@ -70,6 +70,159 @@ TcpConnection::~TcpConnection()
             << " fd=" << channel_->fd();
 }
 
+// 线程安全，可以跨线程调用
+void TcpConnection::send(const void* data, size_t len)
+{
+  if (state_ == kConnected)
+  {
+    if (loop_->isInLoopThread())
+    {
+      sendInLoop(data, len);
+    }
+    else
+    {
+      string message(static_cast<const char*>(data), len);
+      loop_->runInLoop(
+          boost::bind(&TcpConnection::sendInLoop,
+                      this,
+                      message));
+    }
+  }
+}
+
+// 线程安全，可以跨线程调用
+void TcpConnection::send(const StringPiece& message)
+{
+  if (state_ == kConnected)
+  {
+    if (loop_->isInLoopThread())
+    {
+      sendInLoop(message);
+    }
+    else
+    {
+      loop_->runInLoop(
+          boost::bind(&TcpConnection::sendInLoop,
+                      this,
+                      message.as_string()));
+                    //std::forward<string>(message)));
+    }
+  }
+}
+
+// 线程安全，可以跨线程调用
+void TcpConnection::send(Buffer* buf)
+{
+  if (state_ == kConnected)
+  {
+    if (loop_->isInLoopThread())
+    {
+      sendInLoop(buf->peek(), buf->readableBytes());
+      buf->retrieveAll();
+    }
+    else
+    {
+      loop_->runInLoop(
+          boost::bind(&TcpConnection::sendInLoop,
+                      this,
+                      buf->retrieveAllAsString()));
+                    //std::forward<string>(message)));
+    }
+  }
+}
+
+void TcpConnection::sendInLoop(const StringPiece& message)
+{
+  sendInLoop(message.data(), message.size());
+}
+
+void TcpConnection::sendInLoop(const void* data, size_t len)
+{
+  loop_->assertInLoopThread();
+  sockets::write(channel_->fd(), data, len);
+  
+  /*
+  loop_->assertInLoopThread();
+  ssize_t nwrote = 0;
+  size_t remaining = len;
+  bool error = false;
+  if (state_ == kDisconnected)
+  {
+    LOG_WARN << "disconnected, give up writing";
+    return;
+  }
+  // if no thing in output queue, try writing directly
+  if (!channel_->isWriting() && outputBuffer_.readableBytes() == 0)
+  {
+    nwrote = sockets::write(channel_->fd(), data, len);
+    if (nwrote >= 0)
+    {
+      remaining = len - nwrote;
+      if (remaining == 0 && writeCompleteCallback_)
+      {
+        loop_->queueInLoop(boost::bind(writeCompleteCallback_, shared_from_this()));
+      }
+    }
+    else // nwrote < 0
+    {
+      nwrote = 0;
+      if (errno != EWOULDBLOCK)
+      {
+        LOG_SYSERR << "TcpConnection::sendInLoop";
+        if (errno == EPIPE) // FIXME: any others?
+        {
+          error = true;
+        }
+      }
+    }
+  }
+
+  assert(remaining <= len);
+  if (!error && remaining > 0)
+  {
+    LOG_TRACE << "I am going to write more data";
+    size_t oldLen = outputBuffer_.readableBytes();
+    if (oldLen + remaining >= highWaterMark_
+        && oldLen < highWaterMark_
+        && highWaterMarkCallback_)
+    {
+      loop_->queueInLoop(boost::bind(highWaterMarkCallback_, shared_from_this(), oldLen + remaining));
+    }
+    outputBuffer_.append(static_cast<const char*>(data)+nwrote, remaining);
+    if (!channel_->isWriting())
+    {
+      channel_->enableWriting();
+    }
+  }
+  */
+}
+
+void TcpConnection::shutdown()
+{
+  // FIXME: use compare and swap
+  if (state_ == kConnected)
+  {
+    setState(kDisconnecting);
+    // FIXME: shared_from_this()?
+    loop_->runInLoop(boost::bind(&TcpConnection::shutdownInLoop, this));
+  }
+}
+
+void TcpConnection::shutdownInLoop()
+{
+  loop_->assertInLoopThread();
+  if (!channel_->isWriting())
+  {
+    // we are not writing
+    socket_->shutdownWrite();
+  }
+}
+
+void TcpConnection::setTcpNoDelay(bool on)
+{
+  socket_->setTcpNoDelay(on);
+}
+
 void TcpConnection::connectEstablished()
 {
   loop_->assertInLoopThread();
@@ -98,7 +251,6 @@ void TcpConnection::connectDestroyed()
 
 void TcpConnection::handleRead(Timestamp receiveTime)
 {
-  /*
   loop_->assertInLoopThread();
   int savedErrno = 0;
   ssize_t n = inputBuffer_.readFd(channel_->fd(), &savedErrno);
@@ -116,7 +268,8 @@ void TcpConnection::handleRead(Timestamp receiveTime)
     LOG_SYSERR << "TcpConnection::handleRead";
     handleError();
   }
-  */
+
+  /*
   loop_->assertInLoopThread();
   int savedErrno = 0;
   char buf[65536];
@@ -135,7 +288,7 @@ void TcpConnection::handleRead(Timestamp receiveTime)
     LOG_SYSERR << "TcpConnection::handleRead";
     handleError();
   }
-  
+  */
 }
 
 void TcpConnection::handleClose()

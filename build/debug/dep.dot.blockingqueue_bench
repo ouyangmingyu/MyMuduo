@@ -5,8 +5,8 @@ node [
     "node30" [ label="blockingqueue_bench" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
     "node30" -> "node9" // blockingqueue_bench -> muduo_base
-    "node75" [ label="pthread" shape="ellipse"];
-    "node9" -> "node75" // muduo_base -> pthread
-    "node76" [ label="rt" shape="ellipse"];
-    "node9" -> "node76" // muduo_base -> rt
+    "node74" [ label="pthread" shape="ellipse"];
+    "node9" -> "node74" // muduo_base -> pthread
+    "node75" [ label="rt" shape="ellipse"];
+    "node9" -> "node75" // muduo_base -> rt
 }

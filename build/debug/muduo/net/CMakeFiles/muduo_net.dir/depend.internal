@@ -140,8 +140,10 @@ muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+ /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Buffer.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Callbacks.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h
+ /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Socket.h
@@ -162,8 +164,10 @@ muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Acceptor.h
+ /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Buffer.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Callbacks.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h
+ /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoopThreadPool.h
  /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h

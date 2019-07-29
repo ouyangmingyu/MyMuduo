@@ -7,10 +7,10 @@ node [
     "node47" -> "node40" // inetaddress_unittest -> muduo_net
     "node9" [ label="muduo_base" shape="diamond"];
     "node40" -> "node9" // muduo_net -> muduo_base
-    "node75" [ label="pthread" shape="ellipse"];
-    "node9" -> "node75" // muduo_base -> pthread
-    "node76" [ label="rt" shape="ellipse"];
-    "node9" -> "node76" // muduo_base -> rt
-    "node77" [ label="boost_unit_test_framework" shape="ellipse"];
-    "node47" -> "node77" // inetaddress_unittest -> boost_unit_test_framework
+    "node74" [ label="pthread" shape="ellipse"];
+    "node9" -> "node74" // muduo_base -> pthread
+    "node75" [ label="rt" shape="ellipse"];
+    "node9" -> "node75" // muduo_base -> rt
+    "node76" [ label="boost_unit_test_framework" shape="ellipse"];
+    "node47" -> "node76" // inetaddress_unittest -> boost_unit_test_framework
 }

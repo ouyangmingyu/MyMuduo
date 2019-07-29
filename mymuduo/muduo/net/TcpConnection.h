@@ -15,10 +15,10 @@
 #include <muduo/base/StringPiece.h>
 #include <muduo/base/Types.h>
 #include <muduo/net/Callbacks.h>
-//#include <muduo/net/Buffer.h>
+#include <muduo/net/Buffer.h>
 #include <muduo/net/InetAddress.h>
 
-//#include <boost/any.hpp>
+#include <boost/any.hpp>
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/noncopyable.hpp>
 #include <boost/scoped_ptr.hpp>
@@ -57,11 +57,22 @@ class TcpConnection : boost::noncopyable,
   const InetAddress& peerAddress() { return peerAddr_; }
   bool connected() const { return state_ == kConnected; }
 
+  // void send(string&& message); // C++11
+  void send(const void* message, size_t len);
+  void send(const StringPiece& message);
+  // void send(Buffer&& message); // C++11
+  void send(Buffer* message);  // this one will swap data
+  void shutdown(); // NOT thread safe, no simultaneous calling
+  void setTcpNoDelay(bool on);
+
   void setConnectionCallback(const ConnectionCallback& cb)
   { connectionCallback_ = cb; }
 
   void setMessageCallback(const MessageCallback& cb)
   { messageCallback_ = cb; }
+
+  Buffer* inputBuffer()
+  { return &inputBuffer_; }
 
   /// Internal use only.
   void setCloseCallback(const CloseCallback& cb)
@@ -77,6 +88,9 @@ class TcpConnection : boost::noncopyable,
   void handleRead(Timestamp receiveTime);
   void handleClose();
   void handleError();
+  void sendInLoop(const StringPiece& message);
+  void sendInLoop(const void* message, size_t len);
+  void shutdownInLoop();
   void setState(StateE s) { state_ = s; }
 
   EventLoop* loop_;			// 所属EventLoop
@@ -90,6 +104,8 @@ class TcpConnection : boost::noncopyable,
   ConnectionCallback connectionCallback_;
   MessageCallback messageCallback_;
   CloseCallback closeCallback_;
+  Buffer inputBuffer_;			// 应用层接收缓冲区
+  Buffer outputBuffer_;			// 应用层发送缓冲区
 };
 
 typedef boost::shared_ptr<TcpConnection> TcpConnectionPtr;

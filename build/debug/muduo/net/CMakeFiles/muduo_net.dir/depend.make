@@ -139,8 +139,10 @@ muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMu
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Timestamp.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Buffer.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Callbacks.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h
+muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Socket.h
@@ -161,8 +163,10 @@ muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Acceptor.h
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Buffer.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Callbacks.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Channel.h
+muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoop.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoopThreadPool.h
 muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h

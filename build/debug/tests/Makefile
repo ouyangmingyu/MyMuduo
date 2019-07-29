@@ -68,16 +68,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,6 +89,16 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -183,21 +183,6 @@ pthread_atfork_test: tests/CMakeFiles/pthread_atfork_test.dir/rule
 pthread_atfork_test/fast:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/pthread_atfork_test.dir/build.make tests/CMakeFiles/pthread_atfork_test.dir/build
 .PHONY : pthread_atfork_test/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test08.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test08.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test08.dir/rule
-
-# Convenience name for target.
-reactor_test08: tests/CMakeFiles/reactor_test08.dir/rule
-
-.PHONY : reactor_test08
-
-# fast build rule for target.
-reactor_test08/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/build
-.PHONY : reactor_test08/fast
 
 # Convenience name for target.
 tests/CMakeFiles/log_test2.dir/rule:
@@ -290,6 +275,21 @@ reactor_test03/fast:
 .PHONY : reactor_test03/fast
 
 # Convenience name for target.
+tests/CMakeFiles/bsa.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bsa.dir/rule
+.PHONY : tests/CMakeFiles/bsa.dir/rule
+
+# Convenience name for target.
+bsa: tests/CMakeFiles/bsa.dir/rule
+
+.PHONY : bsa
+
+# fast build rule for target.
+bsa/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
+.PHONY : bsa/fast
+
+# Convenience name for target.
 tests/CMakeFiles/deadlock_test.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/deadlock_test.dir/rule
 .PHONY : tests/CMakeFiles/deadlock_test.dir/rule
@@ -380,49 +380,34 @@ reactor_test07/fast:
 .PHONY : reactor_test07/fast
 
 # Convenience name for target.
-tests/CMakeFiles/reactor_test09.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test09.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test09.dir/rule
+tests/CMakeFiles/reactor_test12.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test12.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test12.dir/rule
 
 # Convenience name for target.
-reactor_test09: tests/CMakeFiles/reactor_test09.dir/rule
+reactor_test12: tests/CMakeFiles/reactor_test12.dir/rule
 
-.PHONY : reactor_test09
+.PHONY : reactor_test12
 
 # fast build rule for target.
-reactor_test09/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/build
-.PHONY : reactor_test09/fast
+reactor_test12/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test12.dir/build.make tests/CMakeFiles/reactor_test12.dir/build
+.PHONY : reactor_test12/fast
 
 # Convenience name for target.
-tests/CMakeFiles/bsa.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bsa.dir/rule
-.PHONY : tests/CMakeFiles/bsa.dir/rule
+tests/CMakeFiles/reactor_test11.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test11.dir/rule
+.PHONY : tests/CMakeFiles/reactor_test11.dir/rule
 
 # Convenience name for target.
-bsa: tests/CMakeFiles/bsa.dir/rule
+reactor_test11: tests/CMakeFiles/reactor_test11.dir/rule
 
-.PHONY : bsa
+.PHONY : reactor_test11
 
 # fast build rule for target.
-bsa/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
-.PHONY : bsa/fast
-
-# Convenience name for target.
-tests/CMakeFiles/reactor_test10.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/reactor_test10.dir/rule
-.PHONY : tests/CMakeFiles/reactor_test10.dir/rule
-
-# Convenience name for target.
-reactor_test10: tests/CMakeFiles/reactor_test10.dir/rule
-
-.PHONY : reactor_test10
-
-# fast build rule for target.
-reactor_test10/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test10.dir/build.make tests/CMakeFiles/reactor_test10.dir/build
-.PHONY : reactor_test10/fast
+reactor_test11/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test11.dir/build.make tests/CMakeFiles/reactor_test11.dir/build
+.PHONY : reactor_test11/fast
 
 CountDownLatch_test1.o: CountDownLatch_test1.cc.o
 
@@ -802,86 +787,59 @@ Reactor_test07.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test07.dir/build.make tests/CMakeFiles/reactor_test07.dir/Reactor_test07.cc.s
 .PHONY : Reactor_test07.cc.s
 
-Reactor_test08.o: Reactor_test08.cc.o
+Reactor_test11.o: Reactor_test11.cc.o
 
-.PHONY : Reactor_test08.o
-
-# target to build an object file
-Reactor_test08.cc.o:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/Reactor_test08.cc.o
-.PHONY : Reactor_test08.cc.o
-
-Reactor_test08.i: Reactor_test08.cc.i
-
-.PHONY : Reactor_test08.i
-
-# target to preprocess a source file
-Reactor_test08.cc.i:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/Reactor_test08.cc.i
-.PHONY : Reactor_test08.cc.i
-
-Reactor_test08.s: Reactor_test08.cc.s
-
-.PHONY : Reactor_test08.s
-
-# target to generate assembly for a file
-Reactor_test08.cc.s:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test08.dir/build.make tests/CMakeFiles/reactor_test08.dir/Reactor_test08.cc.s
-.PHONY : Reactor_test08.cc.s
-
-Reactor_test09.o: Reactor_test09.cc.o
-
-.PHONY : Reactor_test09.o
+.PHONY : Reactor_test11.o
 
 # target to build an object file
-Reactor_test09.cc.o:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/Reactor_test09.cc.o
-.PHONY : Reactor_test09.cc.o
+Reactor_test11.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test11.dir/build.make tests/CMakeFiles/reactor_test11.dir/Reactor_test11.cc.o
+.PHONY : Reactor_test11.cc.o
 
-Reactor_test09.i: Reactor_test09.cc.i
+Reactor_test11.i: Reactor_test11.cc.i
 
-.PHONY : Reactor_test09.i
+.PHONY : Reactor_test11.i
 
 # target to preprocess a source file
-Reactor_test09.cc.i:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/Reactor_test09.cc.i
-.PHONY : Reactor_test09.cc.i
+Reactor_test11.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test11.dir/build.make tests/CMakeFiles/reactor_test11.dir/Reactor_test11.cc.i
+.PHONY : Reactor_test11.cc.i
 
-Reactor_test09.s: Reactor_test09.cc.s
+Reactor_test11.s: Reactor_test11.cc.s
 
-.PHONY : Reactor_test09.s
+.PHONY : Reactor_test11.s
 
 # target to generate assembly for a file
-Reactor_test09.cc.s:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/Reactor_test09.cc.s
-.PHONY : Reactor_test09.cc.s
+Reactor_test11.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test11.dir/build.make tests/CMakeFiles/reactor_test11.dir/Reactor_test11.cc.s
+.PHONY : Reactor_test11.cc.s
 
-Reactor_test10.o: Reactor_test10.cc.o
+Reactor_test12.o: Reactor_test12.cc.o
 
-.PHONY : Reactor_test10.o
+.PHONY : Reactor_test12.o
 
 # target to build an object file
-Reactor_test10.cc.o:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test10.dir/build.make tests/CMakeFiles/reactor_test10.dir/Reactor_test10.cc.o
-.PHONY : Reactor_test10.cc.o
+Reactor_test12.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test12.dir/build.make tests/CMakeFiles/reactor_test12.dir/Reactor_test12.cc.o
+.PHONY : Reactor_test12.cc.o
 
-Reactor_test10.i: Reactor_test10.cc.i
+Reactor_test12.i: Reactor_test12.cc.i
 
-.PHONY : Reactor_test10.i
+.PHONY : Reactor_test12.i
 
 # target to preprocess a source file
-Reactor_test10.cc.i:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test10.dir/build.make tests/CMakeFiles/reactor_test10.dir/Reactor_test10.cc.i
-.PHONY : Reactor_test10.cc.i
+Reactor_test12.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test12.dir/build.make tests/CMakeFiles/reactor_test12.dir/Reactor_test12.cc.i
+.PHONY : Reactor_test12.cc.i
 
-Reactor_test10.s: Reactor_test10.cc.s
+Reactor_test12.s: Reactor_test12.cc.s
 
-.PHONY : Reactor_test10.s
+.PHONY : Reactor_test12.s
 
 # target to generate assembly for a file
-Reactor_test10.cc.s:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test10.dir/build.make tests/CMakeFiles/reactor_test10.dir/Reactor_test10.cc.s
-.PHONY : Reactor_test10.cc.s
+Reactor_test12.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test12.dir/build.make tests/CMakeFiles/reactor_test12.dir/Reactor_test12.cc.s
+.PHONY : Reactor_test12.cc.s
 
 bsa.o: bsa.cc.o
 
@@ -917,16 +875,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... reactor_test02"
 	@echo "... pthread_atfork_test"
-	@echo "... reactor_test08"
 	@echo "... log_test2"
 	@echo "... log_test1"
 	@echo "... deadlock_test2"
 	@echo "... reactor_test05"
 	@echo "... reactor_test01"
 	@echo "... reactor_test03"
+	@echo "... bsa"
 	@echo "... deadlock_test"
 	@echo "... countdownlatch_test2"
 	@echo "... rebuild_cache"
@@ -934,10 +891,10 @@ help:
 	@echo "... countdownlatch_test1"
 	@echo "... reactor_test06"
 	@echo "... reactor_test07"
-	@echo "... reactor_test09"
-	@echo "... bsa"
-	@echo "... reactor_test10"
+	@echo "... reactor_test12"
+	@echo "... reactor_test11"
 	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... CountDownLatch_test1.o"
@@ -982,15 +939,12 @@ help:
 	@echo "... Reactor_test07.o"
 	@echo "... Reactor_test07.i"
 	@echo "... Reactor_test07.s"
-	@echo "... Reactor_test08.o"
-	@echo "... Reactor_test08.i"
-	@echo "... Reactor_test08.s"
-	@echo "... Reactor_test09.o"
-	@echo "... Reactor_test09.i"
-	@echo "... Reactor_test09.s"
-	@echo "... Reactor_test10.o"
-	@echo "... Reactor_test10.i"
-	@echo "... Reactor_test10.s"
+	@echo "... Reactor_test11.o"
+	@echo "... Reactor_test11.i"
+	@echo "... Reactor_test11.s"
+	@echo "... Reactor_test12.o"
+	@echo "... Reactor_test12.i"
+	@echo "... Reactor_test12.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

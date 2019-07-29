@@ -87,7 +87,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/CMakeFiles/reactor_test05.dir/DependInfo.cmake"
   "tests/CMakeFiles/reactor_test01.dir/DependInfo.cmake"
   "tests/CMakeFiles/reactor_test03.dir/DependInfo.cmake"
-  "tests/CMakeFiles/bsa.dir/DependInfo.cmake"
   "tests/CMakeFiles/deadlock_test.dir/DependInfo.cmake"
   "tests/CMakeFiles/countdownlatch_test2.dir/DependInfo.cmake"
   "tests/CMakeFiles/reactor_test04.dir/DependInfo.cmake"
@@ -95,4 +94,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/CMakeFiles/reactor_test06.dir/DependInfo.cmake"
   "tests/CMakeFiles/reactor_test07.dir/DependInfo.cmake"
   "tests/CMakeFiles/reactor_test09.dir/DependInfo.cmake"
+  "tests/CMakeFiles/bsa.dir/DependInfo.cmake"
+  "tests/CMakeFiles/reactor_test10.dir/DependInfo.cmake"
   )

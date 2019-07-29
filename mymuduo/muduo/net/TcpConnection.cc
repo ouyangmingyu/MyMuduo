@@ -94,7 +94,6 @@ void TcpConnection::connectDestroyed()
     connectionCallback_(shared_from_this());
   }
   channel_->remove();
- 	LOG_TRACE << "HELLO";
 }
 
 void TcpConnection::handleRead(Timestamp receiveTime)

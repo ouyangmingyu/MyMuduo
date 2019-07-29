@@ -566,6 +566,29 @@ muduoµÄ¶¨Ê±Æ÷ÓÉÈý¸öÀàÊµÏÖ£¬TimerId¡¢Timer¡¢TimerQueue£¬ÓÃ»§Ö»ÄÜ¿´µ½µÚÒ»¸öÀà£¬ÆäË
 	
 	ÎªÊ²Ã´TCÒª¼Ì³Ðenable_shared_from_this£¿¶ø²»Ö±½ÓÓÃthis
 	ÒòÎªÓÃÂãÖ¸Õë³õÊ¼»¯Ò»¸öSPÎÞ·¨µ¼ÖÂÒýÓÃ¼ÆÊý++£¨¸ÃÐÂµÄSPÒýÓÃ¼ÆÊý½«Îª1£©£¬´Ó¶øÎÞ·¨´ïµ½¿ØÖÆÉúÃüµÄÄ¿µÄ
+	
+	
+(11) 	muduoÖ§³Ö¶àÏß³Ì
+	EventLoopThread£¨IOÏß³ÌÀà£©
+	EventLoopThreadPool£¨IOÏß³Ì³ØÀà£©
+	IOÏß³Ì³ØµÄ¹¦ÄÜÊÇ¿ªÆôÈô¸É¸öIOÏß³Ì£¬²¢ÈÃÕâÐ©IOÏß³Ì´¦ÓÚÊÂ¼þÑ­»·µÄ×´Ì¬
+
+	ptr_vector<>£ºµ±ÆäÏú»Ù£¬ËüËù¹ÜÀíµÄ¶ÔÏó¸ú×ÅÏú»Ù¡£
+	scoped_ptr£º¼´unique_ptr£¬½ûÖ¹ÎÒÃÇÊ¹ÓÃ¿½±´¹¹ÔìºÍ¸³ÖµÔËËã·ûµÄÖØÔØ¡£
+	
+	MR¹Ø×¢lfd¡¢SR¹Ø×¢cfd£¬Èç¹ûÃ»ÓÐSR£¬MR¼ÈÐèÒª¹Ø×¢lfdÓÖÐèÒª¹Ø×¢cfd
+	
+	ÎÄ¼þÃèÊö·ûµÄÕ¼ÓÃÇé¿ö
+	µ¥Ïß³ÌÊ±£º
+	3¡¢4¡¢5ºÅfd·Ö±ð±»poll¡¢timequeue¡¢wakeupfdÕ¼ÓÃ
+	6±»lfdÕ¼ÓÃ£¬7±»¿ÕÏÐfdÕ¼ÓÃ£¬ÔÚÖ®ºó¾ÍÊÇ¸÷¸öÐÂÁ¬½ÓµÄfd
+	
+	3¡¢7¶¼Ã»ÓÐ¹Ø×¢Ê±¼ä£¬²»»áupdate
+	
+	¶àÏß³ÌÊ±£º
+	Ã¿¸öÏß³Ì³Ø¶¼»áÓÐ×Ô¼ºµÄpollfd¡¢timerfd¡¢wakeupfd£¨³õÊ¼»¯Ê±pollÃ»ÓÐ´òÓ¡pollfd£¬ÒòÎª»¹Ã»¿ªÊ¼£©
+
+
 
 
 

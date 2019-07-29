@@ -50,6 +50,7 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/install/local.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/edit_cache.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/install.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/list_install_components.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test02.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/pthread_atfork_test.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test08.dir
@@ -59,7 +60,6 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test05.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test01.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test03.dir
-/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/bsa.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/deadlock_test.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/countdownlatch_test2.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/rebuild_cache.dir
@@ -68,7 +68,8 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test06.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test07.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test09.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/bsa.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test10.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/install/strip.dir
-/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/list_install_components.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/install/local.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/edit_cache.dir

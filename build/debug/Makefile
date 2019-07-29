@@ -545,19 +545,6 @@ reactor_test03/fast:
 .PHONY : reactor_test03/fast
 
 #=============================================================================
-# Target rules for targets named bsa
-
-# Build rule for target.
-bsa: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bsa
-.PHONY : bsa
-
-# fast build rule for target.
-bsa/fast:
-	$(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
-.PHONY : bsa/fast
-
-#=============================================================================
 # Target rules for targets named deadlock_test
 
 # Build rule for target.
@@ -648,6 +635,32 @@ reactor_test09/fast:
 	$(MAKE) -f tests/CMakeFiles/reactor_test09.dir/build.make tests/CMakeFiles/reactor_test09.dir/build
 .PHONY : reactor_test09/fast
 
+#=============================================================================
+# Target rules for targets named bsa
+
+# Build rule for target.
+bsa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bsa
+.PHONY : bsa
+
+# fast build rule for target.
+bsa/fast:
+	$(MAKE) -f tests/CMakeFiles/bsa.dir/build.make tests/CMakeFiles/bsa.dir/build
+.PHONY : bsa/fast
+
+#=============================================================================
+# Target rules for targets named reactor_test10
+
+# Build rule for target.
+reactor_test10: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reactor_test10
+.PHONY : reactor_test10
+
+# fast build rule for target.
+reactor_test10/fast:
+	$(MAKE) -f tests/CMakeFiles/reactor_test10.dir/build.make tests/CMakeFiles/reactor_test10.dir/build
+.PHONY : reactor_test10/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -690,7 +703,6 @@ help:
 	@echo "... reactor_test05"
 	@echo "... reactor_test01"
 	@echo "... reactor_test03"
-	@echo "... bsa"
 	@echo "... deadlock_test"
 	@echo "... countdownlatch_test2"
 	@echo "... reactor_test04"
@@ -698,6 +710,8 @@ help:
 	@echo "... reactor_test06"
 	@echo "... reactor_test07"
 	@echo "... reactor_test09"
+	@echo "... bsa"
+	@echo "... reactor_test10"
 .PHONY : help
 
 

@@ -7,8 +7,8 @@ node [
     "node67" -> "node40" // reactor_test06 -> muduo_net
     "node9" [ label="muduo_base" shape="diamond"];
     "node40" -> "node9" // muduo_net -> muduo_base
-    "node74" [ label="pthread" shape="ellipse"];
-    "node9" -> "node74" // muduo_base -> pthread
-    "node75" [ label="rt" shape="ellipse"];
-    "node9" -> "node75" // muduo_base -> rt
+    "node75" [ label="pthread" shape="ellipse"];
+    "node9" -> "node75" // muduo_base -> pthread
+    "node76" [ label="rt" shape="ellipse"];
+    "node9" -> "node76" // muduo_base -> rt
 }

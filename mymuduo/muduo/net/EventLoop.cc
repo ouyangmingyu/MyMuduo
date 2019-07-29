@@ -16,6 +16,7 @@
 //#include <poll.h>
 #include <boost/bind.hpp>
 
+#include <signal.h>
 #include <sys/eventfd.h>
 
 using namespace muduo;
@@ -40,6 +41,19 @@ int createEventfd()
   return evtfd;
 }
 
+#pragma GCC diagnostic ignored "-Wold-style-cast"
+class IgnoreSigPipe
+{
+ public:
+  IgnoreSigPipe()
+  {
+    ::signal(SIGPIPE, SIG_IGN);
+    LOG_TRACE << "Ignore SIGPIPE";
+  }
+};
+#pragma GCC diagnostic error "-Wold-style-cast"
+
+IgnoreSigPipe initObj;
 }
 
 EventLoop* EventLoop::getEventLoopOfCurrentThread()

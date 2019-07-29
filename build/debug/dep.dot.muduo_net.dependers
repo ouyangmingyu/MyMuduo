@@ -5,22 +5,24 @@ node [
     "node40" [ label="muduo_net" shape="diamond"];
     "node47" [ label="inetaddress_unittest" shape="house"];
     "node47" -> "node40" // muduo_net -> inetaddress_unittest
-    "node58" [ label="reactor_test01" shape="house"];
-    "node58" -> "node40" // muduo_net -> reactor_test01
-    "node52" [ label="reactor_test02" shape="house"];
-    "node52" -> "node40" // muduo_net -> reactor_test02
-    "node59" [ label="reactor_test03" shape="house"];
-    "node59" -> "node40" // muduo_net -> reactor_test03
-    "node64" [ label="reactor_test04" shape="house"];
-    "node64" -> "node40" // muduo_net -> reactor_test04
-    "node57" [ label="reactor_test05" shape="house"];
-    "node57" -> "node40" // muduo_net -> reactor_test05
-    "node66" [ label="reactor_test06" shape="house"];
-    "node66" -> "node40" // muduo_net -> reactor_test06
-    "node67" [ label="reactor_test07" shape="house"];
-    "node67" -> "node40" // muduo_net -> reactor_test07
-    "node69" [ label="reactor_test11" shape="house"];
-    "node69" -> "node40" // muduo_net -> reactor_test11
-    "node68" [ label="reactor_test12" shape="house"];
-    "node68" -> "node40" // muduo_net -> reactor_test12
+    "node59" [ label="reactor_test01" shape="house"];
+    "node59" -> "node40" // muduo_net -> reactor_test01
+    "node53" [ label="reactor_test02" shape="house"];
+    "node53" -> "node40" // muduo_net -> reactor_test02
+    "node60" [ label="reactor_test03" shape="house"];
+    "node60" -> "node40" // muduo_net -> reactor_test03
+    "node66" [ label="reactor_test04" shape="house"];
+    "node66" -> "node40" // muduo_net -> reactor_test04
+    "node58" [ label="reactor_test05" shape="house"];
+    "node58" -> "node40" // muduo_net -> reactor_test05
+    "node68" [ label="reactor_test06" shape="house"];
+    "node68" -> "node40" // muduo_net -> reactor_test06
+    "node69" [ label="reactor_test07" shape="house"];
+    "node69" -> "node40" // muduo_net -> reactor_test07
+    "node71" [ label="reactor_test11" shape="house"];
+    "node71" -> "node40" // muduo_net -> reactor_test11
+    "node70" [ label="reactor_test12" shape="house"];
+    "node70" -> "node40" // muduo_net -> reactor_test12
+    "node63" [ label="reactor_test13" shape="house"];
+    "node63" -> "node40" // muduo_net -> reactor_test13
 }

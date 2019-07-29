@@ -113,6 +113,7 @@ void TcpServer::newConnection(int sockfd, const InetAddress& peerAddr)
   LOG_TRACE << "[2] usecount=" << conn.use_count();
   conn->setConnectionCallback(connectionCallback_);
   conn->setMessageCallback(messageCallback_);
+  conn->setWriteCompleteCallback(writeCompleteCallback_);
 
   conn->setCloseCallback(
       boost::bind(&TcpServer::removeConnection, this, _1));

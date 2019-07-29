@@ -558,6 +558,19 @@ deadlock_test/fast:
 .PHONY : deadlock_test/fast
 
 #=============================================================================
+# Target rules for targets named reactor_test13
+
+# Build rule for target.
+reactor_test13: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reactor_test13
+.PHONY : reactor_test13
+
+# fast build rule for target.
+reactor_test13/fast:
+	$(MAKE) -f tests/CMakeFiles/reactor_test13.dir/build.make tests/CMakeFiles/reactor_test13.dir/build
+.PHONY : reactor_test13/fast
+
+#=============================================================================
 # Target rules for targets named countdownlatch_test2
 
 # Build rule for target.
@@ -691,6 +704,7 @@ help:
 	@echo "... reactor_test03"
 	@echo "... bsa"
 	@echo "... deadlock_test"
+	@echo "... reactor_test13"
 	@echo "... countdownlatch_test2"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test1"

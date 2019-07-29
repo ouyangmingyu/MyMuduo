@@ -77,6 +77,11 @@ class TcpServer : boost::noncopyable
   void setMessageCallback(const MessageCallback& cb)
   { messageCallback_ = cb; }
 
+  /// Set write complete callback.
+  /// Not thread safe.
+  void setWriteCompleteCallback(const WriteCompleteCallback& cb)
+  { writeCompleteCallback_ = cb; }
+
 
  private:
   /// Not thread safe, but in loop
@@ -95,6 +100,7 @@ class TcpServer : boost::noncopyable
   boost::scoped_ptr<EventLoopThreadPool> threadPool_;
   ConnectionCallback connectionCallback_;
   MessageCallback messageCallback_;
+  WriteCompleteCallback writeCompleteCallback_;		// 数据发送完毕，会回调此函数
   ThreadInitCallback threadInitCallback_;	// IO线程池中的线程在进入事件循环前，会回调用此函数
   bool started_;
   // always in loop thread

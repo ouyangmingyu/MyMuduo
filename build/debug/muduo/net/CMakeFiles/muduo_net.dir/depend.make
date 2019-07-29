@@ -19,6 +19,14 @@ muduo/net/CMakeFiles/muduo_net.dir/Acceptor.cc.o: /home/mingyu/MyMuduo/MyMuduo/m
 muduo/net/CMakeFiles/muduo_net.dir/Acceptor.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/SocketsOps.h
 muduo/net/CMakeFiles/muduo_net.dir/Acceptor.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h
 
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/StringPiece.h
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Types.h
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/copyable.h
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Buffer.cc
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Buffer.h
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/Endian.h
+muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/SocketsOps.h
+
 muduo/net/CMakeFiles/muduo_net.dir/Channel.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/Atomic.h
 muduo/net/CMakeFiles/muduo_net.dir/Channel.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/CurrentThread.h
 muduo/net/CMakeFiles/muduo_net.dir/Channel.cc.o: /home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/base/LogStream.h

@@ -250,6 +250,33 @@ Channel.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Channel.cc.s
 .PHONY : Channel.cc.s
 
+Connector.o: Connector.cc.o
+
+.PHONY : Connector.o
+
+# target to build an object file
+Connector.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Connector.cc.o
+.PHONY : Connector.cc.o
+
+Connector.i: Connector.cc.i
+
+.PHONY : Connector.i
+
+# target to preprocess a source file
+Connector.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Connector.cc.i
+.PHONY : Connector.cc.i
+
+Connector.s: Connector.cc.s
+
+.PHONY : Connector.s
+
+# target to generate assembly for a file
+Connector.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/Connector.cc.s
+.PHONY : Connector.cc.s
+
 EventLoop.o: EventLoop.cc.o
 
 .PHONY : EventLoop.o
@@ -438,6 +465,33 @@ SocketsOps.s: SocketsOps.cc.s
 SocketsOps.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.s
 .PHONY : SocketsOps.cc.s
+
+TcpClient.o: TcpClient.cc.o
+
+.PHONY : TcpClient.o
+
+# target to build an object file
+TcpClient.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpClient.cc.o
+.PHONY : TcpClient.cc.o
+
+TcpClient.i: TcpClient.cc.i
+
+.PHONY : TcpClient.i
+
+# target to preprocess a source file
+TcpClient.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpClient.cc.i
+.PHONY : TcpClient.cc.i
+
+TcpClient.s: TcpClient.cc.s
+
+.PHONY : TcpClient.s
+
+# target to generate assembly for a file
+TcpClient.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f muduo/net/CMakeFiles/muduo_net.dir/build.make muduo/net/CMakeFiles/muduo_net.dir/TcpClient.cc.s
+.PHONY : TcpClient.cc.s
 
 TcpConnection.o: TcpConnection.cc.o
 
@@ -650,6 +704,9 @@ help:
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
+	@echo "... Connector.o"
+	@echo "... Connector.i"
+	@echo "... Connector.s"
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"
 	@echo "... EventLoop.s"
@@ -671,6 +728,9 @@ help:
 	@echo "... SocketsOps.o"
 	@echo "... SocketsOps.i"
 	@echo "... SocketsOps.s"
+	@echo "... TcpClient.o"
+	@echo "... TcpClient.i"
+	@echo "... TcpClient.s"
 	@echo "... TcpConnection.o"
 	@echo "... TcpConnection.i"
 	@echo "... TcpConnection.s"

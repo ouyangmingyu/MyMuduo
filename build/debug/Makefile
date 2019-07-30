@@ -571,6 +571,19 @@ reactor_test13/fast:
 .PHONY : reactor_test13/fast
 
 #=============================================================================
+# Target rules for targets named tcpClient_test
+
+# Build rule for target.
+tcpClient_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpClient_test
+.PHONY : tcpClient_test
+
+# fast build rule for target.
+tcpClient_test/fast:
+	$(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/build
+.PHONY : tcpClient_test/fast
+
+#=============================================================================
 # Target rules for targets named countdownlatch_test2
 
 # Build rule for target.
@@ -705,6 +718,7 @@ help:
 	@echo "... bsa"
 	@echo "... deadlock_test"
 	@echo "... reactor_test13"
+	@echo "... tcpClient_test"
 	@echo "... countdownlatch_test2"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test1"

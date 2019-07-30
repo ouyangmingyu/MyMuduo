@@ -647,11 +647,51 @@ TcpConnection中shutdown的处理方法
 		不能跨线程调用
 		
 		当客户端read返回0后主动关闭，服务器会收到两个事件：POLLIN、POLLHUP（这是服务器端shutdown导致的，而如果是客户端主动断开，只会返回一个POLLIN事件）
+		
+	
+(14) 	TC完善、信号、boost：：any
+TC完善
+		WriteCompleteCallback含义
+		大流量才需要关注（不断生成数据，然后send，若对等方接受不及时，受滑动窗口控制，导致内核发送缓存不足，这时候需要
+		把数据放入应用层缓冲OB，那么很可能会撑爆OB，解决方法就是调整发送频率，即关注WriteCompleteCallback，当所有用户数据
+		都拷贝到内核，才得到通知发送数据）
+		
+		低流量不需要关注该事件
+		
+		调用时机：数据发送完毕回调函数，即所有的用户数据都已拷贝到内核缓冲区时回调该函数
+		 outputBuffer_被清空也会回调该函数，可以理解为低水位标回调函数
+		
+		HighWaterMarkCallback含义
+		高水位标回调函数，用法和上面相反（会断开连接）
+		
+		boost::any context_
+		绑定每个连接都有的一个未知类型的上下文对象，给上层应用使用，因为网络库并不知道上层要绑定啥
+		
+signal(SIGPIPE, SIG_IGN)
+		服务器要忽略SIGPIPE
+		
+		应用编程和系统编程
 
+
+可变类型解决方案
+		void*. 这种方法不是类型安全的
+		boost::any
+		
+		boost::any
+		任意类型的类型安全存储以及安全的取回
+		在标准库容器中存放不同类型的方法，比如说vector<boost::any>
 		
 
+(15) muduo库对编写tcp客户端程序的支持
 
+		Connector	// 主动发起连接
+		带有自动重连功能，back-off重连策略，即重连时间逐步增长直至一个最大时间（muduo是30秒）
+		
+		TcpClient	// 包含了一个Connector对象（就好比Tcpserver包含一个Acceptor用于被动连接一样）
+		
+		析构TC中的关闭时使用detail中的removeconnection，是因为TC中的有removeconnection有重连功能，然而不需要再重连（因为TC都已经析构了，无需再重连了）
 
+		连接成功后需要不再关注channel的可写事件，重连时需再次关注
 
 
 

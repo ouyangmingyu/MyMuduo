@@ -2,7 +2,7 @@ digraph "GG" {
 node [
   fontsize = "12"
 ];
-    "node54" [ label="pthread_atfork_test" shape="house"];
-    "node75" [ label="pthread" shape="ellipse"];
-    "node54" -> "node75" // pthread_atfork_test -> pthread
+    "node55" [ label="pthread_atfork_test" shape="house"];
+    "node76" [ label="pthread" shape="ellipse"];
+    "node55" -> "node76" // pthread_atfork_test -> pthread
 }

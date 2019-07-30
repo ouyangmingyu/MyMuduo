@@ -2,6 +2,7 @@ set(net_SRCS
   Acceptor.cc
   Buffer.cc
   Channel.cc
+  Connector.cc
   EventLoop.cc
   EventLoopThread.cc
   EventLoopThreadPool.cc
@@ -12,6 +13,7 @@ set(net_SRCS
   poller/PollPoller.cc
   Socket.cc
   SocketsOps.cc
+  TcpClient.cc
   TcpConnection.cc
   TcpServer.cc
   Timer.cc
@@ -31,6 +33,7 @@ set(HEADERS
   EventLoopThread.h
   EventLoopThreadPool.h
   InetAddress.h
+  TcpClient.h
   TcpConnection.h
   TcpServer.h
   TimerId.h

@@ -320,6 +320,21 @@ reactor_test13/fast:
 .PHONY : reactor_test13/fast
 
 # Convenience name for target.
+tests/CMakeFiles/tcpClient_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tcpClient_test.dir/rule
+.PHONY : tests/CMakeFiles/tcpClient_test.dir/rule
+
+# Convenience name for target.
+tcpClient_test: tests/CMakeFiles/tcpClient_test.dir/rule
+
+.PHONY : tcpClient_test
+
+# fast build rule for target.
+tcpClient_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/build
+.PHONY : tcpClient_test/fast
+
+# Convenience name for target.
 tests/CMakeFiles/countdownlatch_test2.dir/rule:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/countdownlatch_test2.dir/rule
 .PHONY : tests/CMakeFiles/countdownlatch_test2.dir/rule
@@ -883,6 +898,33 @@ Reactor_test13.cc.s:
 	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/reactor_test13.dir/build.make tests/CMakeFiles/reactor_test13.dir/Reactor_test13.cc.s
 .PHONY : Reactor_test13.cc.s
 
+TcpClient_test.o: TcpClient_test.cc.o
+
+.PHONY : TcpClient_test.o
+
+# target to build an object file
+TcpClient_test.cc.o:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/TcpClient_test.cc.o
+.PHONY : TcpClient_test.cc.o
+
+TcpClient_test.i: TcpClient_test.cc.i
+
+.PHONY : TcpClient_test.i
+
+# target to preprocess a source file
+TcpClient_test.cc.i:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/TcpClient_test.cc.i
+.PHONY : TcpClient_test.cc.i
+
+TcpClient_test.s: TcpClient_test.cc.s
+
+.PHONY : TcpClient_test.s
+
+# target to generate assembly for a file
+TcpClient_test.cc.s:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/TcpClient_test.cc.s
+.PHONY : TcpClient_test.cc.s
+
 bsa.o: bsa.cc.o
 
 .PHONY : bsa.o
@@ -918,6 +960,7 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
 	@echo "... reactor_test02"
 	@echo "... pthread_atfork_test"
 	@echo "... log_test2"
@@ -929,8 +972,8 @@ help:
 	@echo "... bsa"
 	@echo "... deadlock_test"
 	@echo "... reactor_test13"
+	@echo "... tcpClient_test"
 	@echo "... countdownlatch_test2"
-	@echo "... rebuild_cache"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test1"
 	@echo "... reactor_test06"
@@ -991,6 +1034,9 @@ help:
 	@echo "... Reactor_test13.o"
 	@echo "... Reactor_test13.i"
 	@echo "... Reactor_test13.s"
+	@echo "... TcpClient_test.o"
+	@echo "... TcpClient_test.i"
+	@echo "... TcpClient_test.s"
 	@echo "... bsa.o"
 	@echo "... bsa.i"
 	@echo "... bsa.s"

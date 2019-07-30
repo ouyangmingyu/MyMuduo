@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoopThread.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/EventLoopThreadPool.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/InetAddress.h"
+    "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpClient.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpConnection.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TcpServer.h"
     "/home/mingyu/MyMuduo/MyMuduo/mymuduo/muduo/net/TimerId.h"

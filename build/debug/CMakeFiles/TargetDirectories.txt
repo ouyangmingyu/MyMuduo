@@ -42,6 +42,15 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/CMakeFiles/edit_cache.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/CMakeFiles/install/strip.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/CMakeFiles/install/local.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/install.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/list_install_components.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/rebuild_cache.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/edit_cache.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/muduo_http.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/httpserver_test.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/httprequest_unittest.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/install/local.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/http/CMakeFiles/install/strip.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/install.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/list_install_components.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/muduo/net/tests/CMakeFiles/rebuild_cache.dir
@@ -63,7 +72,7 @@
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/bsa.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/deadlock_test.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test13.dir
-/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/tcpClient_test.dir
+/home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/tcpclient_test.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/countdownlatch_test2.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/reactor_test04.dir
 /home/mingyu/MyMuduo/MyMuduo/build/debug/tests/CMakeFiles/countdownlatch_test1.dir

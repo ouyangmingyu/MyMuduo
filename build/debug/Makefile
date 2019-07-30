@@ -415,6 +415,45 @@ muduo_net/fast:
 .PHONY : muduo_net/fast
 
 #=============================================================================
+# Target rules for targets named muduo_http
+
+# Build rule for target.
+muduo_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 muduo_http
+.PHONY : muduo_http
+
+# fast build rule for target.
+muduo_http/fast:
+	$(MAKE) -f muduo/net/http/CMakeFiles/muduo_http.dir/build.make muduo/net/http/CMakeFiles/muduo_http.dir/build
+.PHONY : muduo_http/fast
+
+#=============================================================================
+# Target rules for targets named httpserver_test
+
+# Build rule for target.
+httpserver_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 httpserver_test
+.PHONY : httpserver_test
+
+# fast build rule for target.
+httpserver_test/fast:
+	$(MAKE) -f muduo/net/http/CMakeFiles/httpserver_test.dir/build.make muduo/net/http/CMakeFiles/httpserver_test.dir/build
+.PHONY : httpserver_test/fast
+
+#=============================================================================
+# Target rules for targets named httprequest_unittest
+
+# Build rule for target.
+httprequest_unittest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 httprequest_unittest
+.PHONY : httprequest_unittest
+
+# fast build rule for target.
+httprequest_unittest/fast:
+	$(MAKE) -f muduo/net/http/CMakeFiles/httprequest_unittest.dir/build.make muduo/net/http/CMakeFiles/httprequest_unittest.dir/build
+.PHONY : httprequest_unittest/fast
+
+#=============================================================================
 # Target rules for targets named inetaddress_unittest
 
 # Build rule for target.
@@ -571,17 +610,17 @@ reactor_test13/fast:
 .PHONY : reactor_test13/fast
 
 #=============================================================================
-# Target rules for targets named tcpClient_test
+# Target rules for targets named tcpclient_test
 
 # Build rule for target.
-tcpClient_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tcpClient_test
-.PHONY : tcpClient_test
+tcpclient_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpclient_test
+.PHONY : tcpclient_test
 
 # fast build rule for target.
-tcpClient_test/fast:
-	$(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/build
-.PHONY : tcpClient_test/fast
+tcpclient_test/fast:
+	$(MAKE) -f tests/CMakeFiles/tcpclient_test.dir/build.make tests/CMakeFiles/tcpclient_test.dir/build
+.PHONY : tcpclient_test/fast
 
 #=============================================================================
 # Target rules for targets named countdownlatch_test2
@@ -706,6 +745,9 @@ help:
 	@echo "... fileutil_test"
 	@echo "... timestamp_unittest"
 	@echo "... muduo_net"
+	@echo "... muduo_http"
+	@echo "... httpserver_test"
+	@echo "... httprequest_unittest"
 	@echo "... inetaddress_unittest"
 	@echo "... reactor_test02"
 	@echo "... pthread_atfork_test"
@@ -718,7 +760,7 @@ help:
 	@echo "... bsa"
 	@echo "... deadlock_test"
 	@echo "... reactor_test13"
-	@echo "... tcpClient_test"
+	@echo "... tcpclient_test"
 	@echo "... countdownlatch_test2"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test1"

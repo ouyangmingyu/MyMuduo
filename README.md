@@ -694,9 +694,60 @@ signal(SIGPIPE, SIG_IGN)
 		连接成功后需要不再关注channel的可写事件，重连时需再次关注
 
 
+Part3:  muduo_http库源码分析
+
+	（1）http request
+	request line + header + body （header分为普通报头，请求报头与实体报头）
+	header与body之间有一空行（CRLF）
+	
+	请求方法有：
+	Get, Post, Head, Put, Delete等
+	协议版本1.0、1.1
+	
+	常用请求头
+	Accept：浏览器可接受的媒体（MIME）类型；
+	Accept-Language：浏览器所希望的语言种类
+	Accept-Encoding：浏览器能够解码的编码方法，如gzip，deflate等
+	User-Agent：告诉HTTP服务器， 客户端使用的操作系统和浏览器的名称和版本
+	Connection：表示是否需要持久连接，Keep-Alive表示长连接，close表示短连接
+	
+	
+	（2）http response
+	status line + header + body （header分为普通报头，响应报头与实体报头）
+	header与body之间有一空行（CRLF）
+	
+	状态响应码
+	1XX  提示信息 - 表示请求已被成功接收，继续处理
+	2XX  成功 - 表示请求已被成功接收，理解，接受
+	3XX  重定向 - 要完成请求必须进行更进一步的处理
+	4XX  客户端错误 -  请求有语法错误或请求无法实现
+	5XX  服务器端错误 -   服务器执行一个有效请求失败
+	
+	
+	（3）muduo_http库涉及到的类
+	HttpRequest：http请求类封装
+	HttpResponse：http响应类封装
+	HttpContext：http协议解析类
+	HttpServer：http服务器类封装
+	
+	
+	短连接不存在粘包问题，不需要传回长度信息，浏览器也能处理
+	长连接需要长度信息
+	
+	1.0版本还不支持长连接，1.1才支持
+	
+	muduo设置支持http是为了查看状态，即inspect
 
 
-Part3: muduo库使用示例
+part4: muduo_inspect库源码分析
 
-Part4: 基于muduo库的ABC_Bank
+
+
+Part5: muduo库使用示例
+
+
+
+Part6: 基于muduo库的ABC_Bank
+
+
 

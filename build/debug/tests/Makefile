@@ -320,19 +320,19 @@ reactor_test13/fast:
 .PHONY : reactor_test13/fast
 
 # Convenience name for target.
-tests/CMakeFiles/tcpClient_test.dir/rule:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tcpClient_test.dir/rule
-.PHONY : tests/CMakeFiles/tcpClient_test.dir/rule
+tests/CMakeFiles/tcpclient_test.dir/rule:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tcpclient_test.dir/rule
+.PHONY : tests/CMakeFiles/tcpclient_test.dir/rule
 
 # Convenience name for target.
-tcpClient_test: tests/CMakeFiles/tcpClient_test.dir/rule
+tcpclient_test: tests/CMakeFiles/tcpclient_test.dir/rule
 
-.PHONY : tcpClient_test
+.PHONY : tcpclient_test
 
 # fast build rule for target.
-tcpClient_test/fast:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/build
-.PHONY : tcpClient_test/fast
+tcpclient_test/fast:
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpclient_test.dir/build.make tests/CMakeFiles/tcpclient_test.dir/build
+.PHONY : tcpclient_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/countdownlatch_test2.dir/rule:
@@ -904,7 +904,7 @@ TcpClient_test.o: TcpClient_test.cc.o
 
 # target to build an object file
 TcpClient_test.cc.o:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/TcpClient_test.cc.o
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpclient_test.dir/build.make tests/CMakeFiles/tcpclient_test.dir/TcpClient_test.cc.o
 .PHONY : TcpClient_test.cc.o
 
 TcpClient_test.i: TcpClient_test.cc.i
@@ -913,7 +913,7 @@ TcpClient_test.i: TcpClient_test.cc.i
 
 # target to preprocess a source file
 TcpClient_test.cc.i:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/TcpClient_test.cc.i
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpclient_test.dir/build.make tests/CMakeFiles/tcpclient_test.dir/TcpClient_test.cc.i
 .PHONY : TcpClient_test.cc.i
 
 TcpClient_test.s: TcpClient_test.cc.s
@@ -922,7 +922,7 @@ TcpClient_test.s: TcpClient_test.cc.s
 
 # target to generate assembly for a file
 TcpClient_test.cc.s:
-	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpClient_test.dir/build.make tests/CMakeFiles/tcpClient_test.dir/TcpClient_test.cc.s
+	cd /home/mingyu/MyMuduo/MyMuduo/build/debug && $(MAKE) -f tests/CMakeFiles/tcpclient_test.dir/build.make tests/CMakeFiles/tcpclient_test.dir/TcpClient_test.cc.s
 .PHONY : TcpClient_test.cc.s
 
 bsa.o: bsa.cc.o
@@ -972,7 +972,7 @@ help:
 	@echo "... bsa"
 	@echo "... deadlock_test"
 	@echo "... reactor_test13"
-	@echo "... tcpClient_test"
+	@echo "... tcpclient_test"
 	@echo "... countdownlatch_test2"
 	@echo "... reactor_test04"
 	@echo "... countdownlatch_test1"

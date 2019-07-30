@@ -9,18 +9,18 @@ node [
     "node22" -> "node9" // muduo_base -> blockingqueue_test
     "node27" [ label="boundedblockingqueue_test" shape="house"];
     "node27" -> "node9" // muduo_base -> boundedblockingqueue_test
-    "node68" [ label="countdownlatch_test1" shape="house"];
-    "node68" -> "node9" // muduo_base -> countdownlatch_test1
-    "node66" [ label="countdownlatch_test2" shape="house"];
-    "node66" -> "node9" // muduo_base -> countdownlatch_test2
+    "node77" [ label="countdownlatch_test1" shape="house"];
+    "node77" -> "node9" // muduo_base -> countdownlatch_test1
+    "node75" [ label="countdownlatch_test2" shape="house"];
+    "node75" -> "node9" // muduo_base -> countdownlatch_test2
     "node26" [ label="exception_test" shape="house"];
     "node26" -> "node9" // muduo_base -> exception_test
     "node32" [ label="fileutil_test" shape="house"];
     "node32" -> "node9" // muduo_base -> fileutil_test
-    "node57" [ label="log_test1" shape="house"];
-    "node57" -> "node9" // muduo_base -> log_test1
-    "node56" [ label="log_test2" shape="house"];
-    "node56" -> "node9" // muduo_base -> log_test2
+    "node66" [ label="log_test1" shape="house"];
+    "node66" -> "node9" // muduo_base -> log_test1
+    "node65" [ label="log_test2" shape="house"];
+    "node65" -> "node9" // muduo_base -> log_test2
     "node19" [ label="logfile_test" shape="house"];
     "node19" -> "node9" // muduo_base -> logfile_test
     "node18" [ label="logging_test" shape="house"];
@@ -31,30 +31,36 @@ node [
     "node15" -> "node9" // muduo_base -> logstream_test
     "node40" [ label="muduo_net" shape="diamond"];
     "node40" -> "node9" // muduo_base -> muduo_net
-    "node47" [ label="inetaddress_unittest" shape="house"];
-    "node47" -> "node40" // muduo_net -> inetaddress_unittest
-    "node60" [ label="reactor_test01" shape="house"];
-    "node60" -> "node40" // muduo_net -> reactor_test01
-    "node54" [ label="reactor_test02" shape="house"];
-    "node54" -> "node40" // muduo_net -> reactor_test02
-    "node61" [ label="reactor_test03" shape="house"];
-    "node61" -> "node40" // muduo_net -> reactor_test03
-    "node67" [ label="reactor_test04" shape="house"];
-    "node67" -> "node40" // muduo_net -> reactor_test04
-    "node59" [ label="reactor_test05" shape="house"];
-    "node59" -> "node40" // muduo_net -> reactor_test05
-    "node69" [ label="reactor_test06" shape="house"];
-    "node69" -> "node40" // muduo_net -> reactor_test06
-    "node70" [ label="reactor_test07" shape="house"];
-    "node70" -> "node40" // muduo_net -> reactor_test07
-    "node72" [ label="reactor_test11" shape="house"];
-    "node72" -> "node40" // muduo_net -> reactor_test11
-    "node71" [ label="reactor_test12" shape="house"];
-    "node71" -> "node40" // muduo_net -> reactor_test12
-    "node64" [ label="reactor_test13" shape="house"];
-    "node64" -> "node40" // muduo_net -> reactor_test13
-    "node65" [ label="tcpClient_test" shape="house"];
-    "node65" -> "node40" // muduo_net -> tcpClient_test
+    "node56" [ label="inetaddress_unittest" shape="house"];
+    "node56" -> "node40" // muduo_net -> inetaddress_unittest
+    "node48" [ label="muduo_http" shape="diamond"];
+    "node48" -> "node40" // muduo_net -> muduo_http
+    "node50" [ label="httprequest_unittest" shape="house"];
+    "node50" -> "node48" // muduo_http -> httprequest_unittest
+    "node49" [ label="httpserver_test" shape="house"];
+    "node49" -> "node48" // muduo_http -> httpserver_test
+    "node69" [ label="reactor_test01" shape="house"];
+    "node69" -> "node40" // muduo_net -> reactor_test01
+    "node63" [ label="reactor_test02" shape="house"];
+    "node63" -> "node40" // muduo_net -> reactor_test02
+    "node70" [ label="reactor_test03" shape="house"];
+    "node70" -> "node40" // muduo_net -> reactor_test03
+    "node76" [ label="reactor_test04" shape="house"];
+    "node76" -> "node40" // muduo_net -> reactor_test04
+    "node68" [ label="reactor_test05" shape="house"];
+    "node68" -> "node40" // muduo_net -> reactor_test05
+    "node78" [ label="reactor_test06" shape="house"];
+    "node78" -> "node40" // muduo_net -> reactor_test06
+    "node79" [ label="reactor_test07" shape="house"];
+    "node79" -> "node40" // muduo_net -> reactor_test07
+    "node81" [ label="reactor_test11" shape="house"];
+    "node81" -> "node40" // muduo_net -> reactor_test11
+    "node80" [ label="reactor_test12" shape="house"];
+    "node80" -> "node40" // muduo_net -> reactor_test12
+    "node73" [ label="reactor_test13" shape="house"];
+    "node73" -> "node40" // muduo_net -> reactor_test13
+    "node74" [ label="tcpclient_test" shape="house"];
+    "node74" -> "node40" // muduo_net -> tcpclient_test
     "node29" [ label="mutex_test" shape="house"];
     "node29" -> "node9" // muduo_base -> mutex_test
     "node17" [ label="singleton_test" shape="house"];

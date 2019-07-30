@@ -27,7 +27,7 @@ class TestClient
     //client_.enableRetry();
     // 标准输入缓冲区中有数据的时候，回调TestClient::handleRead
     stdinChannel_.setReadCallback(boost::bind(&TestClient::handleRead, this));
-	stdinChannel_.enableReading();
+	stdinChannel_.enableReading();		// 关注可读事件
   }
 
   void connect()

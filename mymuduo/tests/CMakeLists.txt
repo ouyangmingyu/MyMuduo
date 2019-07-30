@@ -60,6 +60,5 @@ target_link_libraries(reactor_test12 muduo_net)
 add_executable(reactor_test13 Reactor_test13.cc)
 target_link_libraries(reactor_test13 muduo_net)
 
-add_executable(tcpClient_test TcpClient_test.cc)
-target_link_libraries(tcpClient_test muduo_net)
-
+add_executable(tcpclient_test TcpClient_test.cc)
+target_link_libraries(tcpclient_test muduo_net)

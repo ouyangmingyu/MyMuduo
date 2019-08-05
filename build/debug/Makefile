@@ -454,6 +454,32 @@ httprequest_unittest/fast:
 .PHONY : httprequest_unittest/fast
 
 #=============================================================================
+# Target rules for targets named muduo_inspect
+
+# Build rule for target.
+muduo_inspect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 muduo_inspect
+.PHONY : muduo_inspect
+
+# fast build rule for target.
+muduo_inspect/fast:
+	$(MAKE) -f muduo/net/inspect/CMakeFiles/muduo_inspect.dir/build.make muduo/net/inspect/CMakeFiles/muduo_inspect.dir/build
+.PHONY : muduo_inspect/fast
+
+#=============================================================================
+# Target rules for targets named inspector_test
+
+# Build rule for target.
+inspector_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inspector_test
+.PHONY : inspector_test
+
+# fast build rule for target.
+inspector_test/fast:
+	$(MAKE) -f muduo/net/inspect/CMakeFiles/inspector_test.dir/build.make muduo/net/inspect/CMakeFiles/inspector_test.dir/build
+.PHONY : inspector_test/fast
+
+#=============================================================================
 # Target rules for targets named inetaddress_unittest
 
 # Build rule for target.
@@ -465,6 +491,1072 @@ inetaddress_unittest: cmake_check_build_system
 inetaddress_unittest/fast:
 	$(MAKE) -f muduo/net/tests/CMakeFiles/inetaddress_unittest.dir/build.make muduo/net/tests/CMakeFiles/inetaddress_unittest.dir/build
 .PHONY : inetaddress_unittest/fast
+
+#=============================================================================
+# Target rules for targets named asio_chat_server_threaded
+
+# Build rule for target.
+asio_chat_server_threaded: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_chat_server_threaded
+.PHONY : asio_chat_server_threaded
+
+# fast build rule for target.
+asio_chat_server_threaded/fast:
+	$(MAKE) -f examples/asio/chat/CMakeFiles/asio_chat_server_threaded.dir/build.make examples/asio/chat/CMakeFiles/asio_chat_server_threaded.dir/build
+.PHONY : asio_chat_server_threaded/fast
+
+#=============================================================================
+# Target rules for targets named asio_chat_server
+
+# Build rule for target.
+asio_chat_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_chat_server
+.PHONY : asio_chat_server
+
+# fast build rule for target.
+asio_chat_server/fast:
+	$(MAKE) -f examples/asio/chat/CMakeFiles/asio_chat_server.dir/build.make examples/asio/chat/CMakeFiles/asio_chat_server.dir/build
+.PHONY : asio_chat_server/fast
+
+#=============================================================================
+# Target rules for targets named asio_chat_loadtest
+
+# Build rule for target.
+asio_chat_loadtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_chat_loadtest
+.PHONY : asio_chat_loadtest
+
+# fast build rule for target.
+asio_chat_loadtest/fast:
+	$(MAKE) -f examples/asio/chat/CMakeFiles/asio_chat_loadtest.dir/build.make examples/asio/chat/CMakeFiles/asio_chat_loadtest.dir/build
+.PHONY : asio_chat_loadtest/fast
+
+#=============================================================================
+# Target rules for targets named asio_chat_client
+
+# Build rule for target.
+asio_chat_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_chat_client
+.PHONY : asio_chat_client
+
+# fast build rule for target.
+asio_chat_client/fast:
+	$(MAKE) -f examples/asio/chat/CMakeFiles/asio_chat_client.dir/build.make examples/asio/chat/CMakeFiles/asio_chat_client.dir/build
+.PHONY : asio_chat_client/fast
+
+#=============================================================================
+# Target rules for targets named asio_chat_server_threaded_efficient
+
+# Build rule for target.
+asio_chat_server_threaded_efficient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_chat_server_threaded_efficient
+.PHONY : asio_chat_server_threaded_efficient
+
+# fast build rule for target.
+asio_chat_server_threaded_efficient/fast:
+	$(MAKE) -f examples/asio/chat/CMakeFiles/asio_chat_server_threaded_efficient.dir/build.make examples/asio/chat/CMakeFiles/asio_chat_server_threaded_efficient.dir/build
+.PHONY : asio_chat_server_threaded_efficient/fast
+
+#=============================================================================
+# Target rules for targets named asio_chat_server_threaded_highperformance
+
+# Build rule for target.
+asio_chat_server_threaded_highperformance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_chat_server_threaded_highperformance
+.PHONY : asio_chat_server_threaded_highperformance
+
+# fast build rule for target.
+asio_chat_server_threaded_highperformance/fast:
+	$(MAKE) -f examples/asio/chat/CMakeFiles/asio_chat_server_threaded_highperformance.dir/build.make examples/asio/chat/CMakeFiles/asio_chat_server_threaded_highperformance.dir/build
+.PHONY : asio_chat_server_threaded_highperformance/fast
+
+#=============================================================================
+# Target rules for targets named asio_tutorial_timer5
+
+# Build rule for target.
+asio_tutorial_timer5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_tutorial_timer5
+.PHONY : asio_tutorial_timer5
+
+# fast build rule for target.
+asio_tutorial_timer5/fast:
+	$(MAKE) -f examples/asio/tutorial/CMakeFiles/asio_tutorial_timer5.dir/build.make examples/asio/tutorial/CMakeFiles/asio_tutorial_timer5.dir/build
+.PHONY : asio_tutorial_timer5/fast
+
+#=============================================================================
+# Target rules for targets named asio_tutorial_timer3
+
+# Build rule for target.
+asio_tutorial_timer3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_tutorial_timer3
+.PHONY : asio_tutorial_timer3
+
+# fast build rule for target.
+asio_tutorial_timer3/fast:
+	$(MAKE) -f examples/asio/tutorial/CMakeFiles/asio_tutorial_timer3.dir/build.make examples/asio/tutorial/CMakeFiles/asio_tutorial_timer3.dir/build
+.PHONY : asio_tutorial_timer3/fast
+
+#=============================================================================
+# Target rules for targets named asio_tutorial_timer2
+
+# Build rule for target.
+asio_tutorial_timer2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_tutorial_timer2
+.PHONY : asio_tutorial_timer2
+
+# fast build rule for target.
+asio_tutorial_timer2/fast:
+	$(MAKE) -f examples/asio/tutorial/CMakeFiles/asio_tutorial_timer2.dir/build.make examples/asio/tutorial/CMakeFiles/asio_tutorial_timer2.dir/build
+.PHONY : asio_tutorial_timer2/fast
+
+#=============================================================================
+# Target rules for targets named asio_tutorial_timer6
+
+# Build rule for target.
+asio_tutorial_timer6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_tutorial_timer6
+.PHONY : asio_tutorial_timer6
+
+# fast build rule for target.
+asio_tutorial_timer6/fast:
+	$(MAKE) -f examples/asio/tutorial/CMakeFiles/asio_tutorial_timer6.dir/build.make examples/asio/tutorial/CMakeFiles/asio_tutorial_timer6.dir/build
+.PHONY : asio_tutorial_timer6/fast
+
+#=============================================================================
+# Target rules for targets named asio_tutorial_timer4
+
+# Build rule for target.
+asio_tutorial_timer4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asio_tutorial_timer4
+.PHONY : asio_tutorial_timer4
+
+# fast build rule for target.
+asio_tutorial_timer4/fast:
+	$(MAKE) -f examples/asio/tutorial/CMakeFiles/asio_tutorial_timer4.dir/build.make examples/asio/tutorial/CMakeFiles/asio_tutorial_timer4.dir/build
+.PHONY : asio_tutorial_timer4/fast
+
+#=============================================================================
+# Target rules for targets named fastcgi_test
+
+# Build rule for target.
+fastcgi_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fastcgi_test
+.PHONY : fastcgi_test
+
+# fast build rule for target.
+fastcgi_test/fast:
+	$(MAKE) -f examples/fastcgi/CMakeFiles/fastcgi_test.dir/build.make examples/fastcgi/CMakeFiles/fastcgi_test.dir/build
+.PHONY : fastcgi_test/fast
+
+#=============================================================================
+# Target rules for targets named filetransfer_download
+
+# Build rule for target.
+filetransfer_download: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filetransfer_download
+.PHONY : filetransfer_download
+
+# fast build rule for target.
+filetransfer_download/fast:
+	$(MAKE) -f examples/filetransfer/CMakeFiles/filetransfer_download.dir/build.make examples/filetransfer/CMakeFiles/filetransfer_download.dir/build
+.PHONY : filetransfer_download/fast
+
+#=============================================================================
+# Target rules for targets named filetransfer_download2
+
+# Build rule for target.
+filetransfer_download2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filetransfer_download2
+.PHONY : filetransfer_download2
+
+# fast build rule for target.
+filetransfer_download2/fast:
+	$(MAKE) -f examples/filetransfer/CMakeFiles/filetransfer_download2.dir/build.make examples/filetransfer/CMakeFiles/filetransfer_download2.dir/build
+.PHONY : filetransfer_download2/fast
+
+#=============================================================================
+# Target rules for targets named filetransfer_download3
+
+# Build rule for target.
+filetransfer_download3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filetransfer_download3
+.PHONY : filetransfer_download3
+
+# fast build rule for target.
+filetransfer_download3/fast:
+	$(MAKE) -f examples/filetransfer/CMakeFiles/filetransfer_download3.dir/build.make examples/filetransfer/CMakeFiles/filetransfer_download3.dir/build
+.PHONY : filetransfer_download3/fast
+
+#=============================================================================
+# Target rules for targets named hub
+
+# Build rule for target.
+hub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hub
+.PHONY : hub
+
+# fast build rule for target.
+hub/fast:
+	$(MAKE) -f examples/hub/CMakeFiles/hub.dir/build.make examples/hub/CMakeFiles/hub.dir/build
+.PHONY : hub/fast
+
+#=============================================================================
+# Target rules for targets named pub
+
+# Build rule for target.
+pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pub
+.PHONY : pub
+
+# fast build rule for target.
+pub/fast:
+	$(MAKE) -f examples/hub/CMakeFiles/pub.dir/build.make examples/hub/CMakeFiles/pub.dir/build
+.PHONY : pub/fast
+
+#=============================================================================
+# Target rules for targets named muduo_pubsub
+
+# Build rule for target.
+muduo_pubsub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 muduo_pubsub
+.PHONY : muduo_pubsub
+
+# fast build rule for target.
+muduo_pubsub/fast:
+	$(MAKE) -f examples/hub/CMakeFiles/muduo_pubsub.dir/build.make examples/hub/CMakeFiles/muduo_pubsub.dir/build
+.PHONY : muduo_pubsub/fast
+
+#=============================================================================
+# Target rules for targets named sub
+
+# Build rule for target.
+sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sub
+.PHONY : sub
+
+# fast build rule for target.
+sub/fast:
+	$(MAKE) -f examples/hub/CMakeFiles/sub.dir/build.make examples/hub/CMakeFiles/sub.dir/build
+.PHONY : sub/fast
+
+#=============================================================================
+# Target rules for targets named idleconnection_echo
+
+# Build rule for target.
+idleconnection_echo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 idleconnection_echo
+.PHONY : idleconnection_echo
+
+# fast build rule for target.
+idleconnection_echo/fast:
+	$(MAKE) -f examples/idleconnection/CMakeFiles/idleconnection_echo.dir/build.make examples/idleconnection/CMakeFiles/idleconnection_echo.dir/build
+.PHONY : idleconnection_echo/fast
+
+#=============================================================================
+# Target rules for targets named idleconnection_echo2
+
+# Build rule for target.
+idleconnection_echo2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 idleconnection_echo2
+.PHONY : idleconnection_echo2
+
+# fast build rule for target.
+idleconnection_echo2/fast:
+	$(MAKE) -f examples/idleconnection/CMakeFiles/idleconnection_echo2.dir/build.make examples/idleconnection/CMakeFiles/idleconnection_echo2.dir/build
+.PHONY : idleconnection_echo2/fast
+
+#=============================================================================
+# Target rules for targets named maxconnection_echo
+
+# Build rule for target.
+maxconnection_echo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 maxconnection_echo
+.PHONY : maxconnection_echo
+
+# fast build rule for target.
+maxconnection_echo/fast:
+	$(MAKE) -f examples/maxconnection/CMakeFiles/maxconnection_echo.dir/build.make examples/maxconnection/CMakeFiles/maxconnection_echo.dir/build
+.PHONY : maxconnection_echo/fast
+
+#=============================================================================
+# Target rules for targets named multiplex_demux
+
+# Build rule for target.
+multiplex_demux: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 multiplex_demux
+.PHONY : multiplex_demux
+
+# fast build rule for target.
+multiplex_demux/fast:
+	$(MAKE) -f examples/multiplexer/CMakeFiles/multiplex_demux.dir/build.make examples/multiplexer/CMakeFiles/multiplex_demux.dir/build
+.PHONY : multiplex_demux/fast
+
+#=============================================================================
+# Target rules for targets named multiplex_server
+
+# Build rule for target.
+multiplex_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 multiplex_server
+.PHONY : multiplex_server
+
+# fast build rule for target.
+multiplex_server/fast:
+	$(MAKE) -f examples/multiplexer/CMakeFiles/multiplex_server.dir/build.make examples/multiplexer/CMakeFiles/multiplex_server.dir/build
+.PHONY : multiplex_server/fast
+
+#=============================================================================
+# Target rules for targets named multiplex_server_simple
+
+# Build rule for target.
+multiplex_server_simple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 multiplex_server_simple
+.PHONY : multiplex_server_simple
+
+# fast build rule for target.
+multiplex_server_simple/fast:
+	$(MAKE) -f examples/multiplexer/CMakeFiles/multiplex_server_simple.dir/build.make examples/multiplexer/CMakeFiles/multiplex_server_simple.dir/build
+.PHONY : multiplex_server_simple/fast
+
+#=============================================================================
+# Target rules for targets named netty_discard_client
+
+# Build rule for target.
+netty_discard_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netty_discard_client
+.PHONY : netty_discard_client
+
+# fast build rule for target.
+netty_discard_client/fast:
+	$(MAKE) -f examples/netty/discard/CMakeFiles/netty_discard_client.dir/build.make examples/netty/discard/CMakeFiles/netty_discard_client.dir/build
+.PHONY : netty_discard_client/fast
+
+#=============================================================================
+# Target rules for targets named netty_discard_server
+
+# Build rule for target.
+netty_discard_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netty_discard_server
+.PHONY : netty_discard_server
+
+# fast build rule for target.
+netty_discard_server/fast:
+	$(MAKE) -f examples/netty/discard/CMakeFiles/netty_discard_server.dir/build.make examples/netty/discard/CMakeFiles/netty_discard_server.dir/build
+.PHONY : netty_discard_server/fast
+
+#=============================================================================
+# Target rules for targets named netty_echo_client
+
+# Build rule for target.
+netty_echo_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netty_echo_client
+.PHONY : netty_echo_client
+
+# fast build rule for target.
+netty_echo_client/fast:
+	$(MAKE) -f examples/netty/echo/CMakeFiles/netty_echo_client.dir/build.make examples/netty/echo/CMakeFiles/netty_echo_client.dir/build
+.PHONY : netty_echo_client/fast
+
+#=============================================================================
+# Target rules for targets named netty_echo_server
+
+# Build rule for target.
+netty_echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netty_echo_server
+.PHONY : netty_echo_server
+
+# fast build rule for target.
+netty_echo_server/fast:
+	$(MAKE) -f examples/netty/echo/CMakeFiles/netty_echo_server.dir/build.make examples/netty/echo/CMakeFiles/netty_echo_server.dir/build
+.PHONY : netty_echo_server/fast
+
+#=============================================================================
+# Target rules for targets named netty_uptime
+
+# Build rule for target.
+netty_uptime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netty_uptime
+.PHONY : netty_uptime
+
+# fast build rule for target.
+netty_uptime/fast:
+	$(MAKE) -f examples/netty/uptime/CMakeFiles/netty_uptime.dir/build.make examples/netty/uptime/CMakeFiles/netty_uptime.dir/build
+.PHONY : netty_uptime/fast
+
+#=============================================================================
+# Target rules for targets named pingpong_client
+
+# Build rule for target.
+pingpong_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pingpong_client
+.PHONY : pingpong_client
+
+# fast build rule for target.
+pingpong_client/fast:
+	$(MAKE) -f examples/pingpong/CMakeFiles/pingpong_client.dir/build.make examples/pingpong/CMakeFiles/pingpong_client.dir/build
+.PHONY : pingpong_client/fast
+
+#=============================================================================
+# Target rules for targets named pingpong_bench
+
+# Build rule for target.
+pingpong_bench: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pingpong_bench
+.PHONY : pingpong_bench
+
+# fast build rule for target.
+pingpong_bench/fast:
+	$(MAKE) -f examples/pingpong/CMakeFiles/pingpong_bench.dir/build.make examples/pingpong/CMakeFiles/pingpong_bench.dir/build
+.PHONY : pingpong_bench/fast
+
+#=============================================================================
+# Target rules for targets named pingpong_server
+
+# Build rule for target.
+pingpong_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pingpong_server
+.PHONY : pingpong_server
+
+# fast build rule for target.
+pingpong_server/fast:
+	$(MAKE) -f examples/pingpong/CMakeFiles/pingpong_server.dir/build.make examples/pingpong/CMakeFiles/pingpong_server.dir/build
+.PHONY : pingpong_server/fast
+
+#=============================================================================
+# Target rules for targets named roundtrip
+
+# Build rule for target.
+roundtrip: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roundtrip
+.PHONY : roundtrip
+
+# fast build rule for target.
+roundtrip/fast:
+	$(MAKE) -f examples/roundtrip/CMakeFiles/roundtrip.dir/build.make examples/roundtrip/CMakeFiles/roundtrip.dir/build
+.PHONY : roundtrip/fast
+
+#=============================================================================
+# Target rules for targets named shorturl
+
+# Build rule for target.
+shorturl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shorturl
+.PHONY : shorturl
+
+# fast build rule for target.
+shorturl/fast:
+	$(MAKE) -f examples/shorturl/CMakeFiles/shorturl.dir/build.make examples/shorturl/CMakeFiles/shorturl.dir/build
+.PHONY : shorturl/fast
+
+#=============================================================================
+# Target rules for targets named simple_daytime
+
+# Build rule for target.
+simple_daytime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_daytime
+.PHONY : simple_daytime
+
+# fast build rule for target.
+simple_daytime/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_daytime.dir/build.make examples/simple/CMakeFiles/simple_daytime.dir/build
+.PHONY : simple_daytime/fast
+
+#=============================================================================
+# Target rules for targets named simple_allinone
+
+# Build rule for target.
+simple_allinone: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_allinone
+.PHONY : simple_allinone
+
+# fast build rule for target.
+simple_allinone/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_allinone.dir/build.make examples/simple/CMakeFiles/simple_allinone.dir/build
+.PHONY : simple_allinone/fast
+
+#=============================================================================
+# Target rules for targets named simple_echo
+
+# Build rule for target.
+simple_echo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_echo
+.PHONY : simple_echo
+
+# fast build rule for target.
+simple_echo/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_echo.dir/build.make examples/simple/CMakeFiles/simple_echo.dir/build
+.PHONY : simple_echo/fast
+
+#=============================================================================
+# Target rules for targets named simple_discard
+
+# Build rule for target.
+simple_discard: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_discard
+.PHONY : simple_discard
+
+# fast build rule for target.
+simple_discard/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_discard.dir/build.make examples/simple/CMakeFiles/simple_discard.dir/build
+.PHONY : simple_discard/fast
+
+#=============================================================================
+# Target rules for targets named simple_chargen
+
+# Build rule for target.
+simple_chargen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_chargen
+.PHONY : simple_chargen
+
+# fast build rule for target.
+simple_chargen/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_chargen.dir/build.make examples/simple/CMakeFiles/simple_chargen.dir/build
+.PHONY : simple_chargen/fast
+
+#=============================================================================
+# Target rules for targets named simple_timeclient
+
+# Build rule for target.
+simple_timeclient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_timeclient
+.PHONY : simple_timeclient
+
+# fast build rule for target.
+simple_timeclient/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_timeclient.dir/build.make examples/simple/CMakeFiles/simple_timeclient.dir/build
+.PHONY : simple_timeclient/fast
+
+#=============================================================================
+# Target rules for targets named simple_time
+
+# Build rule for target.
+simple_time: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_time
+.PHONY : simple_time
+
+# fast build rule for target.
+simple_time/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_time.dir/build.make examples/simple/CMakeFiles/simple_time.dir/build
+.PHONY : simple_time/fast
+
+#=============================================================================
+# Target rules for targets named simple_chargenclient
+
+# Build rule for target.
+simple_chargenclient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_chargenclient
+.PHONY : simple_chargenclient
+
+# fast build rule for target.
+simple_chargenclient/fast:
+	$(MAKE) -f examples/simple/CMakeFiles/simple_chargenclient.dir/build.make examples/simple/CMakeFiles/simple_chargenclient.dir/build
+.PHONY : simple_chargenclient/fast
+
+#=============================================================================
+# Target rules for targets named tcprelay
+
+# Build rule for target.
+tcprelay: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcprelay
+.PHONY : tcprelay
+
+# fast build rule for target.
+tcprelay/fast:
+	$(MAKE) -f examples/socks4a/CMakeFiles/tcprelay.dir/build.make examples/socks4a/CMakeFiles/tcprelay.dir/build
+.PHONY : tcprelay/fast
+
+#=============================================================================
+# Target rules for targets named socks4a
+
+# Build rule for target.
+socks4a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 socks4a
+.PHONY : socks4a
+
+# fast build rule for target.
+socks4a/fast:
+	$(MAKE) -f examples/socks4a/CMakeFiles/socks4a.dir/build.make examples/socks4a/CMakeFiles/socks4a.dir/build
+.PHONY : socks4a/fast
+
+#=============================================================================
+# Target rules for targets named sudoku_solver_basic
+
+# Build rule for target.
+sudoku_solver_basic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sudoku_solver_basic
+.PHONY : sudoku_solver_basic
+
+# fast build rule for target.
+sudoku_solver_basic/fast:
+	$(MAKE) -f examples/sudoku/CMakeFiles/sudoku_solver_basic.dir/build.make examples/sudoku/CMakeFiles/sudoku_solver_basic.dir/build
+.PHONY : sudoku_solver_basic/fast
+
+#=============================================================================
+# Target rules for targets named sudoku_solver_multiloop
+
+# Build rule for target.
+sudoku_solver_multiloop: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sudoku_solver_multiloop
+.PHONY : sudoku_solver_multiloop
+
+# fast build rule for target.
+sudoku_solver_multiloop/fast:
+	$(MAKE) -f examples/sudoku/CMakeFiles/sudoku_solver_multiloop.dir/build.make examples/sudoku/CMakeFiles/sudoku_solver_multiloop.dir/build
+.PHONY : sudoku_solver_multiloop/fast
+
+#=============================================================================
+# Target rules for targets named sudoku_solver_threadpool
+
+# Build rule for target.
+sudoku_solver_threadpool: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sudoku_solver_threadpool
+.PHONY : sudoku_solver_threadpool
+
+# fast build rule for target.
+sudoku_solver_threadpool/fast:
+	$(MAKE) -f examples/sudoku/CMakeFiles/sudoku_solver_threadpool.dir/build.make examples/sudoku/CMakeFiles/sudoku_solver_threadpool.dir/build
+.PHONY : sudoku_solver_threadpool/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger03
+
+# Build rule for target.
+twisted_finger03: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger03
+.PHONY : twisted_finger03
+
+# fast build rule for target.
+twisted_finger03/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger03.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger03.dir/build
+.PHONY : twisted_finger03/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger01
+
+# Build rule for target.
+twisted_finger01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger01
+.PHONY : twisted_finger01
+
+# fast build rule for target.
+twisted_finger01/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger01.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger01.dir/build
+.PHONY : twisted_finger01/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger02
+
+# Build rule for target.
+twisted_finger02: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger02
+.PHONY : twisted_finger02
+
+# fast build rule for target.
+twisted_finger02/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger02.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger02.dir/build
+.PHONY : twisted_finger02/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger04
+
+# Build rule for target.
+twisted_finger04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger04
+.PHONY : twisted_finger04
+
+# fast build rule for target.
+twisted_finger04/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger04.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger04.dir/build
+.PHONY : twisted_finger04/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger07
+
+# Build rule for target.
+twisted_finger07: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger07
+.PHONY : twisted_finger07
+
+# fast build rule for target.
+twisted_finger07/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger07.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger07.dir/build
+.PHONY : twisted_finger07/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger05
+
+# Build rule for target.
+twisted_finger05: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger05
+.PHONY : twisted_finger05
+
+# fast build rule for target.
+twisted_finger05/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger05.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger05.dir/build
+.PHONY : twisted_finger05/fast
+
+#=============================================================================
+# Target rules for targets named twisted_finger06
+
+# Build rule for target.
+twisted_finger06: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twisted_finger06
+.PHONY : twisted_finger06
+
+# fast build rule for target.
+twisted_finger06/fast:
+	$(MAKE) -f examples/twisted/finger/CMakeFiles/twisted_finger06.dir/build.make examples/twisted/finger/CMakeFiles/twisted_finger06.dir/build
+.PHONY : twisted_finger06/fast
+
+#=============================================================================
+# Target rules for targets named wordcount_hasher
+
+# Build rule for target.
+wordcount_hasher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wordcount_hasher
+.PHONY : wordcount_hasher
+
+# fast build rule for target.
+wordcount_hasher/fast:
+	$(MAKE) -f examples/wordcount/CMakeFiles/wordcount_hasher.dir/build.make examples/wordcount/CMakeFiles/wordcount_hasher.dir/build
+.PHONY : wordcount_hasher/fast
+
+#=============================================================================
+# Target rules for targets named wordcount_receiver
+
+# Build rule for target.
+wordcount_receiver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wordcount_receiver
+.PHONY : wordcount_receiver
+
+# fast build rule for target.
+wordcount_receiver/fast:
+	$(MAKE) -f examples/wordcount/CMakeFiles/wordcount_receiver.dir/build.make examples/wordcount/CMakeFiles/wordcount_receiver.dir/build
+.PHONY : wordcount_receiver/fast
+
+#=============================================================================
+# Target rules for targets named zeromq_local_lat
+
+# Build rule for target.
+zeromq_local_lat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zeromq_local_lat
+.PHONY : zeromq_local_lat
+
+# fast build rule for target.
+zeromq_local_lat/fast:
+	$(MAKE) -f examples/zeromq/CMakeFiles/zeromq_local_lat.dir/build.make examples/zeromq/CMakeFiles/zeromq_local_lat.dir/build
+.PHONY : zeromq_local_lat/fast
+
+#=============================================================================
+# Target rules for targets named zeromq_remote_lat
+
+# Build rule for target.
+zeromq_remote_lat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zeromq_remote_lat
+.PHONY : zeromq_remote_lat
+
+# fast build rule for target.
+zeromq_remote_lat/fast:
+	$(MAKE) -f examples/zeromq/CMakeFiles/zeromq_remote_lat.dir/build.make examples/zeromq/CMakeFiles/zeromq_remote_lat.dir/build
+.PHONY : zeromq_remote_lat/fast
+
+#=============================================================================
+# Target rules for targets named muduo_cdns
+
+# Build rule for target.
+muduo_cdns: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 muduo_cdns
+.PHONY : muduo_cdns
+
+# fast build rule for target.
+muduo_cdns/fast:
+	$(MAKE) -f examples/cdns/CMakeFiles/muduo_cdns.dir/build.make examples/cdns/CMakeFiles/muduo_cdns.dir/build
+.PHONY : muduo_cdns/fast
+
+#=============================================================================
+# Target rules for targets named cdns
+
+# Build rule for target.
+cdns: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cdns
+.PHONY : cdns
+
+# fast build rule for target.
+cdns/fast:
+	$(MAKE) -f examples/cdns/CMakeFiles/cdns.dir/build.make examples/cdns/CMakeFiles/cdns.dir/build
+.PHONY : cdns/fast
+
+#=============================================================================
+# Target rules for targets named mcurl
+
+# Build rule for target.
+mcurl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mcurl
+.PHONY : mcurl
+
+# fast build rule for target.
+mcurl/fast:
+	$(MAKE) -f examples/curl/CMakeFiles/mcurl.dir/build.make examples/curl/CMakeFiles/mcurl.dir/build
+.PHONY : mcurl/fast
+
+#=============================================================================
+# Target rules for targets named curl_download
+
+# Build rule for target.
+curl_download: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 curl_download
+.PHONY : curl_download
+
+# fast build rule for target.
+curl_download/fast:
+	$(MAKE) -f examples/curl/CMakeFiles/curl_download.dir/build.make examples/curl/CMakeFiles/curl_download.dir/build
+.PHONY : curl_download/fast
+
+#=============================================================================
+# Target rules for targets named muduo_curl
+
+# Build rule for target.
+muduo_curl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 muduo_curl
+.PHONY : muduo_curl
+
+# fast build rule for target.
+muduo_curl/fast:
+	$(MAKE) -f examples/curl/CMakeFiles/muduo_curl.dir/build.make examples/curl/CMakeFiles/muduo_curl.dir/build
+.PHONY : muduo_curl/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_dispatcher_lite_test
+
+# Build rule for target.
+protobuf_dispatcher_lite_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_dispatcher_lite_test
+.PHONY : protobuf_dispatcher_lite_test
+
+# fast build rule for target.
+protobuf_dispatcher_lite_test/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_dispatcher_lite_test.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_dispatcher_lite_test.dir/build
+.PHONY : protobuf_dispatcher_lite_test/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_codec
+
+# Build rule for target.
+protobuf_codec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_codec
+.PHONY : protobuf_codec
+
+# fast build rule for target.
+protobuf_codec/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_codec.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_codec.dir/build
+.PHONY : protobuf_codec/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_client
+
+# Build rule for target.
+protobuf_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_client
+.PHONY : protobuf_client
+
+# fast build rule for target.
+protobuf_client/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_client.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_client.dir/build
+.PHONY : protobuf_client/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_codec_test
+
+# Build rule for target.
+protobuf_codec_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_codec_test
+.PHONY : protobuf_codec_test
+
+# fast build rule for target.
+protobuf_codec_test/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_codec_test.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_codec_test.dir/build
+.PHONY : protobuf_codec_test/fast
+
+#=============================================================================
+# Target rules for targets named query_proto
+
+# Build rule for target.
+query_proto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 query_proto
+.PHONY : query_proto
+
+# fast build rule for target.
+query_proto/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/query_proto.dir/build.make examples/protobuf/codec/CMakeFiles/query_proto.dir/build
+.PHONY : query_proto/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_dispatcher_test
+
+# Build rule for target.
+protobuf_dispatcher_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_dispatcher_test
+.PHONY : protobuf_dispatcher_test
+
+# fast build rule for target.
+protobuf_dispatcher_test/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_dispatcher_test.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_dispatcher_test.dir/build
+.PHONY : protobuf_dispatcher_test/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_codec_all
+
+# Build rule for target.
+protobuf_codec_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_codec_all
+.PHONY : protobuf_codec_all
+
+# fast build rule for target.
+protobuf_codec_all/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_codec_all.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_codec_all.dir/build
+.PHONY : protobuf_codec_all/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_server
+
+# Build rule for target.
+protobuf_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_server
+.PHONY : protobuf_server
+
+# fast build rule for target.
+protobuf_server/fast:
+	$(MAKE) -f examples/protobuf/codec/CMakeFiles/protobuf_server.dir/build.make examples/protobuf/codec/CMakeFiles/protobuf_server.dir/build
+.PHONY : protobuf_server/fast
+
+#=============================================================================
+# Target rules for targets named sudoku_proto
+
+# Build rule for target.
+sudoku_proto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sudoku_proto
+.PHONY : sudoku_proto
+
+# fast build rule for target.
+sudoku_proto/fast:
+	$(MAKE) -f examples/protobuf/rpc/CMakeFiles/sudoku_proto.dir/build.make examples/protobuf/rpc/CMakeFiles/sudoku_proto.dir/build
+.PHONY : sudoku_proto/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_sudoku_client
+
+# Build rule for target.
+protobuf_rpc_sudoku_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_sudoku_client
+.PHONY : protobuf_rpc_sudoku_client
+
+# fast build rule for target.
+protobuf_rpc_sudoku_client/fast:
+	$(MAKE) -f examples/protobuf/rpc/CMakeFiles/protobuf_rpc_sudoku_client.dir/build.make examples/protobuf/rpc/CMakeFiles/protobuf_rpc_sudoku_client.dir/build
+.PHONY : protobuf_rpc_sudoku_client/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_sudoku_server
+
+# Build rule for target.
+protobuf_rpc_sudoku_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_sudoku_server
+.PHONY : protobuf_rpc_sudoku_server
+
+# fast build rule for target.
+protobuf_rpc_sudoku_server/fast:
+	$(MAKE) -f examples/protobuf/rpc/CMakeFiles/protobuf_rpc_sudoku_server.dir/build.make examples/protobuf/rpc/CMakeFiles/protobuf_rpc_sudoku_server.dir/build
+.PHONY : protobuf_rpc_sudoku_server/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_all
+
+# Build rule for target.
+protobuf_rpc_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_all
+.PHONY : protobuf_rpc_all
+
+# fast build rule for target.
+protobuf_rpc_all/fast:
+	$(MAKE) -f examples/protobuf/rpc/CMakeFiles/protobuf_rpc_all.dir/build.make examples/protobuf/rpc/CMakeFiles/protobuf_rpc_all.dir/build
+.PHONY : protobuf_rpc_all/fast
+
+#=============================================================================
+# Target rules for targets named echo_proto
+
+# Build rule for target.
+echo_proto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_proto
+.PHONY : echo_proto
+
+# fast build rule for target.
+echo_proto/fast:
+	$(MAKE) -f examples/protobuf/rpcbench/CMakeFiles/echo_proto.dir/build.make examples/protobuf/rpcbench/CMakeFiles/echo_proto.dir/build
+.PHONY : echo_proto/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_echo_client
+
+# Build rule for target.
+protobuf_rpc_echo_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_echo_client
+.PHONY : protobuf_rpc_echo_client
+
+# fast build rule for target.
+protobuf_rpc_echo_client/fast:
+	$(MAKE) -f examples/protobuf/rpcbench/CMakeFiles/protobuf_rpc_echo_client.dir/build.make examples/protobuf/rpcbench/CMakeFiles/protobuf_rpc_echo_client.dir/build
+.PHONY : protobuf_rpc_echo_client/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_echo_server
+
+# Build rule for target.
+protobuf_rpc_echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_echo_server
+.PHONY : protobuf_rpc_echo_server
+
+# fast build rule for target.
+protobuf_rpc_echo_server/fast:
+	$(MAKE) -f examples/protobuf/rpcbench/CMakeFiles/protobuf_rpc_echo_server.dir/build.make examples/protobuf/rpcbench/CMakeFiles/protobuf_rpc_echo_server.dir/build
+.PHONY : protobuf_rpc_echo_server/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_resolver_server
+
+# Build rule for target.
+protobuf_rpc_resolver_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_resolver_server
+.PHONY : protobuf_rpc_resolver_server
+
+# fast build rule for target.
+protobuf_rpc_resolver_server/fast:
+	$(MAKE) -f examples/protobuf/resolver/CMakeFiles/protobuf_rpc_resolver_server.dir/build.make examples/protobuf/resolver/CMakeFiles/protobuf_rpc_resolver_server.dir/build
+.PHONY : protobuf_rpc_resolver_server/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_rpc_resolver_client
+
+# Build rule for target.
+protobuf_rpc_resolver_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protobuf_rpc_resolver_client
+.PHONY : protobuf_rpc_resolver_client
+
+# fast build rule for target.
+protobuf_rpc_resolver_client/fast:
+	$(MAKE) -f examples/protobuf/resolver/CMakeFiles/protobuf_rpc_resolver_client.dir/build.make examples/protobuf/resolver/CMakeFiles/protobuf_rpc_resolver_client.dir/build
+.PHONY : protobuf_rpc_resolver_client/fast
+
+#=============================================================================
+# Target rules for targets named resolver_proto
+
+# Build rule for target.
+resolver_proto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 resolver_proto
+.PHONY : resolver_proto
+
+# fast build rule for target.
+resolver_proto/fast:
+	$(MAKE) -f examples/protobuf/resolver/CMakeFiles/resolver_proto.dir/build.make examples/protobuf/resolver/CMakeFiles/resolver_proto.dir/build
+.PHONY : resolver_proto/fast
 
 #=============================================================================
 # Target rules for targets named reactor_test02
@@ -748,7 +1840,91 @@ help:
 	@echo "... muduo_http"
 	@echo "... httpserver_test"
 	@echo "... httprequest_unittest"
+	@echo "... muduo_inspect"
+	@echo "... inspector_test"
 	@echo "... inetaddress_unittest"
+	@echo "... asio_chat_server_threaded"
+	@echo "... asio_chat_server"
+	@echo "... asio_chat_loadtest"
+	@echo "... asio_chat_client"
+	@echo "... asio_chat_server_threaded_efficient"
+	@echo "... asio_chat_server_threaded_highperformance"
+	@echo "... asio_tutorial_timer5"
+	@echo "... asio_tutorial_timer3"
+	@echo "... asio_tutorial_timer2"
+	@echo "... asio_tutorial_timer6"
+	@echo "... asio_tutorial_timer4"
+	@echo "... fastcgi_test"
+	@echo "... filetransfer_download"
+	@echo "... filetransfer_download2"
+	@echo "... filetransfer_download3"
+	@echo "... hub"
+	@echo "... pub"
+	@echo "... muduo_pubsub"
+	@echo "... sub"
+	@echo "... idleconnection_echo"
+	@echo "... idleconnection_echo2"
+	@echo "... maxconnection_echo"
+	@echo "... multiplex_demux"
+	@echo "... multiplex_server"
+	@echo "... multiplex_server_simple"
+	@echo "... netty_discard_client"
+	@echo "... netty_discard_server"
+	@echo "... netty_echo_client"
+	@echo "... netty_echo_server"
+	@echo "... netty_uptime"
+	@echo "... pingpong_client"
+	@echo "... pingpong_bench"
+	@echo "... pingpong_server"
+	@echo "... roundtrip"
+	@echo "... shorturl"
+	@echo "... simple_daytime"
+	@echo "... simple_allinone"
+	@echo "... simple_echo"
+	@echo "... simple_discard"
+	@echo "... simple_chargen"
+	@echo "... simple_timeclient"
+	@echo "... simple_time"
+	@echo "... simple_chargenclient"
+	@echo "... tcprelay"
+	@echo "... socks4a"
+	@echo "... sudoku_solver_basic"
+	@echo "... sudoku_solver_multiloop"
+	@echo "... sudoku_solver_threadpool"
+	@echo "... twisted_finger03"
+	@echo "... twisted_finger01"
+	@echo "... twisted_finger02"
+	@echo "... twisted_finger04"
+	@echo "... twisted_finger07"
+	@echo "... twisted_finger05"
+	@echo "... twisted_finger06"
+	@echo "... wordcount_hasher"
+	@echo "... wordcount_receiver"
+	@echo "... zeromq_local_lat"
+	@echo "... zeromq_remote_lat"
+	@echo "... muduo_cdns"
+	@echo "... cdns"
+	@echo "... mcurl"
+	@echo "... curl_download"
+	@echo "... muduo_curl"
+	@echo "... protobuf_dispatcher_lite_test"
+	@echo "... protobuf_codec"
+	@echo "... protobuf_client"
+	@echo "... protobuf_codec_test"
+	@echo "... query_proto"
+	@echo "... protobuf_dispatcher_test"
+	@echo "... protobuf_codec_all"
+	@echo "... protobuf_server"
+	@echo "... sudoku_proto"
+	@echo "... protobuf_rpc_sudoku_client"
+	@echo "... protobuf_rpc_sudoku_server"
+	@echo "... protobuf_rpc_all"
+	@echo "... echo_proto"
+	@echo "... protobuf_rpc_echo_client"
+	@echo "... protobuf_rpc_echo_server"
+	@echo "... protobuf_rpc_resolver_server"
+	@echo "... protobuf_rpc_resolver_client"
+	@echo "... resolver_proto"
 	@echo "... reactor_test02"
 	@echo "... pthread_atfork_test"
 	@echo "... log_test2"

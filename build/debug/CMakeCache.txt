@@ -200,6 +200,9 @@ PROTOBUF_PROTOC_LIBRARY:FILEPATH=/usr/local/protobuf/lib/libprotoc.so
 //Path to a library.
 PROTOBUF_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/local/protobuf/lib/libprotoc.so
 
+//Dependencies for the target
+echo_proto_LIB_DEPENDS:STATIC=general;protobuf;general;pthread;
+
 //Value Computed by CMake
 muduo_BINARY_DIR:STATIC=/home/mingyu/MyMuduo/MyMuduo/build/debug
 
@@ -210,10 +213,34 @@ muduo_SOURCE_DIR:STATIC=/home/mingyu/MyMuduo/MyMuduo/mymuduo
 muduo_base_LIB_DEPENDS:STATIC=general;pthread;general;rt;
 
 //Dependencies for the target
+muduo_cdns_LIB_DEPENDS:STATIC=general;muduo_net;general;cares;
+
+//Dependencies for the target
+muduo_curl_LIB_DEPENDS:STATIC=general;muduo_net;general;curl;
+
+//Dependencies for the target
 muduo_http_LIB_DEPENDS:STATIC=general;muduo_net;
 
 //Dependencies for the target
+muduo_inspect_LIB_DEPENDS:STATIC=general;muduo_http;
+
+//Dependencies for the target
 muduo_net_LIB_DEPENDS:STATIC=general;muduo_base;
+
+//Dependencies for the target
+muduo_pubsub_LIB_DEPENDS:STATIC=general;muduo_inspect;
+
+//Dependencies for the target
+protobuf_codec_LIB_DEPENDS:STATIC=general;protobuf;general;muduo_net;general;z;
+
+//Dependencies for the target
+query_proto_LIB_DEPENDS:STATIC=general;protobuf;general;pthread;
+
+//Dependencies for the target
+resolver_proto_LIB_DEPENDS:STATIC=general;protobuf;general;pthread;
+
+//Dependencies for the target
+sudoku_proto_LIB_DEPENDS:STATIC=general;protobuf;general;pthread;
 
 
 ########################
@@ -306,7 +333,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=36
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

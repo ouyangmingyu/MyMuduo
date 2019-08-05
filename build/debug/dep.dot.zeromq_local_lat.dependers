@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node249" [ label="zeromq_local_lat" shape="house"];
+}

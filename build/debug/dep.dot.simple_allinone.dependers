@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node196" [ label="simple_allinone" shape="house"];
+}

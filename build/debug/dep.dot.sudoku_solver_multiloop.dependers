@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node220" [ label="sudoku_solver_multiloop" shape="house"];
+}

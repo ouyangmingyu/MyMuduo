@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node174" [ label="pingpong_client" shape="house"];
+}

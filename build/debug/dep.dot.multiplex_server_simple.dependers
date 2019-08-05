@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node145" [ label="multiplex_server_simple" shape="house"];
+}

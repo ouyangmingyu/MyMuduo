@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node283" [ label="protobuf_dispatcher_test" shape="house"];
+}

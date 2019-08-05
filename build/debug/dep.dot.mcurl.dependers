@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node265" [ label="mcurl" shape="house"];
+}

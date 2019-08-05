@@ -741,9 +741,53 @@ Part3:  muduo_http库源码分析
 
 part4: muduo_inspect库源码分析
 
+	muduo_inspect库通过HTTP方式为服务器提供监控接口
+	接受了多少个TCP连接
+	当前有多少个活动连接
+	一共响应了多少次请求
+	每次请求的平均响应时间多少毫秒
+	。。。
+	
+	Inspector	 // 包含了一个HttpServer对象
+	ProcessInspector // 通过ProcessInfo返回进程信息
+	ProcessInfo // 获取进程相关信息
+	
+	模块、命令、帮助、回调
+	
+	竞态问题：
+	不能直接用start，因为构造函数还没执行完，就调用他的成员函数，是不行的，那么用runafter来执行start
+
 
 
 Part5: muduo库使用示例
+	1. 五个简单TCP协议、muduo库网络模型使用示例（数独）
+		（1）五个简单TCP协议
+		• discard - 丢弃所有收到的数据；
+			包含一个tcpserver对象即可，然后写回调函数（关注三个半事件）
+		• daytime - 服务端 accept 连接之后，以字符串形式发送当前时间，然后主动断
+		开连接；
+		• time - 服务端 accept 连接之后，以二进制形式发送当前时间（从 Epoch 到现在
+		的秒数），然后主动断开连接；我们需要一个客户程序来把收到的时间转换为字
+		符串。
+			源代码有32位数溢出的问题存在，使得时间不准确，通过强转为64位整数解决该问题
+			时间会早8小时，因为北京时间是UTC+8
+		• echo - 回显服务，把收到的数据发回客户端；
+			包含一个tcpserver对象即可，然后写回调函数
+		• chargen（char genrator） - 服务端 accept 连接之后，不停地发送测试数据。
+			33~126为可打印字符，每行输出72个字符（33.。。104，34.。。105，55.。。126然后又轮转回来 56.。。126，33）
+			一次发送94行数据为一组，然后循环发送，每当发送一组，回调onwritecomplete再次发送数据
+			由于TCP有限流功能，即使服务器发送很快，若客户端处理不快（打印出来），会使得吞吐量不高，若不打印，会很快
+			
+			千兆网卡发送上限  1000M/8
+			
+	（2）muduo库网络模型使用示例
+	reactor（一个IO线程）
+		IO线程负责所有工作（lfd和cfd）
+	multiple reactor （多个IO线程）
+		多了一行setthreadnum，导致eventloopthreadpool调用，出现多个reactor，main reactor负责lfd，sub reactor负责cfd，采用轮叫方式分配连接
+	one loop per thread + thread pool （多个IO线程 + 计算线程池）
+		数独既是IO密集型，又是计算密集型，那么计算过程用计算线程池来处理，防止IO线程阻塞而影响连接，处理完了再通过IO线程来发送
+
 
 
 

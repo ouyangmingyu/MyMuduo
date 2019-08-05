@@ -7,4 +7,18 @@ node [
     "node50" -> "node48" // muduo_http -> httprequest_unittest
     "node49" [ label="httpserver_test" shape="house"];
     "node49" -> "node48" // muduo_http -> httpserver_test
+    "node55" [ label="muduo_inspect" shape="diamond"];
+    "node55" -> "node48" // muduo_http -> muduo_inspect
+    "node118" [ label="hub" shape="house"];
+    "node118" -> "node55" // muduo_inspect -> hub
+    "node58" [ label="inspector_test" shape="house"];
+    "node58" -> "node55" // muduo_inspect -> inspector_test
+    "node121" [ label="muduo_pubsub" shape="diamond"];
+    "node121" -> "node55" // muduo_inspect -> muduo_pubsub
+    "node119" [ label="pub" shape="house"];
+    "node119" -> "node121" // muduo_pubsub -> pub
+    "node122" [ label="sub" shape="house"];
+    "node122" -> "node121" // muduo_pubsub -> sub
+    "node189" [ label="shorturl" shape="house"];
+    "node189" -> "node48" // muduo_http -> shorturl
 }

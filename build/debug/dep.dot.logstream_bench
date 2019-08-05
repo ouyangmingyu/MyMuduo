@@ -5,8 +5,8 @@ node [
     "node16" [ label="logstream_bench" shape="house"];
     "node9" [ label="muduo_base" shape="diamond"];
     "node16" -> "node9" // logstream_bench -> muduo_base
-    "node85" [ label="pthread" shape="ellipse"];
-    "node9" -> "node85" // muduo_base -> pthread
-    "node86" [ label="rt" shape="ellipse"];
-    "node9" -> "node86" // muduo_base -> rt
+    "node343" [ label="pthread" shape="ellipse"];
+    "node9" -> "node343" // muduo_base -> pthread
+    "node344" [ label="rt" shape="ellipse"];
+    "node9" -> "node344" // muduo_base -> rt
 }

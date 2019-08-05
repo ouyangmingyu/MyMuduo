@@ -1,0 +1,10 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node316" [ label="resolver_proto" shape="diamond"];
+    "node314" [ label="protobuf_rpc_resolver_client" shape="house"];
+    "node314" -> "node316" // resolver_proto -> protobuf_rpc_resolver_client
+    "node313" [ label="protobuf_rpc_resolver_server" shape="house"];
+    "node313" -> "node316" // resolver_proto -> protobuf_rpc_resolver_server
+}

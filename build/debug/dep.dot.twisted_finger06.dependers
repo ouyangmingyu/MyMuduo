@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node232" [ label="twisted_finger06" shape="house"];
+}

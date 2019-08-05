@@ -1,0 +1,6 @@
+digraph "GG" {
+node [
+  fontsize = "12"
+];
+    "node296" [ label="protobuf_rpc_sudoku_client" shape="house"];
+}

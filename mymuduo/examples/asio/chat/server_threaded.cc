@@ -45,6 +45,7 @@ class ChatServer : boost::noncopyable
         << conn->peerAddress().toIpPort() << " is "
         << (conn->connected() ? "UP" : "DOWN");
 
+    // 有多个IO线程，因而这里的connections_需要用mutex保护
     MutexLockGuard lock(mutex_);
     if (conn->connected())
     {
@@ -60,7 +61,9 @@ class ChatServer : boost::noncopyable
                        const string& message,
                        Timestamp)
   {
+    // 有多个IO线程，因而这里的connections_需要用mutex保护
     MutexLockGuard lock(mutex_);
+    // 转发消息给所有客户端
     for (ConnectionList::iterator it = connections_.begin();
         it != connections_.end();
         ++it)
@@ -74,7 +77,7 @@ class ChatServer : boost::noncopyable
   TcpServer server_;
   LengthHeaderCodec codec_;
   MutexLock mutex_;
-  ConnectionList connections_;
+  ConnectionList connections_;		// 连接列表
 };
 
 int main(int argc, char* argv[])

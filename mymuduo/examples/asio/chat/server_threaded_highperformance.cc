@@ -66,10 +66,13 @@ class ChatServer : boost::noncopyable
     LOG_DEBUG;
 
     MutexLockGuard lock(mutex_);
+    // 转发消息给所有客户端，高效转发（多线程来转发）
     for (std::set<EventLoop*>::iterator it = loops_.begin();
         it != loops_.end();
         ++it)
     {
+      // 1、让对应的IO线程来执行distributeMessage
+	  // 2、distributeMessage不受mutex_保护
       (*it)->queueInLoop(f);
     }
     LOG_DEBUG;
@@ -80,6 +83,7 @@ class ChatServer : boost::noncopyable
   void distributeMessage(const string& message)
   {
     LOG_DEBUG << "begin";
+    // connections_是thread local变量，所以不需要保护
     for (ConnectionList::iterator it = connections_.instance().begin();
         it != connections_.instance().end();
         ++it)
@@ -101,6 +105,7 @@ class ChatServer : boost::noncopyable
   EventLoop* loop_;
   TcpServer server_;
   LengthHeaderCodec codec_;
+  // 线程局部单例变量，每个线程都有一个connections_实例
   ThreadLocalSingleton<ConnectionList> connections_;
 
   MutexLock mutex_;

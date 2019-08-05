@@ -48,12 +48,14 @@ class ChatServer : boost::noncopyable
         << (conn->connected() ? "UP" : "DOWN");
 
     MutexLockGuard lock(mutex_);
-    if (!connections_.unique())
+    if (!connections_.unique())		// 说明引用计数大于2
     {
+      // new ConnectionList(*connections_)这段代码拷贝了一份ConnectionList
       connections_.reset(new ConnectionList(*connections_));
     }
     assert(connections_.unique());
 
+    // 在复本上修改，不会影响读者，所以读者在遍历列表的时候，不需要用mutex保护
     if (conn->connected())
     {
       connections_->insert(conn);
@@ -71,13 +73,17 @@ class ChatServer : boost::noncopyable
                        const string& message,
                        Timestamp)
   {
-    ConnectionListPtr connections = getConnectionList();;
+    // 引用计数加1，mutex保护的临界区大大缩短
+    ConnectionListPtr connections = getConnectionList();
+    // 可能大家会有疑问，不受mutex保护，写者更改了连接列表怎么办？
+    // 实际上，写者是在另一个复本上修改，所以无需担心。
     for (ConnectionList::iterator it = connections->begin();
         it != connections->end();
         ++it)
     {
       codec_.send(get_pointer(*it), message);
     }
+    // 当connections这个栈上的变量销毁的时候，引用计数减1
   }
 
   ConnectionListPtr getConnectionList()

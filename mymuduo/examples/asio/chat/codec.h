@@ -25,6 +25,7 @@ class LengthHeaderCodec : boost::noncopyable
                  muduo::net::Buffer* buf,
                  muduo::Timestamp receiveTime)
   {
+    // 这里用while而不用if
     while (buf->readableBytes() >= kHeaderLen) // kHeaderLen == 4
     {
       // FIXME: use Buffer::peekInt32()
@@ -37,14 +38,14 @@ class LengthHeaderCodec : boost::noncopyable
         conn->shutdown();  // FIXME: disable reading
         break;
       }
-      else if (buf->readableBytes() >= len + kHeaderLen)
+      else if (buf->readableBytes() >= len + kHeaderLen)  // 达到一条完整的消息
       {
         buf->retrieve(kHeaderLen);
         muduo::string message(buf->peek(), len);
         messageCallback_(conn, message, receiveTime);
         buf->retrieve(len);
       }
-      else
+      else  // 未达到一条完整的消息
       {
         break;
       }

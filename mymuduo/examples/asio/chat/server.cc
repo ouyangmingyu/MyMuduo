@@ -40,6 +40,7 @@ class ChatServer : boost::noncopyable
              << conn->peerAddress().toIpPort() << " is "
              << (conn->connected() ? "UP" : "DOWN");
 
+    // 只有一个IO线程，因而这里的connections_不需要用mutex保护
     if (conn->connected())
     {
       connections_.insert(conn);
@@ -54,6 +55,8 @@ class ChatServer : boost::noncopyable
                        const string& message,
                        Timestamp)
   {
+    // 只有一个IO线程，因而这里的connections_不需要用mutex保护
+    // 转发消息给所有客户端
     for (ConnectionList::iterator it = connections_.begin();
         it != connections_.end();
         ++it)
@@ -65,8 +68,8 @@ class ChatServer : boost::noncopyable
   typedef std::set<TcpConnectionPtr> ConnectionList;
   EventLoop* loop_;
   TcpServer server_;
-  LengthHeaderCodec codec_;
-  ConnectionList connections_;
+  LengthHeaderCodec codec_;         // 消息编解码
+  ConnectionList connections_;      // 连接列表
 };
 
 int main(int argc, char* argv[])

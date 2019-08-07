@@ -864,6 +864,20 @@ Part5: muduo库使用示例
 	 3、distributeMessage不受mutex_保护
 	
 	这样就降低了第一条到最后一个客户端的延迟
+	
+	4. 测量两台机器网络延迟——RTT
+	NTP 协议的工作原理与之类似，不过，除了测量 RTT， NTP 还需要知道两台机器之
+	间的时间差 (clock offset)，这样才能校准时间。
+	offset可能是因为客户端和服务器端时间可能不同步，算出offset用于同步时间
+
+	有服务器运行（-s选项）和客户端运行
+	setnodelay，因为设计为一到来就发回
+	
+	修改系统时间  sudo date -s 要修改的时间
+	
+	5. 
+
+
 
 
 

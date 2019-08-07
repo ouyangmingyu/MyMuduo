@@ -34,15 +34,16 @@ void EchoServer::onConnection(const TcpConnectionPtr& conn)
 
   if (conn->connected())
   {
-    ++numConnected_;
+    ++numConnected_; // 当前连接数加1
     if (numConnected_ > kMaxConnections_)
     {
-      conn->shutdown();
+      conn->send("too many connections\r\n", strlen("too many connections\r\n"));
+      conn->shutdown(); // 断开连接
     }
   }
   else
   {
-    --numConnected_;
+    --numConnected_; // 当前连接数减1
   }
   LOG_INFO << "numConnected = " << numConnected_;
 }

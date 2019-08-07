@@ -48,7 +48,7 @@ class ChatServer : boost::noncopyable
         << (conn->connected() ? "UP" : "DOWN");
 
     MutexLockGuard lock(mutex_);
-    if (!connections_.unique())		// 说明引用计数大于2
+    if (!connections_.unique())		// 说明引用计数大于1
     {
       // new ConnectionList(*connections_)这段代码拷贝了一份ConnectionList
       connections_.reset(new ConnectionList(*connections_));
@@ -83,6 +83,9 @@ class ChatServer : boost::noncopyable
     {
       codec_.send(get_pointer(*it), message);
     }
+
+	// 这个断言不一定成立
+	//assert(!connections.unique());
     // 当connections这个栈上的变量销毁的时候，引用计数减1
   }
 

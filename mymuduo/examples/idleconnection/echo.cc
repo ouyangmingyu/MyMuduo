@@ -23,7 +23,7 @@ EchoServer::EchoServer(EventLoop* loop,
       boost::bind(&EchoServer::onConnection, this, _1));
   server_.setMessageCallback(
       boost::bind(&EchoServer::onMessage, this, _1, _2, _3));
-  loop->runEvery(1.0, boost::bind(&EchoServer::onTimer, this));
+  loop->runEvery(1.0, boost::bind(&EchoServer::onTimer, this)); // 注册一个1s定时器
   connectionBuckets_.resize(idleSeconds);
   dumpConnectionBuckets();
 }
@@ -42,7 +42,7 @@ void EchoServer::onConnection(const TcpConnectionPtr& conn)
   if (conn->connected())
   {
     EntryPtr entry(new Entry(conn));
-    connectionBuckets_.back().insert(entry);
+    connectionBuckets_.back().insert(entry);  // 插入到队尾，这时候引用计数为2
     dumpConnectionBuckets();
     WeakEntryPtr weakEntry(entry);
     conn->setContext(weakEntry);
@@ -76,6 +76,7 @@ void EchoServer::onMessage(const TcpConnectionPtr& conn,
 
 void EchoServer::onTimer()
 {
+  // 相当于将tail位置原有的Bucket删除了，然后增加了一个空的Bucket
   connectionBuckets_.push_back(Bucket());
   dumpConnectionBuckets();
 }

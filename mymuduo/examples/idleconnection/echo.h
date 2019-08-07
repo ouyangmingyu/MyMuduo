@@ -60,14 +60,14 @@ class EchoServer
 
     WeakTcpConnectionPtr weakConn_;
   };
-  typedef boost::shared_ptr<Entry> EntryPtr;
+  typedef boost::shared_ptr<Entry> EntryPtr;  // set中的元素是一个EntryPtr
   typedef boost::weak_ptr<Entry> WeakEntryPtr;
-  typedef boost::unordered_set<EntryPtr> Bucket;
-  typedef boost::circular_buffer<Bucket> WeakConnectionList;
+  typedef boost::unordered_set<EntryPtr> Bucket;  // 环形缓冲区每个格子存放的是一个hash_set
+  typedef boost::circular_buffer<Bucket> WeakConnectionList;  // 环形缓冲区
 
   muduo::net::EventLoop* loop_;
   muduo::net::TcpServer server_;
-  WeakConnectionList connectionBuckets_;
+  WeakConnectionList connectionBuckets_; // 连接队列环形缓冲区
 };
 
 #endif  // MUDUO_EXAMPLES_IDLECONNECTION_ECHO_H

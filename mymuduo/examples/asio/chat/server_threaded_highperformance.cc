@@ -72,7 +72,8 @@ class ChatServer : boost::noncopyable
         ++it)
     {
       // 1、让对应的IO线程来执行distributeMessage
-	  // 2、distributeMessage不受mutex_保护
+	  // 2、distributeMessage放到IO线程队列中执行，因此，这里的mutex_锁竞争大大减小
+	  // 3、distributeMessage不受mutex_保护
       (*it)->queueInLoop(f);
     }
     LOG_DEBUG;
@@ -109,7 +110,7 @@ class ChatServer : boost::noncopyable
   ThreadLocalSingleton<ConnectionList> connections_;
 
   MutexLock mutex_;
-  std::set<EventLoop*> loops_;
+  std::set<EventLoop*> loops_;	// EventLoop列表
 };
 
 int main(int argc, char* argv[])

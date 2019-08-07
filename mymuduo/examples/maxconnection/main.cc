@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
   LOG_INFO << "pid = " << getpid();
   EventLoop loop;
   InetAddress listenAddr(2007);
-  int maxConnections = 5;
+  int maxConnections = 2;
   if (argc > 1)
   {
     maxConnections = atoi(argv[1]);

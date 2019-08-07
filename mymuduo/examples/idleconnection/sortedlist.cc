@@ -37,14 +37,14 @@ class EchoServer
 
   struct Node : public muduo::copyable
   {
-    Timestamp lastReceiveTime;
-    WeakConnectionList::iterator position;
+    Timestamp lastReceiveTime; // 该连接最后一次活跃时刻
+    WeakConnectionList::iterator position; // 该连接在连接列表中的位置
   };
 
   EventLoop* loop_;
   TcpServer server_;
   int idleSeconds_;
-  WeakConnectionList connectionList_;
+  WeakConnectionList connectionList_; // 连接列表
 };
 
 EchoServer::EchoServer(EventLoop* loop,
@@ -74,7 +74,7 @@ void EchoServer::onConnection(const TcpConnectionPtr& conn)
     node.lastReceiveTime = Timestamp::now();
     connectionList_.push_back(conn);
     node.position = --connectionList_.end();
-    conn->setContext(node);
+    conn->setContext(node);	// 将TcpConnection与Node关联，以便得到conn，就能得到node
   }
   else
   {
@@ -98,6 +98,7 @@ void EchoServer::onMessage(const TcpConnectionPtr& conn,
   Node* node = boost::any_cast<Node>(conn->getMutableContext());
   node->lastReceiveTime = time;
   // move node inside list with list::splice()
+  // 时间更新了，需要将连接移至列表末端，以保证列表是按最后更新时刻排序
   connectionList_.erase(node->position);
   connectionList_.push_back(conn);
   node->position = --connectionList_.end();
@@ -117,22 +118,22 @@ void EchoServer::onTimer()
     {
       Node* n = boost::any_cast<Node>(conn->getMutableContext());
       double age = timeDifference(now, n->lastReceiveTime);
-      if (age > idleSeconds_)
+      if (age > idleSeconds_) // 说明超时了
       {
         conn->shutdown();
       }
-      else if (age < 0)
+      else if (age < 0) // 这种情况一般不可能发生
       {
         LOG_WARN << "Time jump";
         n->lastReceiveTime = now;
       }
-      else
+      else // age >= 0且age <= idleSeconds_，说明未超时
       {
         break;
       }
       ++it;
     }
-    else
+    else // 说明连接已关闭
     {
       LOG_WARN << "Expired";
       it = connectionList_.erase(it);
